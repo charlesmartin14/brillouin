@@ -329,7 +329,7 @@
          do i2 =1,4
           cscal = cscal + cubar(i1)*ca(i1,i2)*cu(i2)
         enddo
-  1   enddo
+      enddo
 
       return
       end
