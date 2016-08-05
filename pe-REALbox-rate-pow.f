@@ -215,7 +215,7 @@
       implicit real*8(a-b,d-h,o-z)
       implicit complex*16(c)
       dimension cgamma(0:3,4,4),cgamma5(4,4),gmunu(0:3,0:3)
-      common / dirac / ci,cgamma,cgamma5,gmunu
+      common /dirac/ ci,cgamma,cgamma5,gmunu
       ci =(0.d0,1.d0)
 
       do i1 =1,4
@@ -260,7 +260,7 @@
       implicit complex*16(c)
       dimension cgamma(0:3,4,4),cgamma5(4,4),cwu(4,2)
       dimension cu(4),gmunu(0:3,0:3),cs(2),cphi(2),p(0:3)
-      common / dirac / ci,cgamma,cgamma5,gmunu
+      common /dirac/ ci,cgamma,cgamma5,gmunu
       fac = dsqrt(p(0) + rm)
       cphi(1) = cs(1)*fac
       cphi(2) = cs(2)*fac
@@ -291,7 +291,7 @@
 
       dimension cgamma(0:3,4,4),cgamma5(4,4),gmunu(0:3,0:3)
       dimension cwu(4,2),cu(4),cubar(4),cs(2),cphi(2),p(0:3)
-      common / dirac / ci,cgamma,cgamma5,gmunu
+      common /dirac/ ci,cgamma,cgamma5,gmunu
 
       fac = dsqrt(p(0) + rm)
       cphi(1) = cs(1)*fac
