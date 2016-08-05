@@ -1,10 +1,10 @@
       implicit real*8(a-b,d-h,o-z)
       implicit complex*16(c)
-      dimension ca(4,4),cb(4,4),cgamma(0:3,4,4)
-      dimension gamma5(4,4),gmunu(0:3,0:3),cu1bar(4),cu2(4),cukbar(4)
-      dimension cue(4),p1(0:3),p2(0:3),pk(0:3),cs1(2),cs2(2),csk(2)
-      dimension cleft(4,4),cGVGA(4,4),xg(100),wxg(100),pg(100),wpg(100)
-      dimension pe(0:3),cse(2)
+      dimension ca(4,4),cb(4,4),cgamma(0:3,4,4),
+     1     gamma5(4,4),gmunu(0:3,0:3),cu1bar(4),cu2(4),cukbar(4),
+     2     cue(4),p1(0:3),p2(0:3),pk(0:3),cs1(2),cs2(2),csk(2),
+     3     cleft(4,4),cGVGA(4,4),xg(100),wxg(100),pg(100),wpg(100),
+     4     pe(0:3),cse(2)
       common /dirac/ ci,cgamma,cgamma5,gmunu
       common /con/ pi,hbarc,rc,alpha,GF,GV,GA,dMp,dMn,dme,dmnu,dMd,gnpd,
      1     dkapp,dkapn,dufac,dN0,e
@@ -40,7 +40,7 @@
       call chsgng(ca)
 
       cscal = 1.d0
-      call saddg(cscal,ca,c l e f t)
+      call saddg(cscal,ca,cleft)
       call copyg(cgamma5,ca)
       cscal = GA
       call smultg(cscal,ca,ca)
@@ -66,7 +66,6 @@
       densep = 7.d0 ! g/cc NiH density ??
       dNiMW = 28.d0 ! g/mol NiH MW ??
       dndens = dN0*densep/dNiMW
-      rhoep =((hbarc*1.d-13)**3)*dndens
 
       open(9,file='plot.dat',status='UNKNOWN')
 
@@ -80,26 +79,28 @@
       tran2 = 0.d0
       do ix =1,nx
       do ip =1,np
-        do is1 =1,2
+      do is1 =1,2
          cs1(is1) = 1.d0
-         do is2 =1,2
-          cs2(is2) = 1.d0
-            do ise =1,2
-              cse(ise) = 1.d0
-              do isk =1,2
-                csk(isk) = 1.d0
-                do isgn1 = 1,2
-                  do isgn2 = 1,2
-                    do isgn3 = 1,2
-                       camp2 = 0.d0
-                       pep1 = pep*((-1.d0)**isgn1)
-                       pep2 = pep*((-1.d0)**isgn2)
-                       pep3 = pep*((-1.d0)**isgn3)
-                  call pekin(xg(ix),pg(ip),pep1,pep2,pep3,pe,p1,p2,pk)
-                       call spinubar(p1,dMn,cs1,cu1bar)
-                       call spinu(p2,dMp,cs2,cu2)
-                       call spinu(pe,dme,cse,cue)
-                       call spinubar(pk,dmnu,csk,cukbar)
+      do is2 =1,2
+         cs2(is2) = 1.d0
+      do ise =1,2
+         cse(ise) = 1.d0
+      do isk =1,2
+         csk(isk) = 1.d0
+         
+      do isgn1 = 1,2
+      do isgn2 = 1,2
+      do isgn3 = 1,2
+            
+      camp2 = 0.d0
+      pep1 = pep*((-1.d0)**isgn1)
+      pep2 = pep*((-1.d0)**isgn2)
+      pep3 = pep*((-1.d0)**isgn3)
+      call pekin(xg(ix),pg(ip),pep1,pep2,pep3,pe,p1,p2,pk)
+      call spinubar(p1,dMn,cs1,cu1bar)
+      call spinu(p2,dMp,cs2,cu2)
+      call spinu(pe,dme,cse,cue)
+      call spinubar(pk,dmnu,csk,cukbar)
     
       call vcopyg(0,cgamma,cb)
       call multg(cGVGA,cb,cb)
