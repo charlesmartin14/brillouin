@@ -1,7 +1,7 @@
       implicit real*8(a-b,d-h,o-z)
       implicit complex*16(c)
       dimension ca(4,4),cb(4,4),cgamma(0:3,4,4),
-     1     gamma5(4,4),gmunu(0:3,0:3),cu1bar(4),cu2(4),cukbar(4),
+     1     cgamma5(4,4),gmunu(0:3,0:3),cu1bar(4),cu2(4),cukbar(4),
      2     cue(4),p1(0:3),p2(0:3),pk(0:3),cs1(2),cs2(2),csk(2),
      3     cleft(4,4),cGVGA(4,4),xg(100),wxg(100),pg(100),wpg(100),
      4     pe(0:3),cse(2)
@@ -352,14 +352,14 @@
       end
       
 
-      subroutine vcopyg(mu,ca,cb)
+      subroutine vcopyg(mu,caa,cb)
       implicit real*8(a-b,d-h,o-z)
       implicit complex*16(c)
-      dimension ca(0:3,4,4),cb(4,4)
+      dimension caa(0:3,4,4),cb(4,4)
 
       do i1 =1,4
          do i2 =1,4
-            cb(i1,i2) = ca(mu,i1,i2)
+            cb(i1,i2) = caa(mu,i1,i2)
          enddo
       enddo
 
