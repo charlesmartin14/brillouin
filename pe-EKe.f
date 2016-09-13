@@ -29,40 +29,18 @@
 
 
       do iep =1,500
-      pep =(pmin + dexp(dlog(1.d-11)+ dfloat(iep)*
+         pep =(pmin + dexp(dlog(1.d-11)+ dfloat(iep)*
      1        (dlog(100.d0)-dlog(1.d-11))/500.d0))/ dsqrt(3.d0)
-      
-      rlconf = 1.d-5*hbarc*pi/pep
-
-      do ix =1,nx
-      do ip =1,np
-            
-      do isgn1 = 1,2
-      do isgn2 = 1,2
-      do isgn3 = 1,2
-            
-      camp2 = 0.d0
-      pep1 = pep*((-1.d0)**isgn1)
-      pep2 = pep*((-1.d0)**isgn2)
-      pep3 = pep*((-1.d0)**isgn3)
-      call pekin(xg(ix),pg(ip),pep1,pep2,pep3,pe,p1,p2,pk)
-    
-      enddo
-      enddo
-      enddo
-    
-      EKn = p1(0) - dMn
-      EKe = pe(0) - dme
-
-      enddo
-      enddo
-    
-      EKp = p2(0) - dMp
-      EKn = p1(0) - dMn
-      EKe = pe(0) - dme
-      EKnu = pk(0) - dmnu
-      write(*,*) rlconf,EKe,EKn
-
+         
+         rlconf = 1.d-5*hbarc*pi/pep
+         call pekin0(pep,pe,p1,p2,pk)
+         
+         EKp = p2(0) - dMp
+         EKn = p1(0) - dMn
+         EKe = pe(0) - dme
+         EKnu = pk(0) - dmnu
+         write(*,*) rlconf,EKe,EKn,EKnu,EKp
+         
       enddo
 
      
@@ -373,7 +351,7 @@
       end
 
       
-      subroutine pekin(x,phi,pep1,pep2,pep3,pe,p1,p2,pk)
+      subroutine pekin0(pep,pe,p1,p2,pk)
       implicit real*8(a-b,d-h,o-z)
       implicit complex*16(c)
 
@@ -381,14 +359,8 @@
       common /con/ pi,hbarc,rc,alpha,GF,GV,GA,dMp,dMn,dme,dmnu,dMd,gnpd
      1  ,dkapp,dkapn,dufac,dN0,e
 
-      p2(0) = dsqrt(dMp**2 + pep1**2 + pep2**2 + pep3**2)
-      p2(1) = -pep1
-      p2(2) = -pep2
-      p2(3) = -pep3
-      pe(0) = dsqrt(dme**2 + pep1**2 + pep2**2 + pep3**2)
-      pe(1) = pep1
-      pe(2) = pep2
-      pe(3) = pep3
+      p2(0) = dsqrt(dMp**2 + 3*(pep**2))
+      pe(0) = dsqrt(dme**2 + 3*(pep**2))
 
       Etot = p2(0) + pe(0)
 
@@ -397,13 +369,7 @@
       pnu = dsqrt((Eknu+dmnu)**2 - dmnu**2)
 
       pk(0) = Eknu + dmnu
-      pk(1) = pnu*dsqrt(1.d0 - x**2)*dcos(phi)
-      pk(2) = pnu*dsqrt(1.d0 - x**2)*dsin(phi)
-      pk(3) = pnu*x
       p1(0) = p2(0) + pe(0) - pk(0)
-      p1(1) = p2(1) + pe(1) - pk(1)
-      p1(2) = p2(2) + pe(2) - pk(2)
-      p1(3) = p2(3) + pe(3) - pk(3)
 
       RETURN
       end
