@@ -100,8 +100,6 @@
       pep3 = pep*((-1.d0)**isgn3)
       call pekin(xg(ix),pg(ip),pep1,pep2,pep3,pe,p1,p2,pk)
 
-      stop
-      
       call spinubar(p1,dMn,cs1,cu1bar)
       call spinu(p2,dMp,cs2,cu2)
       call spinu(pe,dme,cse,cue)
@@ -136,7 +134,22 @@
       call multg(cb,clef t,cb)
       call ubaru(cukbar,cb,cue,clep3)
       camp2 = camp2 +
-     1   (chad0* clep0 - chad1* clep1 - chad2* clep2 - chad3* clep3)
+     1     (chad0* clep0 - chad1* clep1 - chad2* clep2 - chad3* clep3)
+
+      write(6,*) "chad0",chad0
+      write(6,*) "chad1",chad1
+      write(6,*) "chad2",chad2
+      write(6,*) "chad3",chad3
+
+      write(6,*) "clep0",clep0
+      write(6,*) "clep1",clep1
+      write(6,*) "clep2",clep2
+      write(6,*) "clep3",clep3
+
+      write(6,*) "camp2",camp2
+
+      
+      stop
     
       enddo
       enddo
