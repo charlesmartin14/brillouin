@@ -90,9 +90,12 @@
       do isk =1,2
          csk(isk) = 1.d0
          
-      do isgn1 = 1,2
-      do isgn2 = 1,2
-      do isgn3 = 1,2
+C     do isgn1 = 1,2
+C     do isgn2 = 1,2
+C     do isgn3 = 1,2
+         isgn1=1
+         isgn2=1
+         isgn3=1
             
       camp2 = 0.d0
       pep1 = pep*((-1.d0)**isgn1)
@@ -147,14 +150,17 @@
       write(6,*) "clep3",clep3
 
       write(6,*) "camp2",camp2
-
-      
-      stop
     
-      enddo
-      enddo
-      enddo
+C      enddo
+C      enddo
+C      enddo
 
+      ftop =rc*((pep/(2.d0*pi))**3)*(GF**2)*(dsqrt(pk(0)**2-dmnu**2))**3
+      fbot = 
+     1     (512.d0 *(pi **2)* p2(0)* pe(0)* hbarc * 1.d-15*
+     1     dabs((pk(1) *(p1(0)* pk(1)-pk(0)* p1(1))) +
+     1     (pk(2)*(p1(0)* pk(2)-pk(0)* p1(2))) +
+     1     (pk(3)*(p1(0)* pk(3)-pk(0)* p1(3)))))
 
       fact =rc*((pep/(2.d0*pi))**3)*(GF**2)*(dsqrt(pk(0)**2-dmnu**2))**3
      1     /(512.d0 *(pi **2)* p2(0)* pe(0)* hbarc * 1.d-15*
@@ -170,6 +176,10 @@
       tran2 = tran2 + wxg(ix)*wpg(ip)*
      1    dreal(camp2* dconjg(camp2)) * fact *dndens
 
+      write(6,*) 'ftop', ftop
+      write(6,*) 'fbot', fbot
+      write(6,*) 'fact', fact
+      stop
     
       csk(isk) = 0.d0
       enddo
