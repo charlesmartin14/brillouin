@@ -16,7 +16,7 @@
 \maketitle
 \section{Abstract}
 
-We describe a Gedandkenexperiment in which a bare proton can capture an electron due soley to confinement. We first briefly review the aspects around bare electron proton capture.  We then provide a numerical solution of the Fermi VA-Theory for K-electron capture for an electron-proton pair confined in a classical box of size L. Interestingly, we find that the capture is most likely for L=0.004-0.009 Angstroms, well beyond the radius of the proton. 
+We describe a Gedandkenexperiment in which a bare proton can capture an electron due solely to confinement. We first briefly review the aspects around bare electron proton capture.  We then provide a numerical solution of the Fermi VA-Theory for K-electron capture for an electron-proton pair confined in a classical box of size L. Interestingly, we find that the capture is most likely for L=0.004-0.009 Angstroms, well beyond the radius of the proton. 
 
 \section{Background}
 
@@ -129,6 +129,214 @@ The rate of EC can be computed using the Fermi VA-Theory [8,10].  The most basic
 Note that the V-A theory assumes an incoherent nuclear process, it is local, and that the interaction is phenomonological. It is treated as a simply a contact potential at the surface of the nucleus. This means one only needs compute the nuclear charge--the electron density on the surface of the nucleus.
 
 More complicated calculations are used for larger nuclei, second order processes, etc. They only require modifications to treat either atomic electronic structure of reactant and product atoms, and/or specific considerations for nuclear internal conversion and other second order processes.
+
+\subsection{Bare proton-electron capture}
+
+
+We frequently write K-electron capture as if it were simply proton-electron capture
+
+$$p^{+}+e^{-} \rightleftarrows n^{0}+\nu_{e}\;\;.$$
+
+Theoretically, a free proton can could capture an electron from the continuum, but the interaction energy must be  above threshold for neutron production.  This is a huge amount of energy, although this happens regularly in  accelerators.
+
+Observing proton electron capture outside of an accelerator, "on the desktop", so to speak, would be an incredibly hard experiment because both final particles are neutral, and  the neutrino is extremely weakly interacting.
+
+\subsubsection{Stellar Nucleosynthesis}
+
+Bare proton-electron Capture is thought to occur in stars.  It is thought to drive the formation of primordial elements, and to occur in the forming of neutron stars [?].
+
+For example, Bachall and coworkers have studied the electron capture rate in stellar media, and have computed the rate of EC of 7Be in the Sun [13].
+
+It is believed that a Hydrogen undergoes EC is the core collapse supernovae and in neutron stars [14]; in fact, it is thought to create stellar instability. While we usually characterize a star by it's temperature, these are also very dense systems, with $\rho\sim 10^6\;g\;cm^{-3}$.  In contrast, the smallest star has density $\rho\sim 10^{2}-10^{3}\;g\;cm^{-3}$ [?]
+
+The reverse reaction is also suppressed because, inside the neutron star, it is impossible to create a new electron; the Fermi sea is 'full'.
+
+Generally speaking, at zero energy, proton EC is not possible because it violates energy-momentum conservation.
+At very high Temperatures, however, the proton electron collisions have sufficient energy to overcome the reaction barrier, and one needs a large supply of high energy electrons to suppress the reverse reaction).
+
+So electron capture can occur by bare protons, but, presumably, only under extreme confinement.
+
+\section{Confinement Induced Electron Capture}
+
+We pose the following Gedankenexperiment:  
+
+Suppose we confine an electron and a bare proton as a particle-in-a-box of volume $L^3$.  What box size L will 'induce' electron confinement ?
+
+We write this as
+
+$$E_{box}+p^{+}+e^{-}\rightarrow n^{0}+\nu_{e}$$
+
+where $E_{box}$ is the *confinement energy*, which is induced by the box constraints. 
+
+\subsubsection{neutron-post reaction}
+
+To prevent the reverse reaction, we assume that the free neutron subsequently combines with another proton, and gives us 2.2 GeV of energy in the process.  This post-process contributes to the power output
+
+\subsection{a Classical box and the Compton length}
+The first obvious question is, should we use a classical or a relativisitic box?   
+
+Most electron capture rate calculations use classical wavefunctions [10, 12].  
+
+We can safely use a classical box as long as $L_{min} \ge \dfrac{1}{2\pi}\lambda_{e}$, where $\lambda_{e}$ is Compton wavelength of an electron [16-19].  The Compton wavelength sets the scale, accounting for both quantum mechanics and special relativity. [15]
+
+$$\lambda_{e}=\dfrac{h}{m_{e}c}=\dfrac{e^{2}}{m_{e}c^{2}}$$
+
+$$\lambda_{e}\approx2.426\times 10^{-12}\;m$$
+
+For an electron, the minimum L is on the order of 0.004 Angstrom 
+$$L_{min}\sim0.004\;\mathring{A}$$ 
+
+Furthermore, in any high energy, relativisitic system, one has to worry about positron production, here $\beta^{+}$-decay. This generally occurs below the Compton length. We are seeking the maximum box size which can induce EC, and we assume that, at the max, positron emission will be very rare.
+
+Finally, we assume that the electron wavefunction does not change appreciably during the interaction, so that we may use a very simplified form for the cross section ($\sigma$) and rate ($\Gamma$).  Again, this is reasonable for boxes $L\ge\lambda_{e}$.
+
+So we use a classical box, with minimum size $L_{min}=0.004\;\mathring{A}$; we compute the maximum size below.
+
+\subsection{Theory}
+
+\subsubsection{Particle production under the Weak interaction}
+
+\begin{figure}
+   \includegraphics[scale=0.25]{img/feynman.png}
+   \caption{article production}
+  \label{fig:ppp}
+\end{figure}
+
+Electron capture is mediated by the Weak Interaction, through the particle production process, given by the 4-point Interaction (see Figure \ref{ppp})
+
+$$p^{+}+e^{-}\rightarrow\;n^{0}\;+\;\nu{_e}$$
+
+which requires 0.511 MeV more energy--which is *provided* by the box. We do not consider the $\beta^{+}$-decay process here either.
+
+\subsubsection{Hamiltonian}
+
+The Hamiltonian for the V-A theory is [?]
+
+$$\mathcal{H}(x)=-\dfrac{G_{F}}{\sqrt{2}}\left[J^{\mu}(x)L^{+}_{\mu}(x)+h.c.\right]$$
+
+where $J_{\mu}$ and $L_{\mu}$ are the Hadron and Lepton currents, resp, and are given by
+
+$$J_{\mu}=\bar{u}_{n}\gamma_{\mu}(1+\lambda\gamma_{5})u_{p}$$
+
+$$L_{\mu}=\bar{u}_{\mu}(1+\gamma_{5})u_{e}$$
+
+where $u_{n},u_{p},u_{e},u_{\nu}$ are Dirac Spinors.
+
+$G_{F}$ is the Universal Fermi Weak Coupling Constant, and $\lambda=-\dfrac{G_{A}}{G_{V}}$, which is determined by experiment (and subject to minor changes).  $G_{V}$ is the Axial-Vector Weak Coupling Constant, and $G_{A}$ is the vector weak coupling
+constant.  The most recent value is $G_{V}=?1.27590^{+0.00409}_{?0.00445}$, and $G_{A}=1$ "under the conserved vector current (CVC) hypothesis of the Standard Model" [22].
+ 
+\subsubsection{Transition Rates and Power Calculations}
+
+We want to compute the power generated by confined electron capture, as a funciton of the box size (L)
+We need the  rate of electon capture, $\Gamma_{EC}$.  And we need to assume the reverse reaciton is suppressed.  The rate is given by Fermi's Golden Rule (discussed in the Appendix)
+
+$$\Gamma_{EC}=\Gamma_{fi}=2\pi|\mathcal{M}_{fi}|^{2}\rho(E_{f})$$
+
+where the matrix element $\mathcal{M}_{fi}$and the density of states $\rho(E_{f})$ must be Lorentz Invariant (L.I.)
+
+The matrix elements are 
+$$\mathcal{M}_{fi}=\left<\Psi_{final}\big\vert\mathcal{H}\big\vert\Psi_{final}\right>$$
+
+
+\subsubsection{VA Matrix Elements}
+
+We use a slghtly different convention for the matrix elements, multiplying by $G_{V}$, giving
+
+The matrix elements $\mathcal{M}_{fi}$ are
+
+$$\mathcal{M}_{fi}=\dfrac{G_{F}}{\sqrt{2}}\bar{u}(p_{n},s_{n})(G_{V}-G_{A}\gamma^{5})\gamma^{\mu}u(p_{p},s_{p})\times\bar{u}(k,s_{k})\gamma_{u}(1-\gamma^{5})u(s_{e},p_{e})$$
+
+
+We use Dirac 4-Spinors
+
+$$\bar{u}(p_{n},s_{n}),u(p_{p},s_{p}),\bar{u}(k,s_{k}),u(s_{e},p_{e})$$
+where
+
+$$s_{n}, s_{p},s_{e},s_{k}$$ 
+
+are 2-component spin vectors for the neutron, proton, electron, and electron neutrino, resp. 
+
+The Dirac spinors assume the standard energy normalization $\dfrac{1}{\sqrt{2E}}$.
+
+The $\gamma$ are 4-component Gamma matrices, and  $(\cdots\gamma^{\mu}\cdots\gamma_{u}\cdots)$ is the Einstein summation convention.
+
+
+\subsubsection{Cross Section}
+
+The cross section for the process
+
+$$E_{box}+p^{+}+e^{-}\rightarrow n^{0}+\nu_{e}$$
+
+is given by 
+
+$$d\sigma_{ep}=\left(\dfrac{1}{2\pi}\right)^{2}\dfrac{\sum_{fi}\big\vert\mathcal{M}_{fi}\big\vert^{2}}{16\;\big\vert\mathbf{k}\cdot(E{_n}\mathbf{k}-k^{0}\mathbf{p}_{n})\big\vert}\dfrac{k^{3}p_{e}d\Omega_{k}}{\big\vert\mathbf{p}_{e}\cdot(E_{p}\mathbf{p}_{e}-E_{e}\mathbf{p}_{e})\big\vert}$$
+
+Notice that when applying the VA theory this way, we assume that the electron-proton interaction is a contact potential, operating at the surface of the nucleus, and that the underlying quantum process is incoherent.  
+
+\subsubsection{Particle-in-the-box Wavefunctions}
+
+
+We treat the electron, proton pair as classical particle-in-a-box.
+
+$$\psi_{ep}(\mathbf{x})=\left(\dfrac{2}{L}\right)^{\frac{3}{2}}cos\left(\dfrac{\pi x}{L}\right)cos\left(\dfrac{\pi y}{L}\right)cos\left(\dfrac{\pi z}{L}\right)$$
+
+expressions for momentum
+
+Because the VA theory assumes an incoherent process, the electron, proton wavefunction is usually factored as an electron wavefunction, with a point-particle in the center
+
+$$\psi_{ep}(\mathbf{x})=\psi_{p}(0)\psi_{e}(\mathbf{x})$$
+
+We only consider the  ground state $\psi_{ep}^{0}$ wavefunction.
+
+
+We note, in *ab initio* electronic structure calculations, it is now generally possible to treat the Hydrogen prton wavefunction explicitly, and to treat the electron-proton coupling at the level of Hartree Fock (i.e. variational mean field) [12] This has proved useful for describing isotope effects on electronic structure
+
+Here, we treat the confined electron, proton pair in the c.m. frame so that the 3-momentum of the electron and proton related
+$$\mathbf{p}_{e}=\mathbf{p}_{pe}$$
+$$\mathbf{p}_{p}=-\mathbf{p}_{pe}$$
+
+\subsubsection{comment on our approach}
+
+We note that Blatt and Weisskopf [20] describe the fermi VA theory in the non-relativisitic limit.  Here, they use classical plane wave solutions $(e^{i\mathbf{p}\mathbf{x}})$, with just box normalization $(\frac{1}{L^{3}})$.  In contrast, we use the full classical particle-in-the-box wavefunctions, and analyze the problem just above the Compton scale using the low order VA theory.
+
+\subsubsection{Relativistic Kinematics and Energetics}
+For consistency with the particle production process,
+
+$$ p+e\rightarrow n+\nu_{e} $$
+
+we treat all kinematics and energetics relativisitcally, such that the 4-vectors satisify
+
+$$\overrightarrow{P}_{n}+\overrightarrow{P}_{e}=\overrightarrow{P}_{n}+\overrightarrow{P}_{\nu_{e}} $$
+
+$$E^{2}=M^{2}+p^{2}$$
+
+This gives
+
+$$E^{2}_{e}=m^{2}_{e}+3\left(\dfrac{\pi}{L}\right)^{2}$$ 
+
+$$E^{2}_{p}=M^{2}_{p}+3\left(\dfrac{\pi}{L}\right)^{2}$$
+
+The threshold Kinetic energy in the center of momentum (c.m.) frame is given as
+
+$$EKe_{min}:\;\;K_{e}=E_{e}-m_{e}=\dfrac{(M_{n}-m_{e}+m_{\nu})^{2}-M^{2}_{p}}{2(M_{n}+m_{\nu})}$$
+ 
+Giving the minimum momentum as
+
+$$pmin:\;\;\mathbf{p}_{min}=\sqrt{(K_{e}+m_{e})^{2}-m_{e}^{2}} $$
+
+Of course, the proton rest frame is approximately the electron rest frame, but it should be mentioned that the in the electron rest frame, the threshold kinetic energy is 2000X greater.  Therefore, it is assumed that the energy transfer to induce electron capture is in the c.m. frame of the (e,p) pair.
+
+The total energy in the c.m. frame is
+
+$$E_{tot}=E_{n}-E_{e}$$
+
+For the final state, the neutrino kinetic energy is
+
+$$K_{\nu}=k^{0}-m_{\nu}=\dfrac{(E_{p}+E_{e}-m_{\nu})^{2}-M^{2}_{n}}{2(E_{p}+E_{e})}$$
+
+and the neutron kinetic energy is
+
+$$K_{n}=E_{n}-M_{n}=\dfrac{(E_{p}+E_{e}-M_{n})^{2}-m^{2}_{\nu}}{2(E_{p}+E_{e})}$$
 
 \end{document}  
 
