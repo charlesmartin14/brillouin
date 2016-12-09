@@ -289,7 +289,7 @@ $$\psi_{ep}(\mathbf{x})=\psi_{p}(0)\psi_{e}(\mathbf{x})$$
 We only consider the  ground state $\psi_{ep}^{0}$ wavefunction.
 
 
-We note, in *ab initio* electronic structure calculations, it is now generally possible to treat the Hydrogen prton wavefunction explicitly, and to treat the electron-proton coupling at the level of Hartree Fock (i.e. variational mean field) [12] This has proved useful for describing isotope effects on electronic structure
+We note, in *ab initio* electronic structure calculations, it is now generally possible to treat the Hydrogen proton wavefunction explicitly, and to treat the electron-proton coupling at the level of Hartree Fock (i.e. variational mean field) [12] This has proved useful for describing isotope effects on electronic structure
 
 Here, we treat the confined electron, proton pair in the c.m. frame so that the 3-momentum of the electron and proton related
 $$\mathbf{p}_{e}=\mathbf{p}_{pe}$$
@@ -299,18 +299,29 @@ $$\mathbf{p}_{p}=-\mathbf{p}_{pe}$$
 
 We note that Blatt and Weisskopf [20] describe the fermi VA theory in the non-relativisitic limit.  Here, they use classical plane wave solutions $(e^{i\mathbf{p}\mathbf{x}})$, with just box normalization $(\frac{1}{L^{3}})$.  In contrast, we use the full classical particle-in-the-box wavefunctions, and analyze the problem just above the Compton scale using the low order VA theory.
 
+\subsubsection{Rate of Confined Electron Capture}
+
+Given the computed Dirac 4-vectors, we can compute the rate of electron capture using the VA-theory, for a given set of vectors
+
+For the process
+
+$$E_{box}+p^{+}+e^{-}\rightarrow n^{0}+\nu_{e}$$
+
+The rate $\Gamma_{EC}$ of electron capture is determined by multiplying the cross section by the incident velocity $\mathbf{v}_{in}$ and the the electronic wavefunction at the origin 
+
+$$\Gamma_{EC}=\big\vert\Psi(0)\big\vert^{2}\mathbf{v}_{in}\sigma_{EC}$$
+
+This gives :
+
+$$d\lambda_{ep}=\left(\dfrac{1}{2\pi}\right)^{2}\dfrac{\sum_{fi}\big\vert\mathcal{M}_{fi}\left[p_{ep}\rightarrow i\nabla)\right]\psi_{ep}(\mathbf{x})\big\vert_{\mathbf{x}=0}\big\vert^{2}}{16E_{p}E_{e}\;\big\vert\mathbf{k}\cdot(E{_n}\mathbf{k}-k^{0}\mathbf{p}_{n})\big\vert}k^{3}d\Omega_{k}$$
+
+
 \subsubsection{Relativistic Kinematics and Energetics}
 For consistency with the particle production process,
 
 $$ p+e\rightarrow n+\nu_{e} $$
 
-we treat all kinematics and energetics relativisitcally, such that the 4-vectors satisify
-
-$$\overrightarrow{P}_{n}+\overrightarrow{P}_{e}=\overrightarrow{P}_{n}+\overrightarrow{P}_{\nu_{e}} $$
-
-$$E^{2}=M^{2}+p^{2}$$
-
-This gives
+we treat all kinematics and energetics relativistically.  We have
 
 $$E^{2}_{e}=m^{2}_{e}+3\left(\dfrac{\pi}{L}\right)^{2}$$ 
 
