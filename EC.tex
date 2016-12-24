@@ -197,7 +197,7 @@ We write the differential cross section in the C.M. frame as
 
 $$d\sigma_{EC}=\left(\dfrac{1}{2\pi}\right)^{2}\dfrac{\sum_{fi}\big\vert\mathcal{M}_{fi}\big\vert^{2}}{16\;\big\vert\mathbf{k}\cdot(E{_n}\mathbf{k}-k^{0}\mathbf{p}_{n})\big\vert}\dfrac{k^{3}p_{e}d\Omega_{k}}{\big\vert\mathbf{p}_{e}\cdot(E_{p}\mathbf{p}_{e}-E_{e}\mathbf{p}_{e})\big\vert}$$
 
-where $\mathcal{M}_{fi}$ is a matrix element of the weak interaction Hamiltonian, and $k$ represents the neutrino.
+where $\mathcal{M}_{fi}$ is a matrix element of the weak interaction Hamiltonian,  $k$ represents the neutrino, and we use natural units $(\hbar=1,c=1)$.
 
 We represent the $(e^{-},p^{+})$ pair using a 3D box wavefunction, and obtain the Energies and 3-momenta from the relativistic kinematics.  We then average over all possible incident velocities (or momenta $\mathbf{p}_{ep}$) for the 3D box, and integrate over outbound neutrino solid angle $d\Omega_{k}$ using numerical quadrature.
 
@@ -207,9 +207,85 @@ This gives the rate as
 
 $$d\Gamma_{EC}=\left(\dfrac{1}{2\pi}\right)^{2}\dfrac{\sum_{fi}\big\vert\mathcal{M}_{fi}\left[p_{ep}\rightarrow i\nabla)\right]\psi_{ep}(\mathbf{x})\big\vert_{\mathbf{x}=0}\big\vert^{2}}{16E_{p}E_{e}\;\big\vert\mathbf{k}\cdot(E{_n}\mathbf{k}-k^{0}\mathbf{p}_{n})\big\vert}k^{3}d\Omega_{k}$$
 
-where 
+where we explicitly specify the electronic wavefunction.
 
-\subsubsection{Hamiltonian}
+\subsubsection{Power}
+
+
+\subsubsection{Particle-in-the-box Wavefunctions}
+
+
+We treat the electron, proton pair as classical particle-in-a-box.
+
+$$\psi_{ep}(\mathbf{x})=\left(\dfrac{2}{L}\right)^{\frac{3}{2}}cos\left(\dfrac{\pi x}{L}\right)cos\left(\dfrac{\pi y}{L}\right)cos\left(\dfrac{\pi z}{L}\right)$$
+
+expressions for momentum
+
+Because the VA theory assumes an incoherent process, the electron, proton wavefunction is usually factored as an electron wavefunction, with a point-particle in the center
+
+$$\psi_{ep}(\mathbf{x})=\psi_{p}(0)\psi_{e}(\mathbf{x})$$
+
+We only consider the  ground state $\psi_{ep}^{0}$ wavefunction.
+
+
+We note, in \emph{ab initio} electronic structure calculations, it is now generally possible to treat the Hydrogen proton wavefunction explicitly, and to treat the electron-proton coupling at the level of Hartree Fock [my book, 12].  This has proved useful for describing isotope effects on electronic structure [?]
+
+Here, we treat the confined electron, proton pair in the C.M. frame so that the 3-momentum of the electron and proton related
+$$\mathbf{p}_{e}=\mathbf{p}_{pe}$$
+$$\mathbf{p}_{p}=-\mathbf{p}_{pe}$$
+
+\subsubsection{comment on our approach}
+
+We note that Blatt and Weisskopf [20] describe the fermi VA theory in the non-relativisitic limit.  Here, they use classical plane wave solutions $(e^{i\mathbf{p}\mathbf{x}})$, with just box normalization $(\frac{1}{L^{3}})$.  In contrast, we use the full classical particle-in-the-box wavefunctions, and analyze the problem just above the Compton scale using the low order VA theory.
+
+
+\subsubsection{Relativistic Kinematics and Energetics}
+For consistency with the particle production process, we treat all kinematics and energetics relativistically.  Given energy-momentum conservation
+
+$$E^{2}=m^{2}+\mathbf{p}^{2}$$
+
+and the particle-in-the-box energy ground state energy 
+
+$$E_{111}=\dfrac{3\pi^{2}}{2mL^{2}}\;\;,$$
+
+we use $E=\dfrac{\mathbf{p}^{2}}{2m}$ to write
+
+$$E^{2}_{e}=m^{2}_{e}+3\left(\dfrac{\pi}{L}\right)^{2}\;\;,$$ and
+
+$$E^{2}_{p}=M^{2}_{p}+3\left(\dfrac{\pi}{L}\right)^{2}\;\;.$$
+
+The threshold Kinetic energy in the center of momentum (C.M.) frame is given as
+
+$$EKe_{min}:\;\;K_{e}=E_{e}-m_{e}=\dfrac{(M_{n}-m_{e}+m_{\nu})^{2}-M^{2}_{p}}{2(M_{n}+m_{\nu})}$$
+
+which is approximately 781.6 KeV (or 783.1 KeV in the proton rest frame).
+
+Of course, the proton rest frame is approximately the electron rest frame, but it should be mentioned that the in the electron rest frame, the threshold kinetic energy is 2000X greater.  Therefore, it is assumed that the energy transfer to induce electron capture is in the C.M. frame of the (e,p) pair.
+ 
+The minimum momentum is 
+
+$$pmin:\;\;\mathbf{p}_{min}=\sqrt{(K_{e}+m_{e})^{2}-m_{e}^{2}}\;\;.$$
+
+The total energy in the C.M. frame is 
+
+[check this]
+
+$$E_{tot}=E_{n}-E_{e}$$
+
+For the final state, the neutrino kinetic energy is
+
+$$K_{\nu}=k^{0}-m_{\nu}=\dfrac{(E_{p}+E_{e}-m_{\nu})^{2}-M^{2}_{n}}{2(E_{p}+E_{e})}$$
+
+and the neutron kinetic energy is
+
+$$K_{n}=E_{n}-M_{n}=\dfrac{(E_{p}+E_{e}-M_{n})^{2}-m^{2}_{\nu}}{2(E_{p}+E_{e})}$$
+
+At this point, we can compute the relativistic energies for all particles, simply as a function of box length (L), for a confined $(e^{-},p^{+})$ pair.  Of interest is the shape of the curve, and when the power output becomes favorable.  To compute the exact rate and estimate the power, we need to evaluate the matrix element(s) of the Weak Interaction Hamiltonian.  
+
+[say something about estimating the size of the interaction here, which should be enough for a baseline calculation]
+
+
+\subsection{Weak Interaction Hamiltonian and Matrix Elements}
 
 The Hamiltonian for the V-A theory is [?]
 
@@ -251,85 +327,13 @@ The $\gamma$ are 4-component Gamma matrices, and  $(\cdots\gamma^{\mu}\cdots\gam
 
 Notice that when applying the VA theory this way, we assume that the electron-proton interaction is a contact potential, operating at the surface of the nucleus, and that the underlying quantum process is incoherent.  
 
-\subsubsection{Particle-in-the-box Wavefunctions}
-
-
-We treat the electron, proton pair as classical particle-in-a-box.
-
-$$\psi_{ep}(\mathbf{x})=\left(\dfrac{2}{L}\right)^{\frac{3}{2}}cos\left(\dfrac{\pi x}{L}\right)cos\left(\dfrac{\pi y}{L}\right)cos\left(\dfrac{\pi z}{L}\right)$$
-
-expressions for momentum
-
-Because the VA theory assumes an incoherent process, the electron, proton wavefunction is usually factored as an electron wavefunction, with a point-particle in the center
-
-$$\psi_{ep}(\mathbf{x})=\psi_{p}(0)\psi_{e}(\mathbf{x})$$
-
-We only consider the  ground state $\psi_{ep}^{0}$ wavefunction.
-
-
-We note, in \emph{ab initio} electronic structure calculations, it is now generally possible to treat the Hydrogen proton wavefunction explicitly, and to treat the electron-proton coupling at the level of Hartree Fock [my book, 12].  This has proved useful for describing isotope effects on electronic structure [?]
-
-Here, we treat the confined electron, proton pair in the c.m. frame so that the 3-momentum of the electron and proton related
-$$\mathbf{p}_{e}=\mathbf{p}_{pe}$$
-$$\mathbf{p}_{p}=-\mathbf{p}_{pe}$$
-
-\subsubsection{comment on our approach}
-
-We note that Blatt and Weisskopf [20] describe the fermi VA theory in the non-relativisitic limit.  Here, they use classical plane wave solutions $(e^{i\mathbf{p}\mathbf{x}})$, with just box normalization $(\frac{1}{L^{3}})$.  In contrast, we use the full classical particle-in-the-box wavefunctions, and analyze the problem just above the Compton scale using the low order VA theory.
-
-\subsubsection{Rate of Confined Electron Capture}
-
-Given the computed Dirac 4-vectors, we can compute the rate of electron capture using the VA-theory, for a given set of vectors
-
-
-
-
-
-
-
-\subsubsection{Relativistic Kinematics and Energetics}
-For consistency with the particle production process, we treat all kinematics and energetics relativistically.  
-
-[ explain how we got here]
-
-We have
-
-$$E^{2}_{e}=m^{2}_{e}+3\left(\dfrac{\pi}{L}\right)^{2}$$ 
-
-$$E^{2}_{p}=M^{2}_{p}+3\left(\dfrac{\pi}{L}\right)^{2}$$
-
-The threshold Kinetic energy in the center of momentum (c.m.) frame is given as
-
-$$EKe_{min}:\;\;K_{e}=E_{e}-m_{e}=\dfrac{(M_{n}-m_{e}+m_{\nu})^{2}-M^{2}_{p}}{2(M_{n}+m_{\nu})}$$
- 
-Giving the minimum momentum as
-
-$$pmin:\;\;\mathbf{p}_{min}=\sqrt{(K_{e}+m_{e})^{2}-m_{e}^{2}} $$
-
-Of course, the proton rest frame is approximately the electron rest frame, but it should be mentioned that the in the electron rest frame, the threshold kinetic energy is 2000X greater.  Therefore, it is assumed that the energy transfer to induce electron capture is in the c.m. frame of the (e,p) pair.
-
-The total energy in the c.m. frame is
-
-$$E_{tot}=E_{n}-E_{e}$$
-
-For the final state, the neutrino kinetic energy is
-
-$$K_{\nu}=k^{0}-m_{\nu}=\dfrac{(E_{p}+E_{e}-m_{\nu})^{2}-M^{2}_{n}}{2(E_{p}+E_{e})}$$
-
-and the neutron kinetic energy is
-
-$$K_{n}=E_{n}-M_{n}=\dfrac{(E_{p}+E_{e}-M_{n})^{2}-m^{2}_{\nu}}{2(E_{p}+E_{e})}$$
-
-\end{document}  
-
-
 
 
 [**] We refer to photons emitted directly from the nucleus as gamma rays, whereas those emitted from atomic electrons are called x-rays.    The naming convention reflects the different origins.
 
 
 
-
+\end{document}  
 
 
 
