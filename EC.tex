@@ -307,7 +307,7 @@ The coupling constants are determined "under the conserved vector current (CVC) 
 \begin{figure}
    \includegraphics[scale=0.5]{img/standard-model.png}
    \caption{Quark picture of electron capture}
-  \label{fig:ec1}
+  \label{fig:SM}
 \end{figure}
 
 [Estimate matrix element value from this..]
@@ -370,7 +370,28 @@ Notice that when applying the VA theory this way, we assume that the electron-pr
 
 \subsubsection{Sum over all spin combinations}
 
+\begin{figure}
+   \includegraphics[scale=0.5]{img/16-allowed.png}
+   \caption{Spin }
+  \label{fig:SC}
+\end{figure}
+
+We sum over the 16 allowed  allowed transitions in the V-A theory, as depicted in Figure
+
+[similar to diagram in "Beta Decay for Pedestrians"]
+
 \subsubsection{Numerical Quadrature over neutrino solid angle}
+
+By Energy conservation, we only need to integrate over the outbound neutrino momenta (solid angle).
+We use an 8-point numerical quadrature.
+
+\begin{figure}
+   \includegraphics[scale=0.1]{img/solid-angle.png}
+   \caption{Solid Angle }
+  \label{fig:NQ}
+\end{figure}
+
+[this diagram needs to be replaced, with something that looks more like a scattering diagram]
 
 \subsubsection{Pseudocode}
 
