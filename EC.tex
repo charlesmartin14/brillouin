@@ -373,28 +373,31 @@ Notice that when applying the VA theory this way, we assume that the electron-pr
 
 \subsection{Numerical Calculations}
 
- The full calculations sums of over all 6 possible $(\pm\mathbf{p}_{ep}(1),\pm\mathbf{p}_{ep}(2),\pm\mathbf{p}_{ep}(3) )$ combinations, and the 16 allowed spin transitions (see figure below), and averaging over the outbound neutrino momenta ($k^{3}d\Omega_k$) using an 8-point gaussian quadrature. 
+ The full calculations sums of over all 6 possible incident momenta combinations
+  $(\pm\mathbf{p}_{ep}(1),\pm\mathbf{p}_{ep}(2),\pm\mathbf{p}_{ep}(3) )$,
+and the 16 allowed spin transitions (see figure below), averaging over the outbound neutrino momenta solid angle ($k^{3}d\Omega_k$) using an 8-point gaussian quadrature. 
  
 \begin{algorithm}
 \caption{Rate and Power Calculations}\label{code}
 \begin{algorithmic}[1]
-\For{$p_{ep}\in [p_{max}, p_{min}]$}\Comment{incident momenta}
-\State $Tran(p_{ep})=0$\Comment{Transfer}
-\State $P_{n}(p_{ep})=0$\Comment{Neutron Power}
+\For{$\mathsf{p}_{ep}\in [\mathsf{p}_{max}, \mathsf{p}_{min}]$}\Comment{$\mathsf{p}_{ep}=\|\mathbf{p}_{ep}(L)\|$}
+\State $Tran(\mathsf{p}_{ep})=0$\Comment{Transfer}
+\State $Power_{n}(\mathsf{p}_{ep})=0$\Comment{Neutron Power}
 \For{$w_{x},w_{\phi}\in \mathbb{Q}[1,8]$}\Comment{quadrature weights}
-\For{$s_{p},s_{e},s_{n},s_{\nu}\in [up, down]$}\Comment{spinor indices}
-\For{$s_{x},s_{y},s_{z}\in [-1,1]$}\Comment{$\mathbf{p}_{ep}=p_{ep}[s_{x},s_{y},s_{z}]$}
-\State $P_{n}, P_{p},P_{e}, P_{\nu}\gets pekin(w_{x},w_{\phi},\mathbf{p}_{ep})$\Comment{relativistic 4-vectors}
-\State $u(p,s_{p}), u(e,s_{e}), \bar{u}(n,s_{n}), \bar{u}(\nu,s_{\nu})$\Comment{get spinors by index}
-\For{$u\in[1,4]$}\Comment{Hamiltonian Currents}
-\State $\mathbf{J}^{u}_{had}=\bar{u}(p_{n},s_{n})\cdot(G_{V}-G_{A}\gamma^{5})\cdot\gamma^{\mu}\cdot u(p_{p},s_{p})$\Comment{Hadronic}
-\State $\mathbf{L}^{u}_{lep}=\bar{u}(k,s_{k})\cdot\gamma_{u}\cdot(1-\gamma^{5})\cdot u(s_{e},p_{e})$\Comment{Leptonic}
+\For{$s_{p},s_{e},s_{n},s_{\nu}\in [0, 1]$}\Comment{$s_{up},s_{down}=0,1$}
+\For{$s_{x},s_{y},s_{z}\in [-1,1]$}\Comment{$\mathbf{p}_{ep}=\mathsf{p}_{ep}[s_{x},s_{y},s_{z}]$}
+\State $p_{p},p_{e}, p_{n}, p_{\nu}\gets pekin(w_{x},w_{\phi},\mathbf{p}_{ep})$\Comment{4 vectors $\gets$ rel. kinematics}
+\State $u(p_{p},s_{p}), u(p_{e},s_{e}), \bar{u}(p_{n},s_{n}), \bar{u}(p_{\nu},s_{\nu})$\Comment{spinors by p, s-index}
+\For{$u\in[1,4]$}\Comment{4-vector indices}
+\State $\mathbf{J}^{u}_{had}=\bar{u}(p_{n},s_{n})\cdot(G_{V}-G_{A}\gamma^{5})\cdot\gamma^{\mu}\cdot u(p_{p},s_{p})$\Comment{Hadronic current}
+\State $\mathbf{L}^{u}_{lep}=\bar{u}(p_{\nu},s_{\nu})\cdot\gamma_{u}\cdot(1-\gamma^{5})\cdot u(p_{e},s_{e})$\Comment{Leptonic current}
 \EndFor
 \State $\mathbb{C}=\langle\mathbf{L}^{\dagger}_{lep},\mathbf{J}_{had}\rangle$\Comment{Current Amplitude}
 \EndFor
 \EndFor
-\State $Tran(p_{ep})+=w_{x}w_{\phi}Re[\mathbb{C}^{\dagger}\mathbb{C}]\mathcal{M}^{2}(p_{ep},P_{n}, P_{p},P_{e}, P_{\nu})$\Comment{Integrated Rate}
-\State $P_{n}(p_{ep})=Tran(p_{ep}*(2.2+(E_{n}-M_{n}))$\Comment{Neutron Power estimate}
+\State $\mathcal{F}^{2}(\mathsf{p}_{ep},p_{p},p_{e}, p_{n}, p_{\nu})$\Comment{Matrix Element Factor}
+\State $Tran(\mathsf{p}_{ep})+=w_{x}w_{\phi}Re[\mathbb{C}^{\dagger}\mathbb{C}]\mathcal{F}^{2}$\Comment{Integrated Rate}
+\State $Power_{n}(\mathsf{p}_{ep})=Tran(\mathsf{p}_{ep})*(2.2+(E_{n}-M_{n}))$\Comment{Neutron Power estimate}
 \EndFor
 \EndFor
 \end{algorithmic}
