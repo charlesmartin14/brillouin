@@ -243,7 +243,7 @@ which we argue is a good measure of the potential reactive power output of the c
 
 \subsubsection{Particle-in-the-box Wavefunctions}
 
-While most E.C. calculations assume a specific, bound, atomic electronic wavefunction(s), we perform a much simpler calculation.  We treat the electron, proton pair as classical particle-in-a-box. 
+While most E.C. calculations assume a specific, bound, atomic electronic wavefunction(s), we perform a much simpler calculation.  We treat the electron-proton pair as classical particle-in-a-box. 
 
 $$\psi_{ep}(\mathbf{x})=\left(\dfrac{2}{L}\right)^{\frac{3}{2}}cos\left(\dfrac{\pi x}{L}\right)cos\left(\dfrac{\pi y}{L}\right)cos\left(\dfrac{\pi z}{L}\right)$$
 
@@ -255,7 +255,7 @@ $$\psi_{ep}(\mathbf{x})=\psi_{p}(0)\psi_{e}(\mathbf{x})$$
 
 We only consider the ground state $\psi_{ep}^{0}$ wavefunction.
 
-We note, in \emph{ab initio} electronic structure calculations, it is now generally possible to treat the Hydrogen proton wavefunction explicitly, and to treat the electron-proton coupling at the level of Hartree Fock \cite{martin}.  This has proved useful for describing isotope effects on electronic structure [?]
+We note, in \emph{ab initio} electronic structure calculations, it is now generally possible to treat the Hydrogen proton wavefunction explicitly, and to treat the electron-proton coupling at the level of Hartree Fock \cite{martin}.  This has proved useful, for example, for describing isotope effects on electronic structure.
 
 Here, we treat the confined electron, proton pair in the C.M. frame so that the 3-momentum of the electron and proton related
 $$\mathbf{p}_{e}=\mathbf{p}_{pe}$$
@@ -263,17 +263,16 @@ $$\mathbf{p}_{p}=-\mathbf{p}_{pe}$$
 
 \subsubsection{comment on our approach}
 
-We note that Blatt and Weisskopf [20] describe the fermi VA theory in the non-relativisitic limit.  Here, they use classical plane wave solutions $(e^{i\mathbf{p}\mathbf{x}})$, with just box normalization $(\frac{1}{L^{3}})$.  In contrast, we use the full classical particle-in-the-box wavefunctions, and analyze the problem just above the Compton scale using the low order VA theory.
-
+Blatt and Weisskopf  describe the Fermi VA theory in the non-relativisitic limit \cite{Weisskopf}.  Here, they use classical plane wave solutions $(e^{i\mathbf{p}\mathbf{x}})$, with just box normalization $(\frac{1}{L^{3}})$.  In contrast, we use the full classical particle-in-the-box wavefunctions, and analyze the problem just above the Compton scale using the low order VA theory.
 
 \subsubsection{Relativistic Kinematics and Energetics}
 For consistency with the particle production process, we treat all kinematics and energetics relativistically.  Given energy-momentum conservation
 
 $$E^{2}=m^{2}+\mathbf{p}^{2}$$
 
-and the particle-in-the-box energy ground state energy 
+and the 3D particle-in-the-box energy ground state energy 
 
-$$E_{111}=\dfrac{3\pi^{2}}{2mL^{2}}\;\;,$$
+$$E_{gs}=\dfrac{3\pi^{2}}{2mL^{2}}\;\;,$$
 
 we use $E=\dfrac{\mathbf{p}^{2}}{2m}$ to write
 
@@ -291,7 +290,7 @@ Of course, the proton rest frame is approximately the electron rest frame, but i
  
 The minimum momentum is 
 
-$$pmin:\;\;\mathbf{p}_{min}=\sqrt{(K_{e}+m_{e})^{2}-m_{e}^{2}}\;\;.$$
+$$\mathbf{p}_{min}=\sqrt{(K_{e}+m_{e})^{2}-m_{e}^{2}}\;\;.$$
 
 For the final state, the neutrino $(\nu)$ kinetic energy is
 
@@ -301,7 +300,8 @@ and the neutron $(n)$ kinetic energy is
 
 $$K_{n}=E_{n}-M_{n}=\dfrac{(E_{p}+E_{e}-M_{n})^{2}-m^{2}_{\nu}}{2(E_{p}+E_{e})}$$
 
-At this point, we can compute the relativistic energies for all particles, simply as a function of box length (L), for a confined $(e^{-},p^{+})$ pair.  Of interest is the shape of the curve, and when the power output becomes favorable.  To compute the exact rate and estimate the power, we need to evaluate the matrix element(s) of the Weak Interaction Hamiltonian.  
+At this point, we can compute the relativistic energies for all particles, simply as a function of box length (L), for a confined $(e^{-},p^{+})$ pair.  Of interest is the shape of the curve, and when the excess power output becomes favorable.  To compute the exact rate and estimate the power, we need to evaluate the matrix element(s) of the Weak Interaction Hamiltonian.  
+While most practitioners simply estimate this, for our purpose, we can simply compute them exactly.
 
 [maybe show the curve, and state the maximum box size. or wait until later ?]  
 
