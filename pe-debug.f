@@ -35,16 +35,113 @@
       PRINT '(A)','EKemin,pmin,E2check'
       write(*,*) Ekemin,pmin,E2check
 
-      iep=1
+
+      call copyg(cgamma5,ca)
+      call chsgng(ca)
+
+      cscal = 1.d0
+      call saddg(cscal,ca,cleft)
+      call copyg(cgamma5,ca)
+      cscal = GA
+      call smultg(cscal,ca,ca)
+      call chsgng(ca)
+ 
+      cscal = GV
+      call saddg(cscal,ca,cGVGA)
+ 
+      do is1 =1,2
+         cs1(is1) = 0.d0
+      enddo
+      do is2 =1,2
+        cs2(is2) = 0.d0
+      enddo
+      do ise =1,2
+         cse(ise) = 0.d0
+      enddo
+      do isk =1,2
+       csk(isk) = 0.d0
+      enddo
+
+      tran2 = 0.d0
+      densep = 7.d0 ! g/cc NiH density ??
+      dNiMW = 28.d0 ! g/mol NiH MW ??
+      dndens = dN0*densep/dNiMW
+
+      open(9,file='plot.dat',status='UNKNOWN')
+
+      do iep =1,1
       pep =(pmin + dexp(dlog(1.d-11)+ dfloat(iep)*
      1        (dlog(100.d0)-dlog(1.d-11))/500.d0))/ dsqrt(3.d0)
       
       rlconf = 1.d-5*hbarc*pi/pep
 
-      pep1 = pep*((-1.d0))
-      pep2 = pep*((-1.d0))
-      pep3 = pep*((-1.d0))
+      test = 0.d0
+      tran2 = 0.d0
+
+      do ix =1,1
+         do ip =1,1
+            
+      do is1 =1,2
+         cs1(is1) = 1.d0
+      do is2 =1,2
+         cs2(is2) = 1.d0
+      do ise =1,2
+         cse(ise) = 1.d0
+      do isk =1,2
+         csk(isk) = 1.d0
+
+      camp2 = 0.0
+        
+      do isgn1 = 1,2
+      do isgn2 = 1,2
+      do isgn3 = 1,2
+
+
+      pep1 = pep*((-1.d0)**isgn1)
+      pep2 = pep*((-1.d0)**isgn2)
+      pep3 = pep*((-1.d0)**isgn3)
       call pekin(xg(ix),pg(ip),pep1,pep2,pep3,pe,p1,p2,pk)
+      call spinubar(p1,dMn,cs1,cu1bar)
+      call spinu(p2,dMp,cs2,cu2)
+      call spinu(pe,dme,cse,cue)
+      call spinubar(pk,dmnu,csk,cukbar)
+    
+      call vcopyg(0,cgamma,cb)
+      call multg(cGVGA,cb,cb)
+      call ubaru(cu1bar,cb,cu2,chad0)
+      call vcopyg(0,cgamma,cb)
+      call multg(cb,clef t,cb)
+      call ubaru(cukbar,cb,cue,clep0)
+    
+    
+      call vcopyg(1,cgamma,cb)
+      call multg(cGVGA,cb,cb)
+      call ubaru(cu1bar,cb,cu2,chad1)
+      call vcopyg(1,cgamma,cb)
+      call multg(cb,clef t,cb)
+      call ubaru(cukbar,cb,cue,clep1)
+      call vcopyg(2,cgamma,cb)
+
+      call multg(cGVGA,cb,cb)
+      call ubaru(cu1bar,cb,cu2,chad2)
+      call vcopyg(2,cgamma,cb)
+      call multg(cb,clef t,cb)
+      call ubaru(cukbar,cb,cue,clep2)
+    
+      call vcopyg(3,cgamma,cb)
+      call multg(cGVGA,cb,cb)
+      call ubaru(cu1bar,cb,cu2,chad3)
+      call vcopyg(3,cgamma,cb)
+      call multg(cb,clef t,cb)
+      call ubaru(cukbar,cb,cue,clep3)
+
+       camp2 = camp2 +
+     1   (chad0* clep0 - chad1* clep1 - chad2* clep2 - chad3* clep3)
+    
+      enddo
+      enddo
+      enddo
+
 
       fact =rc*((pep/(2.d0*pi))**3)*(GF**2)*(dsqrt(pk(0)**2-dmnu**2))**3
      1     /(512.d0 *(pi **2)* p2(0)* pe(0)* hbarc * 1.d-15*
@@ -55,16 +152,37 @@
       EKn = p1(0) - dMn
       EKe = pe(0) - dme
 
-      write(6,*)iep,pmin,p1(0),p2(0),pe(0),pk(0)
 
+      tran2 = tran2 + wxg(ix)*wpg(ip)*
+     1    dreal(camp2* dconjg(camp2)) * fact *dndens
+
+
+      campR = dreal(camp2* dconjg(camp2))
+c     write(*,*)"FCT", is1, is2, ise, isk, fact, camp2, campR, tran2
+      write(*,*)"FCT", is1, is2, ise, isk, campR
+
+      csk(isk) = 0.d0
+      enddo
+      cse(ise) = 0.d0
+      enddo
+      cs2(is2) = 0.d0
+      enddo
+      cs1(is1) = 0.d0
+      enddo
+
+      
+      enddo
+      enddo
     
       EKp = p2(0) - dMp
       EKn = p1(0) - dMn
       EKe = pe(0) - dme
       EKnu = pk(0) - dmnu
-      write(*,*) rlconf,tran2,EKe,EKn
+      write(*,*) "iep,wgx,wpx,rlconf,tran2"
+      write(*,*) iep,wxg(ix),wpg(ip),rlconf,tran2
 
-      write(9,*) rlconf,
+
+      write(9,*) rlconf,tran2,
      1 tran2 *((pe(0) - dme)+(p2(0) - dMp)) * e * 1.d-7,
      1 tran2 *(2.2d0+(p1(0) - dMn)) * e * 1.d-7,EKe,EKn,EKnu,Ekp
       enddo
