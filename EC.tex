@@ -25,7 +25,7 @@
 \maketitle
 \section{Abstract}
 
-We describe a Gedandkenexperiment in which a bare proton can capture an electron due solely to confinement. We first briefly review the aspects around bare electron proton capture.  We then provide a numerical solution of the Fermi VA-Theory for electron capture for an electron-proton pair confined in a classical box of size L. Interestingly, we find that the capture is most likely for L=0.004-0.009 Angstroms, well beyond the radius of the proton.  We also examine the implications for theoretical minimal power output for such a process.
+We describe a Gedandkenexperiment in which a bare proton can capture an electron due solely to confinement. We first briefly review the aspects around bare electron proton capture.  We then provide a numerical solution of the Fermi VA-Theory for electron capture for an electron-proton pair confined in a classical box of size L. Interestingly, we find that the capture is most likely for L=0.004-0.009 Angstroms, well beyond the radius of the proton and the Compton wavelength of the electron.  We also examine the implications for theoretical minimal power output for such a process.
 
 \section{Background}
 
@@ -40,9 +40,9 @@ $$p^{+}+\;e^{-}\rightarrow\;n^{0}\;+\;\nu^{e}$$
 
 This may be called orbital electron capture, K-electron capture, or just electron capture (E.C.) 
 
-Electron capture usually occurs in unstable radioisotopes which lack the (nuclear binding) energy to decay by the more familiar Beta decay (positron emission).  In particular, heavy elements may decay by E.C. and/or $\beta^{+}$ to a lower 'magic number' of stable nuclei, and by $\beta$ decay to achieve a higher magic number.  Very light elements, such as $^{7}Be$,  may also decay by E.C.
+Electron capture usually occurs in unstable radioisotopes which lack the (nuclear binding) energy to decay by the more familiar Beta decay processes ($\beta^{-}, \beta^{+}$).  In particular, heavy elements may decay by E.C. and/or $\beta^{+}$ (positron emission) to a lower 'magic number' of stable nuclei, and by $\beta^{-}$ decay to achieve a higher magic number.  Very light elements, such as $^{7}Be$, may also decay by primarily by E.C., although bare proton electron capture is not readily observed.
   
-We observe electron capture by observing the resulting transmuted nuclei and/or the radiative relaxation processes.  The captured electron is bound to the atom, and it is usually a K-shell electron, but may be L or higher.  The nucleus may then absorb some energy, becoming excited, and then undergo internal conversion.  During this, another higher lying, bound atomic electron is absorbed, and an X-ray, or Auger electron released [see Figure \ref{fig:ec1}].
+We observe electron capture by observing the resulting transmuted nuclei and/or the radiative relaxation processes.  The captured electron is bound to the atom, and it is usually a K-shell electron, but may be L or higher.  The nucleus may then absorb some energy, becoming excited, and then undergo internal conversion.  During this, another higher lying, bound atomic electron is absorbed, and either an X-ray or Auger electron released [see Figure \ref{fig:ec1}].
 
 \begin{figure}
    \includegraphics[scale=0.5]{img/ecrelax.png}
@@ -50,7 +50,7 @@ We observe electron capture by observing the resulting transmuted nuclei and/or 
   \label{fig:ec1}
 \end{figure}
 
-Because electron capture occurs in (proton-rich) nuclei, and, subsequently, releases a X-Ray photon, the reaction is also sometimes written as
+Because electron capture occurs in proton-rich nuclei, and, subsequently, releases a X-Ray photon, the reaction is also sometimes written as
 
 $$^{Z}X_{A}+\;e^{-}\rightarrow\;^{Z-1}X_{A}\;+\;h\nu_{X-ray}$$
 
@@ -61,24 +61,22 @@ Indeed, orbital electron capture is evidenced by high intensity x-rays and soft 
 
 
 \subsubsection{Effect of Chemical Environment of Electron Capture rate} 
-The lightest element that electron capture has been observed in is $^{7}Be$\cite{radbook}. In fact, there is so little energy that the competing $\beta^{+}$ positron emission process (described below) is prohibited, and the half-life for electron capture is $\tau_{EC}\sim 50\;days$.
+The lightest element that E.C. has been observed in is $^{7}Be$\cite{radbook}. In fact, there is so little energy that the competing $\beta^{+}$ positron emission process (described below) is prohibited, leading to a fairly long E.C. half-life of $\tau_{EC}\sim 50\;days$.
 
-Being so light, and having such a large rate, electron capture in $^{7}Be$ can be slightly modified by both changing the chemical environment and/or the external pressure \cite{wang,raydas,ohtsuki}. In particular, in 2004, Ohtsuki et. al. demonstrated a change of $0.83\%$  by embedding Be in C-60 cages.  
+Being so light, and having such a large rate, electron capture in $^{7}Be$ can be slightly modified by both changing the chemical environment and/or the external pressure \cite{wang,raydas,ohtsuki}. In particular, in 2004, Ohtsuki et. al. demonstrated a change of $0.83\%$  by embedding Be in C-60 cages \cite{ohtsuki}.   
 
-How could such changes occur?
-
-The rate of electron capture depends the electronic density at the surface of the nucleus--the nuclear charge.   The electronic energy levels are in the eV range, so intense EM fields can alter the electronic structure and therefore slightly affect the rate. In contrast, the nuclear energy levels are in the keV to MeV region, and it is generally thought to be very difficult to impossible to effect. Of particular practical interest is using very large electric fields for accelerating Beta decay for disposing of nuclear waste \cite{iaea, reiss}.
+How could such changes occur?  The electron capture rate is proportional to electronic density at the surface of the nucleus--\emph{the nuclear charge}.   The electronic energy levels are in the eV range, so intense EM fields can alter the electronic structure and therefore slightly affect the E.C. rate. In contrast, the nuclear energy levels are in the keV to MeV region, and it is generally thought to be very difficult to impossible to effect. Of particular practical interest is using very large electric fields for accelerating Beta decay for disposing of nuclear waste \cite{iaea, reiss}.
 
 \subsection{The Weak Interaction and V-A theory}
 
 Electron capture is mediated by the Weak interaction, described most concisely by the Fermi V-A (Vector Axial) theory \cite{fermi1,ec-review1,ec-review2}.
-The V-A theory is a simple phenomenological approach, readily amenable to numerical calculations   While It is now understood in terms of ElectroWeak Unification and can be derived from the Standard Model, the original paper by Fermi, for which he won the 1938 Nobel Prize in Physics, was initially rejected by \emph{Nature} because "It contained speculations too remote from reality to be of interest to the reader" \cite{close}.
+The V-A theory is a simple phenomenological approach, readily amenable to numerical calculations.  While It is now understood in terms of ElectroWeak Unification and can be derived from the Standard Model, the original paper by Fermi, for which he won the 1938 Nobel Prize in Physics, was initially rejected by \emph{Nature} because "It contained speculations too remote from reality to be of interest to the reader" \cite{close}.
 
-V-A theory is used to compute cross sections for scattering experiments and decay rates for electron capture for various atoms,  even in different environments, chemical and otherwise.  We can use machinery of the V-A theory to explore E.C. in a simple, idealized environment.  To properly describe any reaction, however, we need to understand what reactions we can apply the theory to, and the other competing reactions that might also occur.
+V-A theory is used to compute cross sections for scattering experiments and decay rates for electron capture for various atoms,  even in different environments, chemical and otherwise.  We can use machinery of the V-A theory to explore E.C. in a simple, idealized environment.  To properly describe any reaction, however, we need to understand what reactions we can apply the theory to, and the other, potential competing reactions.
 
-\subsubsection{Electron Capture and other (weak) processes} 
+\subsubsection{Electron Capture and other Weak processes} 
 
-The Weak interaction describes a variety of processes.  \emph{Neutron-rich} nuclei may become more stable as a result by undergoing one or more of the following:
+The Weak interaction describes several related processes within a single framework.  \emph{Neutron-rich} nuclei may become more stable as a result by undergoing one or more of the following:
 
 
 \begin{itemize}
@@ -101,11 +99,11 @@ There are also several related reactions, including
 
 By detailed balance,  reverse electron capture has the same rate as orbital electron capture--but is more favorable energetically.  Indeed, inside the nucleus, the neutron is relatively stable. Free neutron decay has mean lifetime of $\tau=881.5\pm1.5\;sec $, or about 15 minutes. 
 
-In contrast, orbital electron capture by a free proton is unspokenof outside of a stellar environments. Even if the bare reaction could proceed, the reverse reaction would still dominate unless it is suppressed or is kinetically unfavorable. 
+In contrast, orbital electron capture by a free proton is unspoken-of outside of a stellar environments. Even if the bare reaction could proceed, the reverse reaction would still dominate unless it is suppressed or is kinetically unfavorable.  
 
 \subsubsection{Inverse Beta decay}
 
-Electron capture is also sometimes called inverse $\beta$ decay, but, here, we mean this to be the scattering of a proton and an electron anti-neutrino.  It is characterized by emission of a positron $e^{+}$. 
+Electron capture is also sometimes called inverse $\beta$ decay, but, here, we mean this to be the scattering of a proton and an electron anti-neutrino $\bar{\nu}_{e}$.  It is characterized by emission of a positron $e^{+}$. 
 
 \subsubsection{Positron emission}
 
@@ -113,13 +111,13 @@ In particular, any high energy relativisitic process, we have to worry about pos
 
 \subsubsection{*Radiative Electron Capture}
 
-Also, in very rare cases, a gamma ray photon is emitted with the neutrino; this is called Radiative Electron Capture (REC) \cite{glauber1,glauber2, Jauch, roec2007}. This can be thought of as a kind of Internal (or so-called \emph{braking})  Bremsstrahlung radiation, caused by the electron accelerating toward the nucleus during capture,  taking energy away from outbound neutrino\cite{jackson}. It is traditionally been treated as a second order QED correction to the V-A theory \cite{Jauch}.  REC is 1000X less likely, but does occur.   The resulting gamma rays are called soft because they do not exhibit sharp spectral lines.    Recent, detailed rate calculations have elucidated the quantum mechanical details \cite{roec2007}.
+Also, in very rare cases, a gamma ray photon is emitted with the neutrino; this is called Radiative Electron Capture (REC) \cite{glauber1,glauber2, Jauch, roec2007}. This can be thought of as a kind of Internal Bremsstrahlung (or so-called \emph{braking}) radiation, caused by the electron accelerating toward the nucleus during capture,  taking energy away from outbound neutrino\cite{jackson}. It is traditionally been treated as a second order QED correction to the V-A theory \cite{Jauch}.  REC is 1000X less likely, but does occur.   The resulting gamma rays are called soft because they do not exhibit sharp spectral lines.    Recent, detailed rate calculations have elucidated the quantum mechanical details \cite{roec2007}.
 
 \subsection{Rate calculations}
 
 The electron capture rate can be computed using the Fermi VA-Theory \cite{ec-review1,ec-review2}.  The most basic calculations require a only specifying the electronic wavefunctions(s), averaging over the possible electron-proton momenta, and numerically integrating over the outbound neutrino momentum.  We describe this below.
 
-The V-A theory is just second order perturbation theory.  It assumes an incoherent nuclear process, it is local, and that the interaction is phenomenological. It is treated as a simply a contact potential at the surface of the nucleus. Here, this means we only need to compute the nuclear charge--the electron density on the surface of the nucleus $\Vert\psi_{e}(R=0)\Vert$.  
+The V-A theory is based on second order perturbation theory.  It assumes an incoherent nuclear process, it is local, and that the interaction is phenomenological. It is treated as a simply a contact potential at the surface of the nucleus. Here, this means we need to compute the nuclear charge--the electron density on the surface of the nucleus $\Vert\psi_{e}(R=0)\Vert$, which we obtain from a classical particle-in-the-box wavefunction (below).
 
 More complicated calculations are used for larger nuclei, second order processes, etc.  They only require modifications to treat either atomic electronic structure of reactant and product atoms, and/or specific considerations for nuclear internal conversion and other second order processes.
 
@@ -129,23 +127,23 @@ We frequently write electron capture as if it were simply proton-electron captur
 
 $$p^{+}+e^{-} \rightleftarrows n^{0}+\nu_{e}\;\;.$$
 
-At zero energy, proton electron capture is not possible because it violates energy-momentum conservation. Theoretically, a free proton can could capture an electron from the continuum, but the interaction energy must be  above threshold for neutron production.  This is a huge amount of energy, although this happens regularly in accelerators.
+At zero energy, proton electron capture is not possible because it violates energy-momentum conservation. Theoretically, a free proton can could capture an electron from the continuum, but the interaction energy must be  above threshold for neutron production.  This is a huge amount of energy, although this happens regularly in accelerators, and, presumably, in stellar environments.
 
 Observing proton electron capture outside of an accelerator, \emph{on the desktop}, so to speak, would be an incredibly hard experiment because both final particles are neutral, and  the neutrino is extremely weakly interacting.
 
 \subsubsection{Stellar Nucleosynthesis}
 
-Bare proton-electron capture is thought to occur  in the early stages of the big bang and in stellar nucleosynthesis .  It is thought to drive the formation of primordial elements, and to occur in the forming of neutron stars [?].   For example, Bachall and coworkers have studied the electron capture rate in stellar media, and have computed the electron capture rate of $^{7}Be$ in the Sun \cite{bachall62,bachall69}.
+Bare proton-electron capture is thought to occur  in the early stages of the big bang and in stellar nucleosynthesis.  It is thought to drive the formation of primordial elements, and to occur in the forming of neutron stars.   
 
- It is believed that ionized Hydrogen captures an electron during the core collapse supernovae and in neutron stars [14]; in fact, it is thought to create stellar instability.  At very high Temperatures, the proton electron collisions have sufficient energy to overcome the reaction barrier.  And while we usually characterize a star by it's temperature, these are also very dense systems, with $\rho\sim 10^6\;g\;cm^{-3}$.  In contrast, the smallest star has density $\rho\sim 10^{2}-10^{3}\;g\;cm^{-3}$ [?]  As important, the reverse reaction is prohibited because, inside the dense neutron star, it is impossible to create a new electron; the Fermi sea is 'full'.
+At very high temperatures, the proton electron collisions have sufficient energy to overcome the reaction barrier.   For example, Bachall and coworkers have studied the electron capture rate in stellar media, and have computed the electron capture rate of $^{7}Be$ in the Sun \cite{bachall62,bachall69}. And it is believed that ionized Hydrogen captures an electron during the core collapse supernovae and in neutron stars [14]; in fact, it is thought to create stellar instability.   
+
+While we usually characterize a star by it's temperature, these are also very dense systems, with $\rho\sim 10^6\;g\;cm^{-3}$.  In contrast, the smallest star has density $\rho\sim 10^{2}-10^{3}\;g\;cm^{-3}$ [?]  As important, the reverse reaction is prohibited because, inside the dense neutron star, it is impossible to create a new electron; the Fermi sea is 'full'.
 
 So electron capture can occur by bare protons, but, presumably, only under extreme confinement (and with the reverse reaction is suppressed).
 
 \section{Confinement Induced Electron Capture}
 
-We pose the following Gedankenexperiment:  
-
-Suppose we confine an electron and a bare proton as a particle-in-a-box of volume $L^3$.  What box size L will 'induce' electron confinement ?
+We pose the following Gedankenexperiment:    Suppose we confine an electron and a bare proton as a particle-in-a-box of volume $L^3$.  What box size L will 'induce' electron confinement ?
 
 We write this as
 
@@ -159,12 +157,12 @@ To prevent the reverse reaction, we assume that the free neutron subsequently co
 
 Still, for illustrative purposes, we will compute the power output,  assuming this post-reaction,  at all box sizes.
 
-\subsection{Compton length considerations}
+\subsection{Compton length}
 The first obvious question is, should we use a classical or a relativisitic box?   
 
 Most electron capture rate calculations use \emph{ab initio} classical wavefunctions \cite{ec-review1,ec-review2}, perhaps with some relativisitic corrections to the electronic Hamiltonian \cite{martin}.
 
-We can safely use a classical box as long as $L_{min} \ge \dfrac{1}{2\pi}\lambda_{e}$, where $\lambda_{e}$ is Compton wavelength of an electron \cite{relbox,compton,planck}.  The Compton wavelength sets the scale, accounting for both quantum mechanics and special relativity.
+We argue that we can safely use a classical box as long as $L_{min} \ge \dfrac{1}{2\pi}\lambda_{e}$, where $\lambda_{e}$ is Compton wavelength of an electron \cite{relbox,compton,planck}.  The Compton wavelength sets the scale, accounting for both quantum mechanics and special relativity.
 
 $$\lambda_{e}=\dfrac{h}{m_{e}c}=\dfrac{e^{2}}{m_{e}c^{2}}$$
 
@@ -176,6 +174,10 @@ $$L_{min}\sim0.004\;\mathring{A}$$
 In any high energy, relativisitic system, positrons can be produced; here it is through $\beta^{+}$-decay. This generally occurs at or below the Compton length. We are seeking the maximum box size which can induce electron capture, and we assume that, at the max, positron emission will be very rare.
 
 We also assume that the electron wavefunction does not change appreciably during the interaction, so that we may use a very simplified form for the cross section ($\sigma$) and rate ($\Gamma$).  Again, this is reasonable for boxes $L\ge\lambda_{e}$.
+
+\subsection{Klein Paradox}
+
+Klein noted that a relativistic (Dirac) particle-in-a-box will \emph{leak out} at box sizes near the Compton wavelength; this called the Klein paradox \cite{klein1,klein2}.  And while this is usually taught as being simply particle-antiparticle creation, it has been suggested that the Klein paradox it can occur even at larger boxes sizes, and it is a general phenomena of confined relativistic particles.  And recent experiments on Graphene have reopened the debate \cite{klein3}. Still, we will assume the traditional interpretation and that we can ignore the Klein paradox.
 
 So we use a classical box, with minimum size $L_{min}=0.004\;\mathring{A}$.  We compute the maximum size below.
 
@@ -462,7 +464,7 @@ $$\mathcal{F}=r_{c}\left(\dfrac{p_{ep}}{2\pi}\right)^{3}\left(\dfrac{G_{F}^{2}(E
 
 \begin{thebibliography}{21}
 
-\bibitem{yukawa} Yukawa and Sakata, \emph{On the Nuclear Transformation with the Absorption of the Orbital Electron },
+\bibitem{yukawa} Yukawa and Sakata, \emph{On the Nuclear Transformation with the Absorption of the Orbital Electron},
 Phys. Rev. 51, 677 (1937).  
 
 \bibitem{alvarez} Luis W. Alvarez, \emph{The Capture of Orbital Electrons by Nuclei}, Phys. Rev. 54, 486 (1938).
@@ -524,6 +526,12 @@ Phys. Rev. 51, 677 (1937).
 \bibitem{Sen}\emph{Electronic Structure of Quantum Confined Atoms and Molecules},  edited by K.D. Sen
 
 \bibitem{feynman}Feynman and Gelmann
+
+\bibitem{klein1}Bjorken and Drell, \emph{Relativistic Quantum Mechanics}, Vol 1
+
+\bibitem{klein2}\emph{70 years of the Klein paradox}
+
+\bibitem{klein3}
 
 \end{thebibliography}
 
