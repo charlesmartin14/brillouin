@@ -137,7 +137,7 @@ Bare proton-electron capture is thought to occur  in the early stages of the big
 
 At very high temperatures, the proton electron collisions have sufficient energy to overcome the reaction barrier.   For example, Bachall and coworkers have studied the electron capture rate in stellar media, and have computed the electron capture rate of $^{7}Be$ in the Sun \cite{bachall62,bachall69}. And it is believed that ionized Hydrogen captures an electron during the core collapse supernovae and in neutron stars [14]; in fact, it is thought to create stellar instability.   
 
-While we usually characterize a star by it's temperature, these are also very dense systems, with $\rho\sim 10^6\;g\;cm^{-3}$.  In contrast, the smallest star has density $\rho\sim 10^{2}-10^{3}\;g\;cm^{-3}$ [?]  As important, the reverse reaction is prohibited because, inside the dense neutron star, it is impossible to create a new electron; the Fermi sea is 'full'.
+While we usually characterize a star by it's temperature, these are also very dense systems, with $\rho\sim 10^6\;g\;cm^{-3}$.  In contrast, the smallest star has density $\rho\sim 10^{2}-10^{3}\;g\;cm^{-3}$ [?]  As important, the reverse reaction is prohibited because, inside the dense neutron star, it is impossible to create a new electron; the Fermi sea is \emph{full}.
 
 So electron capture can occur by bare protons, but, presumably, only under extreme confinement (and with the reverse reaction is suppressed).
 
@@ -191,13 +191,15 @@ So we use a classical box, with minimum size $L_{min}=0.004\;\mathring{A}$.  We 
   \label{fig:ppp}
 \end{figure}
 
-Electron capture is mediated by the Weak Interaction, through the particle production process, given by the 4-point Interaction (see Figure \ref{fig:ppp}).   It requires 0.511 MeV energy to overcome the reaction barrier, which, here, is \emph{provided} by the box. 
+Electron capture is mediated by the Weak Interaction, through the particle production process, given by the 4-point Interaction (see Figure \ref{fig:ppp}).   It requires \emph{at least} 0.511 MeV energy to overcome the reaction barrier, which, here, is \emph{provided} by the box. 
+
+$$0.511{MeV}+p^{+}+e^{-}\rightarrow n^{0}+\nu_{e}$$  
 
 We want to compute the rate of E.C. and the (minimum) power generated, as a function of the box size (L), using the full Weak Interaction Hamiltonian.  To do this, we need to express the rate in terms of the differential cross section, and in a form suitable for numerical calculations.  
 
 \subsection{Transition Rates and Power Calculations}
 
-The electron capture rate $\Gamma_{EC}$  is given by multiplying the cross section by the incident velocity $\mathbf{v}^{in}_{ep}$ and electronic (box) wavefunction  $\Psi_{ep}(0)$  of the $(e^{-},p^{+})$ pair at the origin
+The electron capture rate $\Gamma_{EC}$  is given by multiplying the cross section $\sigma_{EC}$ by the incident velocity $\mathbf{v}^{in}_{ep}$ and electronic (box) density $\big\vert\Psi_{ep}(0)\big\vert^{2}$  of the $(e^{-},p^{+})$ pair at the origin
 
 $$\Gamma_{EC}=\big\vert\Psi_{ep}(0)\big\vert^{2}\mathbf{v}^{in}_{ep}\sigma_{EC}\;\;.$$
 
@@ -209,15 +211,21 @@ $$d\sigma_{EC}=\left(\dfrac{1}{2\pi}\right)^{2}\dfrac{\sum_{fi}\big\vert\mathcal
 
 where $\mathcal{M}_{fi}$ is a matrix element of the weak interaction Hamiltonian,  $k$ represents the neutrino, and we use natural units $(\hbar=1,c=1)$.
 
-We represent the $(e^{-},p^{+})$ pair using a 3D box wavefunction, and obtain the Energies and 3-momenta from the relativistic kinematics.  We then average over all possible incident velocities (or momenta $\mathbf{p}_{ep}$) for the 3D box, and integrate over outbound neutrino solid angle $d\Omega_{k}$ using numerical quadrature.
+
 
 \subsubsection{Rate}
 
-This gives the rate as
+This gives the (differential) rate as
 
 $$d\Gamma_{EC}=\left(\dfrac{1}{2\pi}\right)^{2}\dfrac{\sum_{fi}\big\vert\mathcal{M}_{fi}\left[p_{ep}\rightarrow i\nabla)\right]\psi_{ep}(\mathbf{x})\big\vert_{\mathbf{x}=0}\big\vert^{2}}{16E_{p}E_{e}\;\big\vert\mathbf{k}\cdot(E{_n}\mathbf{k}-k^{0}\mathbf{p}_{n})\big\vert}k^{3}d\Omega_{k}$$
 
 where we explicitly specify the electronic wavefunction.
+
+We represent the $(e^{-},p^{+})$ pair using a 3D box wavefunction, and obtain the Energies and 3-momenta from the relativistic kinematics.  We then average over all 8 permutations of the incident velocities (really momenta $\mathbf{p}_{ep}$) for the 3D box, and integrate over outbound neutrino solid angle $d\Omega_{k}$ using numerical quadrature.  The final rate is computed as, for each box size, as a function the kinematics, using
+
+$$\Gamma_{EC}=\frac{1}{8}\sum_{\mathbf{p}_{pe}}\int_{d\Omega_{k}}d\Gamma_{EC}$$
+
+where $\big\vert\mathbf{p}_{ep}\big\vert$ is given by the box size (described below).
 
 \subsubsection{Power}
 
@@ -226,7 +234,7 @@ The power $\mathcal{P}$ is
 
 $$\mathcal{P}=\Gamma_{EC}*Q*\rho$$
 
-where is the nuclear decay energy, or Q-value, and $\rho$ is the  density of confined elements.
+where is the nuclear decay energy, or Q-value, and $\rho$ is the  density of confined elements.  We choose the density to that of a typical material, of order Avogadro's number, $\mathrm{N_{A}}\sim6.02\times10^{23}$.
 
 We estimate the power for both the bare proton-electron capture
 
@@ -240,14 +248,13 @@ We also define an excess power as
 
 $$\mathcal{P}_{XS}=\mathcal{P}_{pe}-\mathcal{P}_{n}$$
 
-which we argue is a good measure of the potential reactive power output of the confined E.C. process.
-
+which we argue is a good measure of the potential reactive power output of the confined E.C. process. We are interested in box lengths where the excess power is significant enough to drive the reaction.
 
 \subsubsection{Particle-in-the-box Wavefunctions}
 
-While most E.C. calculations assume a specific, bound, atomic electronic wavefunction(s), we perform a much simpler calculation.  We treat the electron-proton pair as classical particle-in-a-box. 
+While most electron capture calculations assume a specific, bound, atomic electronic wavefunction(s), we perform a much simpler calculation; we treat the electron-proton pair as classical particle-in-a-box,  and analyze the problem just above the Compton scale using the low order VA theory.
 
-$$\psi_{ep}(\mathbf{x})=\left(\dfrac{2}{L}\right)^{\frac{3}{2}}cos\left(\dfrac{\pi x}{L}\right)cos\left(\dfrac{\pi y}{L}\right)cos\left(\dfrac{\pi z}{L}\right)$$
+$$\psi_{ep}(\mathbf{x})=\left(\dfrac{2}{L}\right)^{\frac{3}{2}}cos\left(\dfrac{\pi x}{L}\right)cos\left(\dfrac{\pi y}{L}\right)cos\left(\dfrac{\pi z}{L}\right)$$.
 
 expressions for momentum.
 
@@ -263,9 +270,9 @@ Here, we treat the confined electron, proton pair in the C.M. frame so that the 
 $$\mathbf{p}_{e}=\mathbf{p}_{pe}$$
 $$\mathbf{p}_{p}=-\mathbf{p}_{pe}$$
 
-\subsubsection{comment on our approach}
+and we consider all 8 permutations for a given box size L:
 
-Blatt and Weisskopf  describe the Fermi VA theory in the non-relativisitic limit \cite{Weisskopf}.  Here, they use classical plane wave solutions $(e^{i\mathbf{p}\mathbf{x}})$, with just box normalization $(\frac{1}{L^{3}})$.  In contrast, we use the full classical particle-in-the-box wavefunctions, and analyze the problem just above the Compton scale using the low order VA theory.
+$$\pm\mathbf{p}_{pe}(1), \pm\mathbf{p}_{pe}(1), \pm\mathbf{p}_{pe}(3)$$
 
 \subsubsection{Relativistic Kinematics and Energetics}
 For consistency with the particle production process, we treat all kinematics and energetics relativistically.  Given energy-momentum conservation
