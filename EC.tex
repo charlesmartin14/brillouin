@@ -319,7 +319,9 @@ While most practitioners simply estimate this, for our purpose, we can simply co
 
 \subsection{Weak Interaction Hamiltonian and Matrix Elements}
 
-The Hamiltonian for the V-A theory is [?]
+The Hamiltonian for the V-A theory is [?]  
+
+[[I don't have a great reference for this that has Ricks convention, and the orbital Ec papers I do have use a different convention]]
 
 $$\mathcal{H}(x)=-\dfrac{G_{F}}{\sqrt{2}}\left[J^{\mu}(x)L^{+}_{\mu}(x)+h.c.\right]$$
 
@@ -327,30 +329,13 @@ where $J_{\mu}$ and $L_{\mu}$ are (in modern parlance) the Hadron and Lepton cur
 
 $$J_{\mu}=\bar{u}_{n}\gamma_{\mu}(1+\lambda\gamma_{5})u_{p}$$
 
-$$L_{\mu}=\bar{u}_{\mu}(1+\gamma_{5})u_{e}$$
+$$L_{\mu}=\bar{u}_{\mu}(1-\gamma_{5})u_{e}$$
 
 where $u_{n},u_{p},u_{e},u_{\nu}$ are Dirac (free-particle) wavefunctions.
 
 $G_{F}$ is the Universal Fermi Weak Coupling Constant, and $\lambda=-\dfrac{G_{A}}{G_{V}}$, which is determined by experiment (and subject to minor changes). 
  $G_{V}$ is the Axial-Vector Weak Coupling Constant, and $G_{A}$ is the vector weak coupling
 constant.  The most recent value is $G_{V}=?1.27590^{+0.00409}_{-0.00445}$, and $G_{A}=1$.
-
-\subsubsection{Relation to the Standard Model}
-
-The coupling constants are determined "under the conserved vector current (CVC) hypothesis of the Standard Model" [22].
-
-[explain relation of Gf to W boson propagator, in the low energy regime]
-\begin{figure}
-   \includegraphics[scale=0.5]{img/standard-model.png}
-   \caption{Quark picture of electron capture}
-  \label{fig:SM}
-\end{figure}
-
-[Estimate matrix element value from this..]
-
-
-
-
 
 \subsubsection{VA Matrix Elements}
 
@@ -396,11 +381,23 @@ Notice that when applying the VA theory this way, we assume that the electron-pr
 
 [how much more to describe here ?  Specify the 4-norm / gamma metric tensor convention? ]
 
-[**] We refer to photons emitted directly from the nucleus as gamma rays, whereas those emitted from atomic electrons are called x-rays.    The naming convention reflects the different origins.
+
+\subsubsection{Sum over all spin combinations}
+
+[[DISCUSS HERE]]
+\begin{figure}
+   \includegraphics[scale=0.5]{img/16-allowed.png}
+   \caption{Allowed spin transitions}
+  \label{fig:SC}
+\end{figure}
+
+We sum over the 16  allowed transitions in the V-A theory, as depicted in Figure
+
+[similar to diagram in "Beta Decay for Pedestrians"]
 
 \subsection{Numerical Calculations}
 
- The full calculations sums of over all 6 possible incident momenta combinations
+ The full calculations sums of over all 8 possible incident momenta permutations
   $(\pm\mathbf{p}_{ep}(1),\pm\mathbf{p}_{ep}(2),\pm\mathbf{p}_{ep}(3) )$,
 and the 16 allowed spin transitions (see figure below). By conservation of momenta, we can eliminate the neutron and only need to average over the outbound neutrino momenta solid angle ($k^{3}d\Omega_k$); we do this using an 8-point gaussian quadrature. 
  
@@ -430,34 +427,6 @@ and the 16 allowed spin transitions (see figure below). By conservation of momen
 \end{algorithmic}
 \end{algorithm}
 
-
-
-\subsubsection{Average over incident $\mathbf{p}_{ep}$}
-
-\subsubsection{Sum over all spin combinations}
-
-\begin{figure}
-   \includegraphics[scale=0.5]{img/16-allowed.png}
-   \caption{Allowed spin transitions}
-  \label{fig:SC}
-\end{figure}
-
-We sum over the 16  allowed transitions in the V-A theory, as depicted in Figure
-
-[similar to diagram in "Beta Decay for Pedestrians"]
-
-\subsubsection{Numerical Quadrature over neutrino solid angle}
-
-By Energy conservation, we only need to integrate over the outbound neutrino momenta (solid angle).
-We use an 8-point numerical quadrature.
-
-\begin{figure}
-   \includegraphics[scale=0.1]{img/solid-angle.png}
-   \caption{Solid Angle }
-  \label{fig:NQ}
-\end{figure}
-
-[this diagram needs to be replaced, with something that looks more like a scattering diagram]
 
 \subsubsection{Power Calculations}
 
@@ -542,6 +511,8 @@ Phys. Rev. 51, 677 (1937).
 
 \end{thebibliography}
 
+[[REMOVE?]]
+[**] We refer to photons emitted directly from the nucleus as gamma rays, whereas those emitted from atomic electrons are called x-rays.    The naming convention reflects the different origins.
 
 \end{document}  
 
