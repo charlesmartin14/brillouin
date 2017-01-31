@@ -414,7 +414,7 @@ and the 16 allowed spin transitions (see figure below). By conservation of momen
 \State $Tran(\mathsf{p}_{ep})=0$\Comment{Transfer}
 \State $Power_{n}(\mathsf{p}_{ep})=0$\Comment{Neutron Power}
 \For{$w_{x},w_{\phi}\in \mathbb{Q}[1,8]$}\Comment{quadrature weights}
-\For{$s_{p},s_{e},s_{n},s_{\nu}\in [0, 1]$}\Comment{$s_{up},s_{down}=0,1$}
+\For{$s_{n},s_{p},s_{\nu},s_{e}\in [0, 1]$}\Comment{$s_{up},s_{down}=0,1$}
 \For{$s_{x},s_{y},s_{z}\in [-1,1]$}\Comment{$\mathbf{p}_{ep}=\mathsf{p}_{ep}[s_{x},s_{y},s_{z}]$}
 \State $p_{n},p_{p}, p_{\nu},p_{e}, \gets pekin(w_{x},w_{\phi},\mathbf{p}_{ep})$\Comment{4 vectors $\gets$ rel. kinematics}
 \State $\bar{u}(p_{n},s_{n}),u(p_{p},s_{p}), \bar{u}(p_{\nu},s_{\nu}), u(p_{e},s_{e})$\Comment{spinors by p, s-index}
