@@ -319,27 +319,25 @@ While most practitioners simply estimate this, for our purpose, we can simply co
 
 \subsection{Weak Interaction Hamiltonian and Matrix Elements}
 
-The Hamiltonian for the V-A theory is [?]  
-
-[[I don't have a great reference for this that has Ricks convention, and the orbital Ec papers I do have use a different convention]]
+The Hamiltonian for the V-A theory for E.C. is \cite{ec-review1,ec-review2} 
 
 $$\mathcal{H}(x)=-\dfrac{G_{F}}{\sqrt{2}}\left[J^{\mu}(x)L^{+}_{\mu}(x)+h.c.\right]$$
 
-where $J_{\mu}$ and $L_{\mu}$ are (in modern parlance) the Hadron and Lepton currents, resp., and are given by
+where $J^{\mu}$ and $L_{\mu}$ are (in modern parlance) the Hadron and Lepton currents, resp., and are given by
 
 $$J_{\mu}=\bar{u}_{n}\gamma_{\mu}(1+\lambda\gamma_{5})u_{p}$$
 
 $$L_{\mu}=\bar{u}_{\nu}(1-\gamma_{5})u_{e}$$
 
-where $u_{n},u_{p},u_{e},u_{\nu}$ are Dirac (free-particle) wavefunctions.
+where $u_{n},u_{p},u_{e},u_{\nu}$ are Dirac (free-particle) wavefunctions.   
 
 $G_{F}$ is the Universal Fermi Weak Coupling Constant, and $\lambda=-\dfrac{G_{A}}{G_{V}}$, which is determined by experiment (and subject to minor changes). 
  $G_{V}$ is the Axial-Vector Weak Coupling Constant, and $G_{A}$ is the vector weak coupling
-constant.  The most recent value is $G_{V}=?1.27590^{+0.00409}_{-0.00445}$, and $G_{A}=1$.
+constant.  The most recent value is $G_{V}=1.2767(16)$, and $G_{A}=1$ \cite{vacoupling}.
 
 \subsubsection{VA Matrix Elements}
 
-In our calculations, we use a slightly different convention for the matrix elements, multiplying by $G_{V}$.  The matrix elements $\mathcal{M}_{fi}$ are given by
+In our calculations, however, we use a slightly different, more modern convention for the matrix elements, multiplying through by $G_{V}$ \cite{zuber}.   The matrix elements $\mathcal{M}_{fi}$ are then given by
 
 $$\mathcal{M}_{fi}=\dfrac{G_{F}}{\sqrt{2}}\bar{u}(p_{n},s_{n})(G_{V}-G_{A}\gamma^{5})\gamma^{\mu}u(p_{p},s_{p})\times\bar{u}(p_{\nu},s_{\nu})\gamma_{u}(1-\gamma^{5})u(p_{e},s_{e})$$
 
@@ -362,20 +360,13 @@ $$\langle\bar{u}|u\rangle=\bar{u}_{0}u_{0}-\bar{u}_{1}u_{1}-\bar{u}_{2}u_{2}-\ba
 
 and $\bar{u}=u^{\dagger}\gamma^{0}$.  The $\gamma$ are 4-component Gamma matrices, and  $(\cdots\gamma^{\mu}\cdots\gamma_{u}\cdots)$ is the Einstein summation convention. 
 
-
-
-
-
 Writing the matrix elements in terms of the currents gives
-
-[insert, repetitive ?]
 
 $$\mathbf{J}_{had}=\bar{u}(p_{n},s_{n})(G_{V}-G_{A}\gamma^{5})\gamma^{\mu}u(p_{p},s_{p})$$
 
 $$\mathbf{L}_{lep}=\bar{u}(p_{\nu},s_{\nu})\gamma_{u}(1-\gamma^{5})u(p_{e},s_{e})$$
 
 [Express power in terms of real part of current]
-
 
 Notice that when applying the VA theory this way, we assume that the electron-proton interaction is a contact potential, operating at the surface of the nucleus, and that the underlying quantum process is incoherent.  
 
@@ -419,8 +410,8 @@ and the 16 allowed spin transitions (see figure below). By conservation of momen
 \State $p_{n},p_{p}, p_{\nu},p_{e}, \gets pekin(w_{x},w_{\phi},\mathbf{p}_{ep})$\Comment{4 vectors $\gets$ rel. kinematics}
 \State $\bar{u}(p_{n},s_{n}),u(p_{p},s_{p}), \bar{u}(p_{\nu},s_{\nu}), u(p_{e},s_{e})$\Comment{spinors by p, s-index}
 \For{$u\in[1,4]$}\Comment{4-vector indices}
-\State $\mathbf{J}^{u}_{had}=\bar{u}(p_{n},s_{n})\cdot(G_{V}-G_{A}\gamma^{5})\cdot\gamma^{\mu}\cdot u(p_{p},s_{p})$\Comment{Hadronic current}
-\State $\mathbf{L}^{u}_{lep}=\bar{u}(p_{\nu},s_{\nu})\cdot\gamma_{u}\cdot(1-\gamma^{5})\cdot u(p_{e},s_{e})$\Comment{Leptonic current}
+\State $\mathbf{J}_{had}=\bar{u}(p_{n},s_{n})\cdot(G_{V}-G_{A}\gamma^{5})\cdot\gamma^{\mu}\cdot u(p_{p},s_{p})$\Comment{Hadronic current}
+\State $\mathbf{L}_{lep}=\bar{u}(p_{\nu},s_{\nu})\cdot\gamma_{u}\cdot(1-\gamma^{5})\cdot u(p_{e},s_{e})$\Comment{Leptonic current}
 \EndFor
 \State $\mathbb{C}=\langle\mathbf{L}^{\dagger}_{lep},\mathbf{J}_{had}\rangle$\Comment{Current Amplitude}
 \EndFor
@@ -522,15 +513,19 @@ Phys. Rev. 51, 677 (1937).
 
 \bibitem{feynman}Feynman and Gelmann
 
-\bibitem{klein1}Bjorken and Drell, \emph{Relativistic Quantum Mechanics}, Vol 1
+\bibitem{zuber}C. Itzykson, J.B. Zuber, \emph{Quantum Field Theory}, McGraw-Hill, ISBN 9780486445687 (1985)
 
-\bibitem{klein2}\emph{70 years of the Klein paradox}
+\bibitem{vacoupling}Mund et. al., \emph{Determination of the Weak Axial Vector Coupling from a Measurement of the Beta-Asymmetry Parameter A in Neutron Beta Decay}
 
-\bibitem{klein3}
+\bibitem{klein1}Bjorken and Drell, \emph{Relativistic Quantum Mechanics}, McGraw-Hill,  ISBN 0-07-005493-2 (1964)
+
+\bibitem{klein2}N. Dombey and Alex Calogeracos, \emph{70 years of the Klein paradox}, Physics Reports, 315 (1999) 
+
+\bibitem{klein3}M. I. Katsnelson1, K. S. Novoselov2 and A. K. Geim,\emph{Chiral tunnelling and the Klein paradox in graphene}, Nature Physics 2, 620 - 625 (2006) 
 
 \end{thebibliography}
 
-[[REMOVE?]]
+[[reformat as a footnote ?]]
 [**] We refer to photons emitted directly from the nucleus as gamma rays, whereas those emitted from atomic electrons are called x-rays.    The naming convention reflects the different origins.
 
 \end{document}  
