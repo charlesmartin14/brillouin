@@ -40,8 +40,14 @@ $$p^{+}+\;e^{-}\rightarrow\;n^{0}\;+\;\nu^{e}$$
 
 This may be called orbital electron capture, K-electron capture, or just electron capture (E.C.) 
 
-Electron capture usually occurs in unstable radioisotopes which lack the (nuclear binding) energy to decay by the more familiar Beta decay processes ($\beta^{-}, \beta^{+}$).  In particular, heavy elements may decay by E.C. and/or $\beta^{+}$ (positron emission) to a lower 'magic number' of stable nuclei, and by $\beta^{-}$ decay to achieve a higher magic number.  Very light elements, such as $^{7}Be$, may also decay by primarily by E.C., although bare proton electron capture is not readily observed.
-  
+Electron capture usually occurs in unstable radioisotopes which lack the nuclear binding energy $Q$ to decay by the more familiar Beta decay processes ($\beta^{-}, \beta^{+}$). The typical $Q$ energies necessary are 
+
+$$Q_{\beta^{+}}\sim2-4{MeV},\;\\;Q_{\beta^{-}}\sim0.5-2(MeV),\;\;{and}\;\;Q_{E.C.}\sim0.2-2.0{MeV}$$
+
+When $Q<1.02{MeV}$, which is $2m_{e}c^{2}$, a proton rich nucleus must decay by electron capture.  Otherwise, all 3 processes compete.
+
+In particular, heavy elements may decay by E.C. and/or $\beta^{+}$ (positron emission) to a lower 'magic number' of stable nuclei, and by $\beta^{-}$ decay to achieve a higher magic number.    E.C. is favored for high Z nuclei, but because of the energetic constraint, very light elements, such as $^{7}Be$ decay by primarily by E.C.    Lacking any binding energy, bare proton electron capture is not observed, and requires extreme, exotic conditions.
+ 
 We observe electron capture by observing the resulting transmuted nuclei and/or the radiative relaxation processes.  The captured electron is bound to the atom, and it is usually a K-shell electron, but may be L or higher.  The nucleus may then absorb some energy, becoming excited, and then undergo internal conversion.  During this, another higher lying, bound atomic electron is absorbed, and either an X-ray or Auger electron released [see Figure \ref{fig:ec1}].
 
 \begin{figure}
@@ -93,7 +99,6 @@ There are also several related reactions, including
 \item free neutron decay  $\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;n^{0}\rightarrow p^{+}+e^{-}+\bar{\nu_{e}}$ 
 \item inverse beta decay  $\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;p^{+}+\bar{\nu_{e}} \rightarrow n^{0}+e^{+}$
 \end{itemize}
-
 
 \subsubsection{Neutron decay}
 
@@ -199,9 +204,14 @@ We want to compute the rate of E.C. and the (minimum) power generated, as a func
 
 \subsection{Transition Rates and Power Calculations}
 
-The electron capture rate $\Gamma_{EC}$  is given by multiplying the cross section $\sigma_{EC}$ by the incident velocity $\mathbf{v}^{in}_{ep}$ and electronic (box) density $\big\vert\Psi_{ep}(0)\big\vert^{2}$  of the $(e^{-},p^{+})$ pair at the origin
+Orbital electron capture and other Beta-decay processes follow first order kinetics, so the capture rate is described by a single number. 
+To calculate the rate, we require a full relativistic, quantum mechanical treatment because the capture process involves both creating particles and the kinetic energy spectrum is of order $m_{e}c^{2}$.
+
+ The capture rate $\Gamma_{EC}$  is given by multiplying the cross section $\sigma_{EC}$ by the incident velocity $\mathbf{v}^{in}_{ep}$ and electronic (box) density $\big\vert\Psi_{ep}(0)\big\vert^{2}$  of the $(e^{-},p^{+})$ pair at the origin
 
 $$\Gamma_{EC}=\big\vert\Psi_{ep}(0)\big\vert^{2}\mathbf{v}^{in}_{ep}\sigma_{EC}\;\;.$$
+
+We will compute the electronic density classically, using box wavefunctions, and, for each box size, determine the incident velocity (really momentum). We then compute the cross section using full relativistic kinematics and Dirac spinors.  
 
 \subsubsection{Cross Section}
 
