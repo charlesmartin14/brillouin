@@ -329,7 +329,7 @@ where $J_{\mu}$ and $L_{\mu}$ are (in modern parlance) the Hadron and Lepton cur
 
 $$J_{\mu}=\bar{u}_{n}\gamma_{\mu}(1+\lambda\gamma_{5})u_{p}$$
 
-$$L_{\mu}=\bar{u}_{\mu}(1-\gamma_{5})u_{e}$$
+$$L_{\mu}=\bar{u}_{\nu}(1-\gamma_{5})u_{e}$$
 
 where $u_{n},u_{p},u_{e},u_{\nu}$ are Dirac (free-particle) wavefunctions.
 
@@ -341,7 +341,7 @@ constant.  The most recent value is $G_{V}=?1.27590^{+0.00409}_{-0.00445}$, and 
 
 In our calculations, we use a slightly different convention for the matrix elements, multiplying by $G_{V}$.  The matrix elements $\mathcal{M}_{fi}$ are given by
 
-$$\mathcal{M}_{fi}=\dfrac{G_{F}}{\sqrt{2}}\bar{u}(p_{n},s_{n})(G_{V}-G_{A}\gamma^{5})\gamma^{\mu}u(p_{p},s_{p})\times\bar{u}(k,s_{k})\gamma_{u}(1-\gamma^{5})u(s_{e},p_{e})$$
+$$\mathcal{M}_{fi}=\dfrac{G_{F}}{\sqrt{2}}\bar{u}(p_{n},s_{n})(G_{V}-G_{A}\gamma^{5})\gamma^{\mu}u(p_{p},s_{p})\times\bar{u}(p_{\nu},s_{\nu})\gamma_{u}(1-\gamma^{5})u(p_{e},s_{e})$$
 
 where $u{(p},s)$ are Dirac 4-spinors, with the convention
 
@@ -372,7 +372,7 @@ Writing the matrix elements in terms of the currents gives
 
 $$\mathbf{J}_{had}=\bar{u}(p_{n},s_{n})(G_{V}-G_{A}\gamma^{5})\gamma^{\mu}u(p_{p},s_{p})$$
 
-$$\mathbf{L}_{lep}=\bar{u}(k,s_{k})\gamma_{u}(1-\gamma^{5})u(s_{e},p_{e})$$
+$$\mathbf{L}_{lep}=\bar{u}(p_{\nu},s_{\nu})\gamma_{u}(1-\gamma^{5})u(p_{e},s_{e})$$
 
 [Express power in terms of real part of current]
 
@@ -384,7 +384,7 @@ Notice that when applying the VA theory this way, we assume that the electron-pr
 
 \subsubsection{Sum over all spin combinations}
 
-[[DISCUSS HERE]]
+[[DISCUSS HERE: this section needs some work]]
 \begin{figure}
    \includegraphics[scale=0.5]{img/16-allowed.png}
    \caption{Allowed spin transitions}
@@ -394,16 +394,12 @@ Notice that when applying the VA theory this way, we assume that the electron-pr
 We sum over the 16  allowed transitions in the V-A theory, as depicted in Figure \cite{fig:SC}.
 We note, however, that due to symmetry, only 4 spin configurations contribute appreciably:
 
-$$\bar{u}(p_{n},1)u(p_{p},1)\bar{u}(p_{k},2)u(p_{e},2)$$
-$$\bar{u}(p_{n},2)u(p_{p},2)\bar{u}(p_{k},1)u(p_{e},1)$$
-$$\bar{u}(p_{n},2)u(p_{p},1)\bar{u}(p_{k},2)u(p_{e},2)$$
-$$\bar{u}(p_{n},1)u(p_{p},2)\bar{u}(p_{k},2)u(p_{e},1)$$
-
-
+$$\bar{u}(p_{n},1)u(p_{p},1)\bar{u}(p_{\nu},2)u(p_{e},2)$$
+$$\bar{u}(p_{n},2)u(p_{p},2)\bar{u}(p_{\nu},1)u(p_{e},1)$$
+$$\bar{u}(p_{n},2)u(p_{p},1)\bar{u}(p_{\nu},2)u(p_{e},2)$$
+$$\bar{u}(p_{n},1)u(p_{p},2)\bar{u}(p_{\nu},2)u(p_{e},1)$$
 
 [[similar to diagram in "Beta Decay for Pedestrians"; it would be nice to work this out]]
-
-
 
 \subsection{Numerical Calculations}
 
@@ -420,8 +416,8 @@ and the 16 allowed spin transitions (see figure below). By conservation of momen
 \For{$w_{x},w_{\phi}\in \mathbb{Q}[1,8]$}\Comment{quadrature weights}
 \For{$s_{p},s_{e},s_{n},s_{\nu}\in [0, 1]$}\Comment{$s_{up},s_{down}=0,1$}
 \For{$s_{x},s_{y},s_{z}\in [-1,1]$}\Comment{$\mathbf{p}_{ep}=\mathsf{p}_{ep}[s_{x},s_{y},s_{z}]$}
-\State $p_{p},p_{e}, p_{n}, p_{\nu}\gets pekin(w_{x},w_{\phi},\mathbf{p}_{ep})$\Comment{4 vectors $\gets$ rel. kinematics}
-\State $u(p_{p},s_{p}), u(p_{e},s_{e}), \bar{u}(p_{n},s_{n}), \bar{u}(p_{\nu},s_{\nu})$\Comment{spinors by p, s-index}
+\State $p_{n},p_{p}, p_{\nu},p_{e}, \gets pekin(w_{x},w_{\phi},\mathbf{p}_{ep})$\Comment{4 vectors $\gets$ rel. kinematics}
+\State $\bar{u}(p_{n},s_{n}),u(p_{p},s_{p}), \bar{u}(p_{\nu},s_{\nu}), u(p_{e},s_{e})$\Comment{spinors by p, s-index}
 \For{$u\in[1,4]$}\Comment{4-vector indices}
 \State $\mathbf{J}^{u}_{had}=\bar{u}(p_{n},s_{n})\cdot(G_{V}-G_{A}\gamma^{5})\cdot\gamma^{\mu}\cdot u(p_{p},s_{p})$\Comment{Hadronic current}
 \State $\mathbf{L}^{u}_{lep}=\bar{u}(p_{\nu},s_{\nu})\cdot\gamma_{u}\cdot(1-\gamma^{5})\cdot u(p_{e},s_{e})$\Comment{Leptonic current}
