@@ -405,7 +405,7 @@ $$\bar{u}(p_{n},1)u(p_{p},2)\bar{u}(p_{\nu},2)u(p_{e},1)$$
 
  The full calculations sums of over all 8 possible incident momenta permutations
   $(\pm\mathbf{p}_{ep}(1),\pm\mathbf{p}_{ep}(2),\pm\mathbf{p}_{ep}(3) )$,
-and the 16 allowed spin transitions (see figure below). By conservation of momenta, we can eliminate the neutron and only need to average over the outbound neutrino momenta solid angle ($k^{3}d\Omega_k$); we do this using an 8-point gaussian quadrature. 
+and the 16 allowed spin transitions (see figure below). By conservation of momenta, we can eliminate the neutron and only need to average over the outbound neutrino momenta solid angle ($d\Omega_k$); we do this using an 8-point gaussian quadrature. 
  
 \begin{algorithm}
 \caption{Rate and Power Calculations}\label{code}
@@ -441,12 +441,19 @@ $$\mathcal{F}=r_{c}\left(\dfrac{p_{ep}}{2\pi}\right)^{3}\left(\dfrac{G_{F}^{2}(E
 
 \subsection{Results}
 
-[[DISCUSS HERE: this section needs some work]]
+
+
 \begin{figure}
    \includegraphics[scale=0.5]{img/results.png}
-   \caption{Allowed spin transitions}
-  \label{fig:SC}
+   \caption{Kinetic Energy and Power as a function of Box Length}
+  \label{fig:results}
 \end{figure}
+
+Figure \ref{fig:results} presents the results of relativistic kinematics and excess power calculations, as a function of box length.
+For illustrative purposes, we include results box sizes even below the Compton length.  The excess power ratio is positive for $L>0.004\mathring{A}$, with a maximum of almost a factor of 3.
+
+
+
 
 [references  , perhaps not correctly numbered]
 
