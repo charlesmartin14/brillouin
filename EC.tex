@@ -385,7 +385,9 @@ Notice that when applying the VA theory this way, we assume that the electron-pr
 
 \subsubsection{Sum over all spin combinations}
 
-[[DISCUSS HERE: this section needs some work]]
+[[I have not yet decided how much of this section to include and work out.  The idea is to look at the detailed spin combinations of the matrix elements, and present an analysis similar to the discussion in "Beta Decay for Pedestrians".  this is relevant since , as we see below, even though we sum over 16 matrix element combinations, only 4 are non-negative in this very specific system.  it is possible, in other environments, that forbidden transitions might be allowed.. I also wanted to discuss this to grok the psudecode.]]  
+
+
 \begin{figure}
    \includegraphics[scale=0.5]{img/16-allowed.png}
    \caption{Allowed spin transitions}
@@ -400,7 +402,6 @@ $$\bar{u}(p_{n},2)u(p_{p},2)\bar{u}(p_{\nu},1)u(p_{e},1)$$
 $$\bar{u}(p_{n},2)u(p_{p},1)\bar{u}(p_{\nu},2)u(p_{e},2)$$
 $$\bar{u}(p_{n},1)u(p_{p},2)\bar{u}(p_{\nu},2)u(p_{e},1)$$
 
-[[similar to diagram in "Beta Decay for Pedestrians"; it would be nice to work this out]]
 
 \subsection{Numerical Calculations}
 
@@ -437,7 +438,7 @@ and the 16 allowed spin transitions (see figure below). By conservation of momen
 
 \subsubsection{Power Calculations}
 
-[[Still writing up the dervivation of the power equations exactly]]
+[[Again, I have not worked this out in detail.  In particular, we discuss the power above, so this is just for understanding the code, and I may leave this to the python notebook. It is necessary , however, to really grok all the pseudocode]]
 
 $$\mathcal{F}=r_{c}\left(\dfrac{p_{ep}}{2\pi}\right)^{3}\left(\dfrac{G_{F}^{2}(E_{\nu}^{2}-m_{\nu}^{2})^{3}}{512\pi^{2}\;E_{p}E_{e}\hbar c\;\big\vert\; \mathbf{k}(E_{n}p_{\nu}-E_{\nu}p_{n})\;\big\vert}\right)$$
 
