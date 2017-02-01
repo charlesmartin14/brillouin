@@ -75,10 +75,10 @@
       
       rlconf = 1.d-5*hbarc*pi/pep
 
-      test = 0.d0
       tran2 = 0.d0
       do ix =1,nx
-      do ip =1,np
+         do ip =1,np
+            
       do is1 =1,2
          cs1(is1) = 1.d0
       do is2 =1,2
@@ -136,7 +136,8 @@
       enddo
       enddo
       enddo
-    
+
+
       fact =rc*((pep/(2.d0*pi))**3)*(GF**2)*(dsqrt(pk(0)**2-dmnu**2))**3
      1     /(512.d0 *(pi **2)* p2(0)* pe(0)* hbarc * 1.d-15*
      1     dabs((pk(1) *(p1(0)* pk(1)-pk(0)* p1(1))) +
@@ -145,19 +146,21 @@
     
       EKn = p1(0) - dMn
       EKe = pe(0) - dme
+
       tran2 = tran2 + wxg(ix)*wpg(ip)*
      1    dreal(camp2* dconjg(camp2)) * fact *dndens
 
     
       csk(isk) = 0.d0
       enddo
-      cse(i se) = 0.d0
+      cse(ise) = 0.d0
       enddo
       cs2(is2) = 0.d0
       enddo
       cs1(is1) = 0.d0
       enddo
 
+      
       enddo
       enddo
     
@@ -165,9 +168,10 @@
       EKn = p1(0) - dMn
       EKe = pe(0) - dme
       EKnu = pk(0) - dmnu
-      write(*,*) rlconf,tran2,EKe,EKn
+C     write(*,*) iep,rlconf,tran2,tran2/dndens,EKe,EKn
+      write(*,*) "tran2",iep,rlconf,tran2,tran2/dndens
 
-      write(9,*) rlconf,
+      write(9,*) rlconf,tran2,
      1 tran2 *((pe(0) - dme)+(p2(0) - dMp)) * e * 1.d-7,
      1 tran2 *(2.2d0+(p1(0) - dMn)) * e * 1.d-7,EKe,EKn,EKnu,Ekp
       enddo
