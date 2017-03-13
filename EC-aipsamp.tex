@@ -72,23 +72,34 @@ We briefly review orbital electron capture and some considerations, like environ
 In 1935, Yukawa proposed that a proton, bound in an atomic nucleus,  could capture a low lying, bound atomic electron, transforming into a neutron, and releasing an electron neutrino.
 
 
+$$p^{+}+\;e^{-}\rightarrow\;n^{0}\;+\;\nu^{e}$$
 
-This file may be formatted in both the \texttt{preprint} (the default) and
-\texttt{reprint} styles; the latter format may be used to 
-mimic final journal output. Either format may be used for submission
-purposes; however, for peer review and production, AIP will format the
-article using the \texttt{preprint} class option. Hence, it is
-essential that authors check that their manuscripts format acceptably
-under \texttt{preprint}. Manuscripts submitted to AIP that do not
-format correctly under the \texttt{preprint} option may be delayed in
-both the editorial and production processes.
+This may be called orbital electron capture, K-electron capture, or just electron capture (E.C.) 
 
-The \texttt{widetext} environment will make the text the width of the
-full page, as on page~\pageref{eq:wideeq}. (Note the use the
-\verb+\pageref{#1}+ to get the page number right automatically.) The
-width-changing commands only take effect in \texttt{twocolumn}
-formatting. It has no effect if \texttt{preprint} formatting is chosen
-instead.
+Electron capture usually occurs in unstable radioisotopes which lack the nuclear binding energy $Q$ to decay by the more familiar Beta decay processes ($\beta^{-}, \beta^{+}$). The typical $Q$ energies necessary are 
+
+$$Q_{\beta^{+}}\sim2-4{MeV},\;\\;Q_{\beta^{-}}\sim0.5-2(MeV),\;\;{and}\;\;Q_{E.C.}\sim0.2-2.0{MeV}$$
+
+When $Q<1.02{MeV}$, which is $2m_{e}c^{2}$, a proton rich nucleus must decay by electron capture.  Otherwise, all 3 processes compete.
+
+In particular, heavy elements may decay by E.C. and/or $\beta^{+}$ (positron emission) to a lower 'magic number' of stable nuclei, and by $\beta^{-}$ decay to achieve a higher magic number.    E.C. is favored for high Z nuclei, but because of the energetic constraint, very light elements, such as $^{7}Be$ decay by primarily by E.C.    Lacking any binding energy, bare proton electron capture is not observed, and requires extreme, exotic conditions.
+ 
+We observe electron capture by observing the resulting transmuted nuclei and/or the radiative relaxation processes.  The captured electron is bound to the atom, and it is usually a K-shell electron, but may be L or higher.  The nucleus may then absorb some energy, becoming excited, and then undergo internal conversion.  During this, another higher lying, bound atomic electron is absorbed, and either an X-ray or Auger electron released [see Figure \ref{fig:ec1}].
+
+\begin{figure}
+   \includegraphics[scale=0.25]{img/ecrelax.png}
+   \caption{orbital electron capture relaxation processes}
+  \label{fig:ec1}
+\end{figure}
+
+Because electron capture occurs in proton-rich nuclei, and, subsequently, releases a X-Ray photon, the reaction is also sometimes written as
+
+$$^{Z}X_{A}+\;e^{-}\rightarrow\;^{Z-1}X_{A}\;+\;h\nu_{X-ray}$$
+
+(where Z is the total number of protons and neutrons, A the number protons, and $h\nu_{X-ray}$ is an X-ray photon)
+
+Indeed, orbital electron capture is evidenced by high intensity x-rays and soft electrons.  In 1938, Luis W. Alvarez observed the x-ray signature of orbital electron capture in activated Titanium \cite{alvarez}. Since then, electron capture has been observed in about 150 radioactive isotopes.
+
 
 \subsubsection{\label{sec:level3}Third-level heading: Citations and Footnotes}
 
