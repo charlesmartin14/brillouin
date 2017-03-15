@@ -29,9 +29,6 @@
 %author-numerical,%
 ]{revtex4-1}
 
-\usepackage{algorithm}
-\usepackage[noend]{algpseudocode}
-
 
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
@@ -39,7 +36,8 @@
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
 
-
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
 
 \begin{document}
 
@@ -456,7 +454,9 @@ $$\bar{u}(p_{n},1)u(p_{p},2)\bar{u}(p_{\nu},2)u(p_{e},1)$$
   $(\pm\mathbf{p}_{ep}(1),\pm\mathbf{p}_{ep}(2),\pm\mathbf{p}_{ep}(3) )$,
 and the 16 allowed spin transitions (see figure below). By conservation of momenta, we can eliminate the neutron and only need to average over the outbound neutrino momenta solid angle ($d\Omega_k$); we do this using an 8-point gaussian quadrature. 
 
- \begin{figure}
+
+ \begin{figure*}
+ \begin{minipage}{\linewidth}
 \begin{algorithm}[H]
 \caption{Rate and Power Calculations}\label{code}
 \begin{algorithmic}[1]
@@ -479,10 +479,11 @@ and the 16 allowed spin transitions (see figure below). By conservation of momen
 \State $Tran(\mathsf{p}_{ep})+=w_{x}w_{\phi}Re[\mathbb{C}^{\dagger}\mathbb{C}]\mathcal{F}^{2}$\Comment{Integrated Rate}
 \EndFor
 \State $Power_{n}(\mathsf{p}_{ep})=Tran(\mathsf{p}_{ep})*(2.2+(E_{n}-M_{n}))$\Comment{Neutron Power estimate}
-\EndFor
+\EndFor<
 \end{algorithmic}
 \end{algorithm}
-\end{figure}
+\end{minipage}
+\end{figure*}
 
 
 
@@ -496,11 +497,14 @@ $$\mathcal{F}=r_{c}\left(\dfrac{p_{ep}}{2\pi}\right)^{3}\left(\dfrac{G_{F}^{2}(E
 
 
 
-\begin{figure}
+\begin{figure*}
+ \begin{minipage}{\linewidth}
    \includegraphics[scale=0.5]{img/results.png}
    \caption{Kinetic Energy and Power as a function of Box Length}
   \label{fig:results}
-\end{figure}
+\end{minipage}
+\end{figure*}
+
 
 Figure \ref{fig:results} presents the results of relativistic kinematics and excess power calculations, as a function of box length.
 For illustrative purposes, we include results box sizes even below the Compton length.  The excess power ratio is positive for $L>0.004\mathring{A}$, with a maximum of almost a factor of 3.
