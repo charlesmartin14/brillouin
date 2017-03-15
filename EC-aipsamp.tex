@@ -455,7 +455,7 @@ Notice that when applying the VA theory this way, we assume that the electron-pr
 
 \subsubsection{Sum over all spin combinations}
 
-[[I have not yet decided how much of this section to include and work out.  The idea is to look at the detailed spin combinations of the matrix elements, and present an analysis similar to the discussion in "Beta Decay for Pedestrians".  this is relevant since , as we see below, even though we sum over 16 matrix element combinations, only 4 are non-negative in this very specific system.  it is possible, in other environments, that forbidden transitions might be allowed.. I also wanted to discuss this to grok the psudecode.]]  
+[[I have not yet decided how much of this section to include and work out.  The idea is to look at the detailed spin combinations of the matrix elements, and present an analysis similar to the discussion in "Beta Decay for Pedestrians".  this is relevant since , as we see below, even though we sum over 16 matrix element combinations, only 4 are non-negative in this very specific system.  it is possible, in other environments, that forbidden transitions might be allowed.. I also wanted to discuss this to grok the psuedecode.]]  
 
 
 \begin{figure}
@@ -463,14 +463,37 @@ Notice that when applying the VA theory this way, we assume that the electron-pr
    \caption{Allowed spin transitions}
   \label{fig:SC}
 \end{figure}
-We sum over the 16  allowed transitions in the V-A theory, as depicted in Figure \cite{fig:SC}.
-We note, however, that due to symmetry, only 4 spin configurations contribute appreciably:
+We sum over the 16  allowed transitions in the V-A theory, as depicted in Figure \cite{fig:SC}
+ (taken from Beta Decay for Pedestrians; we need to replicate)
 
-$$\bar{u}(p_{n},1)u(p_{p},1)\bar{u}(p_{\nu},2)u(p_{e},2)$$
-$$\bar{u}(p_{n},2)u(p_{p},2)\bar{u}(p_{\nu},1)u(p_{e},1)$$
-$$\bar{u}(p_{n},2)u(p_{p},1)\bar{u}(p_{\nu},2)u(p_{e},2)$$
-$$\bar{u}(p_{n},1)u(p_{p},2)\bar{u}(p_{\nu},2)u(p_{e},1)$$
+Similar to Beta, s, we have four spin dominate (\emph{allowed}) spin combinations, 
+consisting of two singlet-like (or Fermi-like) initial and final states,  which is of order $50$ (in natural units)
 
+$$s_{p}\neq s{_e};\;\;\;s_{n}\neq s_{\nu}$$
+$$\bar{u}(p_{n},1)u(p_{p},1)\;\bar{u}(p_{\nu},2)u(p_{e},2)$$
+$$\bar{u}(p_{n},2)u(p_{p},2)\;\bar{u}(p_{\nu},1)u(p_{e},1)$$,
+$$\bar{u}(p_{n},2)u(p_{p},1)\;\bar{u}(p_{\nu},1)u(p_{e},2)$$
+$$\bar{u}(p_{n},1)u(p_{p},2)\;\bar{u}(p_{\nu},2)u(p_{e},1)$$.
+
+There are two weaker (\emph{dis-allowed}) combinations, similar to Gamow-Teller transitions,
+where are all spins are the same, and are of order $10^{-1}$ (that is, $10^{-3}$ smaller in magnitude)
+
+$$s_{n}=s_{p}=s_{\nu}=s{_e}$$
+$$\bar{u}(p_{n},1)u(p_{p},1)\;\bar{u}(p_{\nu},1)u(p_{e},1)$$
+$$\bar{u}(p_{n},2)u(p_{p},2)\;\bar{u}(p_{\nu},2)u(p_{e},2)$$.
+
+There are four remaining, non-zero contributions, consisting of a single spin flip
+in the initial or final state, and is of order $10^{-3}$ in magnitude
+
+$$s_{p}\neq s{_e}\;{or}\;s_{n}\neq s_{\nu}$$
+
+$$\bar{u}(p_{n},1)u(p_{p},1)\;\bar{u}(p_{\nu},1)u(p_{e},2)$$
+$$\bar{u}(p_{n},2)u(p_{p},2)\;\bar{u}(p_{\nu},2)u(p_{e},1)$$.
+$$\bar{u}(p_{n},2)u(p_{p},1)\;\bar{u}(p_{\nu},2)u(p_{e},2)$$
+$$\bar{u}(p_{n},1)u(p_{p},2)\;\bar{u}(p_{\nu},1)u(p_{e},1)$$
+
+
+The remaining (single and double flip) transitions have zero amplitude.
 
 \subsection{Numerical Calculations}
 
