@@ -217,7 +217,7 @@ where $E_{box}$ is the \emph{confinement energy}, which is induced by the box co
 
 \subsubsection{Neutron post-reaction}
 
-To prevent the reverse reaction, we assume that the free neutron subsequently combines with another proton, and gives us 2.2 GeV of energy in the process.  This post-process contributes to the power output, and prevents the reverse reaction.  Realistically, we expect this to happen at the maximum box size, at the energy threshold, where the outbound neutron has very low momentum and therefore a very small mean free path.  
+To prevent the reverse reaction, we assume that the free neutron subsequently combines with another proton, and gives us 2.2 MeV of energy in the process.  This post-process contributes to the power output, and prevents the reverse reaction.  Realistically, we expect this to happen at the maximum box size, at the energy threshold, where the outbound neutron has very low momentum and therefore a very small mean free path.  
 
 Still, for illustrative purposes, we will compute the power output,  assuming this post-reaction,  at all box sizes.
 
@@ -258,7 +258,7 @@ So we use a classical box, with minimum size $L_{min}=0.004\;\mathring{A}$.  We 
 
 Electron capture is mediated by the Weak Interaction, through the particle production process, given by the 4-point Interaction (see Figure \ref{fig:ppp}).   It requires \emph{at least} 0.511 MeV energy to overcome the reaction barrier, which, here, is \emph{provided} by the box. 
 
-$$0.511{MeV}+p^{+}+e^{-}\rightarrow n^{0}+\nu_{e}$$  
+$$0.782{MeV}+p^{+}+e^{-}\rightarrow n^{0}+\nu_{e}$$  
 
 We want to compute the rate of E.C. and the (minimum) power generated, as a function of the box size (L), using the full Weak Interaction Hamiltonian.  To do this, we need to express the rate in terms of the differential cross section, and in a form suitable for numerical calculations.  
 
@@ -542,64 +542,6 @@ For illustrative purposes, we include results box sizes even below the Compton l
 We wish to acknowledge the support of the Anthropocene Institute
 \dots.
 \end{acknowledgments}
-
-\appendix
-
-\section{Appendixes}
-
-To start the appendixes, use the \verb+\appendix+ command.
-This signals that all following section commands refer to appendixes
-instead of regular sections. Therefore, the \verb+\appendix+ command
-should be used only once---to set up the section commands to act as
-appendixes. Thereafter normal section commands are used. The heading
-for a section can be left empty. For example,
-\begin{verbatim}
-\appendix
-\section{}
-\end{verbatim}
-will produce an appendix heading that says ``APPENDIX A'' and
-\begin{verbatim}
-\appendix
-\section{Background}
-\end{verbatim}
-will produce an appendix heading that says ``APPENDIX A: BACKGROUND''
-(note that the colon is set automatically).
-
-If there is only one appendix, then the letter ``A'' should not
-appear. This is suppressed by using the star version of the appendix
-command (\verb+\appendix*+ in the place of \verb+\appendix+).
-
-\section{A little more on appendixes}
-
-Observe that this appendix was started by using
-\begin{verbatim}
-\section{A little more on appendixes}
-\end{verbatim}
-
-Note the equation number in an appendix:
-\begin{equation}
-E=mc^2.
-\end{equation}
-
-\subsection{{app:subsec}A subsection in an appendix}
-
-You can use a subsection or subsubsection in an appendix. Note the
-numbering: we are now in Appendix~\ref{app:subsec}.
-
-\subsubsection{{app:subsubsec}A subsubsection in an appendix}
-Note the equation numbers in this appendix, produced with the
-subequations environment:
-\begin{subequations}
-\begin{eqnarray}
-E&=&mc, \label{appa}
-\\
-E&=&mc^2, \label{appb}
-\\
-E&\agt& mc^3. \label{appc}
-\end{eqnarray}
-\end{subequations}
-They turn out to be Eqs.~(\ref{appa}), (\ref{appb}), and (\ref{appc}).
-
 %\nocite{*}
 \bibliography{EC-aipsamp}% Produces the bibliography via BibTeX.
 
