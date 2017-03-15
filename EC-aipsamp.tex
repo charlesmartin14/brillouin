@@ -177,10 +177,60 @@ At zero energy, proton electron capture is not possible because it violates ener
 Observing proton electron capture outside of an accelerator, \emph{on the desktop}, so to speak, would be an incredibly hard experiment because both final particles are neutral, and  the neutrino is extremely weakly interacting.
 
 
+\subsubsection{\label{sec:level3}Stellar Nucleosynthesis}
+
+Bare proton-electron capture is thought to occur  in the early stages of the big bang and in stellar nucleosynthesis.  It is thought to drive the formation of primordial elements, and to occur in the forming of neutron stars.   
+
+At very high temperatures, the proton electron collisions have sufficient energy to overcome the reaction barrier.   For example, Bachall and coworkers have studied the electron capture rate in stellar media, and have computed the electron capture rate of $^{7}Be$ in the Sun \cite{bachall62,bachall69}. And it is believed that ionized Hydrogen captures an electron during the core collapse supernovae and in neutron stars [14]; in fact, it is thought to create stellar instability.   
+
+While we usually characterize a star by it's temperature, these are also very dense systems, with $\rho\sim 10^6\;g\;cm^{-3}$.  In contrast, the smallest star has density $\rho\sim 10^{2}-10^{3}\;g\;cm^{-3}$ [?]  As important, the reverse reaction is prohibited because, inside the dense neutron star, it is impossible to create a new electron; the Fermi sea is \emph{full}.
+
+So electron capture can occur by bare protons, but, presumably, only under extreme confinement (and with the reverse reaction is suppressed).
+
+\section{\label{sec:level1}Confinement Induced Electron Capture}
+
+We pose the following Gedankenexperiment:    Suppose we confine an electron and a bare proton as a particle-in-a-box of volume $L^3$.  What box size L will 'induce' electron confinement ?
+
+We write this as
+
+$$E_{box}+p^{+}+e^{-}\rightarrow n^{0}+\nu_{e}$$
+
+where $E_{box}$ is the \emph{confinement energy}, which is induced by the box constraints. 
+
+\subsubsection{\label{sec:level3}Neutron post-reaction}
+
+To prevent the reverse reaction, we assume that the free neutron subsequently combines with another proton, and gives us 2.2 GeV of energy in the process.  This post-process contributes to the power output, and prevents the reverse reaction.  Realistically, we expect this to happen at the maximum box size, at the energy threshold, where the outbound neutron has very low momentum and therefore a very small mean free path.  
+
+Still, for illustrative purposes, we will compute the power output,  assuming this post-reaction,  at all box sizes.
+
+\subsection{\label{sec:level2}Compton length}
+The first obvious question is, should we use a classical or a relativisitic box?   
+
+Most electron capture rate calculations use \emph{ab initio} classical wavefunctions \cite{ec-review1,ec-review2}, perhaps with some relativisitic corrections to the electronic Hamiltonian \cite{martin}.
+
+We argue that we can safely use a classical box as long as $L_{min} \ge \dfrac{1}{2\pi}\lambda_{e}$, where $\lambda_{e}$ is Compton wavelength of an electron \cite{relbox,compton,planck}.  The Compton wavelength sets the scale, accounting for both quantum mechanics and special relativity.
+
+$$\lambda_{e}=\dfrac{h}{m_{e}c}=\dfrac{e^{2}}{m_{e}c^{2}}$$
+
+$$\lambda_{e}\approx2.426\times 10^{-12}\;m$$
+
+For an electron, the minimum L is on the order of 0.004 Angstrom 
+$$L_{min}\sim0.004\;\mathring{A}$$ 
+
+In any high energy, relativisitic system, positrons can be produced; here it is through $\beta^{+}$-decay. This generally occurs at or below the Compton length. We are seeking the maximum box size which can induce electron capture, and we assume that, at the max, positron emission will be very rare.
+
+We also assume that the electron wavefunction does not change appreciably during the interaction, so that we may use a very simplified form for the cross section ($\sigma$) and rate ($\Gamma$).  Again, this is reasonable for boxes $L\ge\lambda_{e}$.
+
+\subsubsection{Klein Paradox}
+
+Klein noted that a relativistic (Dirac) particle-in-a-box will \emph{leak out} at box sizes near the Compton wavelength; this called the Klein paradox \cite{klein1,klein2}.  And while this is usually taught as being simply particle-antiparticle creation, it has been suggested that the Klein paradox it can occur even at larger boxes sizes, and it is a general phenomena of confined relativistic particles.  And recent experiments on Graphene have reopened the debate \cite{klein3}. Still, we will assume the traditional interpretation and that we can ignore the Klein paradox.
+
+
+
+
 
 \begin{acknowledgments}
-We wish to acknowledge the support of the author community in using
-REV\TeX{}, offering suggestions and encouragement, testing new versions,
+We wish to acknowledge the support of the Anthropocene Institute
 \dots.
 \end{acknowledgments}
 
