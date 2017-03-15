@@ -446,12 +446,7 @@ $$\mathbf{J}_{had}=\bar{u}(p_{n},s_{n})(G_{V}-G_{A}\gamma^{5})\gamma^{\mu}u(p_{p
 
 $$\mathbf{L}_{lep}=\bar{u}(p_{\nu},s_{\nu})\gamma_{u}(1-\gamma^{5})u(p_{e},s_{e})$$
 
-[Express power in terms of real part of current]
-
 Notice that when applying the VA theory this way, we assume that the electron-proton interaction is a contact potential, operating at the surface of the nucleus, and that the underlying quantum process is incoherent.  
-
-[how much more to describe here ?  Specify the 4-norm / gamma metric tensor convention? ]
-
 
 \subsubsection{Sum over all spin combinations}
 
@@ -539,12 +534,34 @@ and the 16 allowed spin transitions (see figure below). By conservation of momen
 
 \subsubsection{Power Calculations}
 
-[[Again, I have not worked this out in detail.  In particular, we discuss the power above, so this is just for understanding the code, and I may leave this to the python notebook. It is necessary , however, to really grok all the pseudocode]]
+Let us write the Real part of the current density as
 
-$$\mathcal{F}=r_{c}\left(\dfrac{p_{ep}}{2\pi}\right)^{3}\left(\dfrac{G_{F}^{2}(E_{\nu}^{2}-m_{\nu}^{2})^{3}}{512\pi^{2}\;E_{p}E_{e}\hbar c\;\big\vert\; \mathbf{k}(E_{n}p_{\nu}-E_{\nu}p_{n})\;\big\vert}\right)$$
+$$C^{2}_{Re}=Re(\bar{C}^{2}_{amp}{C}^{2}_{amp})$$
+
+where
+
+\begin{multline}
+C^{2}_{amp}=(\mathbf{J}_{had})^{\mu}(\mathbf{L}_{lep})_{\mu}=\\
+J^{0}_{had}L^{0}_{lep}-J^{1}_{had}C^{1}_{lep}-J^{2}_{had}L^{2}_{lep}-J^{3}_{had}L^{3}_{lep}
+\end{multline}
+
+We can express the rate as
+
+$$\Gamma_{EC} = C^{2}_{Re}(\mathcal{F})$$
+
+where
+\begin{multline}
+\mathcal{F}=r_{c}\left(\dfrac{p_{ep}}{2\pi}\right)^{3}\left(\dfrac{G_{F}^{2}(E_{\nu}^{2}-m_{\nu}^{2})^{3}}{512\pi^{2}\;E_{p}E_{e}\hbar c\;\big\vert\; \mathbf{k}(E_{n}p_{\nu}-E_{\nu}p_{n})\;\big\vert}\right)
+\end{multline}
+
+
+We write power as
+$$P1 = P_{pe}=C^{2}_{Re}\left[(\mathbf{E}_{e}-m_{e})+(\mathbf{E}_{p}-M_{p})\right]\left(\mathcal{F}\right)$$
+$$P2 = P_{n}=C^{2}_{Re}\left[2.2+(\mathbf{E}_{n}-M_{n})\right]\left(\mathcal{F}\right)$$
+
+and compute these as a function of the box size using the relativistic kinematic and Weak interaction matrix elements.
 
 \subsection{Results}
-
 
 
 \begin{figure*}
