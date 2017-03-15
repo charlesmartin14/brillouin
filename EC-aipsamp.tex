@@ -29,11 +29,17 @@
 %author-numerical,%
 ]{revtex4-1}
 
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
+
+
 
 \begin{document}
 
@@ -64,11 +70,11 @@ We describe a Gedandkenexperiment in which a bare proton can capture an electron
                               %display desired
 \maketitle
 
-\section{\label{sec:level1}Background}
+\section{Background}
 
 We briefly review orbital electron capture and some considerations, like environmental effects on the rate, that motivate this study.
 
-\subsection{\label{sec:level2}Orbital Electron Capture}
+\subsection{Orbital Electron Capture}
 In 1935, Yukawa proposed that a proton, bound in an atomic nucleus,  could capture a low lying, bound atomic electron, transforming into a neutron, and releasing an electron neutrino.
 
 
@@ -101,7 +107,7 @@ $$^{Z}X_{A}+\;e^{-}\rightarrow\;^{Z-1}X_{A}\;+\;h\nu_{X-ray}$$
 Indeed, orbital electron capture is evidenced by high intensity x-rays and soft electrons.  In 1938, Luis W. Alvarez observed the x-ray signature of orbital electron capture in activated Titanium \cite{alvarez}. Since then, electron capture has been observed in about 150 radioactive isotopes.
 
 
-\subsubsection{\label{sec:level3}Effect of Chemical Environment of Electron Capture rate}
+\subsubsection{Effect of Chemical Environment of Electron Capture rate}
 
 The lightest element that E.C. has been observed in is $^{7}Be$\cite{radbook}. In fact, there is so little energy that the competing $\beta^{+}$ positron emission process (described below) is prohibited, leading to a fairly long E.C. half-life of $\tau_{EC}\sim 50\;days$.
 
@@ -109,14 +115,14 @@ Being so light, and having such a large rate, electron capture in $^{7}Be$ can b
 
 How could such changes occur?  The nuclear energy levels are in the keV to MeV region, and it is generally thought to be very difficult to impossible to effect.  But the electron capture rate is proportional to electronic density at the surface of the nucleus--\emph{the nuclear charge}.   The electronic energy levels are in the eV range, so intense EM fields can alter the electronic structure and therefore slightly affect the E.C. rate. 
 
-\subsection{\label{sec:level2}The Weak Interaction and V-A theory}
+\subsection{The Weak Interaction and V-A theory}
 
 Electron capture is mediated by the Weak interaction, described most concisely by the Fermi V-A (Vector Axial) theory \cite{fermi1,ec-review1,ec-review2}.
 The V-A theory is a simple phenomenological approach, readily amenable to numerical calculations.  While It is now understood in terms of ElectroWeak Unification and can be derived from the Standard Model, the original paper by Fermi, for which he won the 1938 Nobel Prize in Physics, was initially rejected by \emph{Nature} because "It contained speculations too remote from reality to be of interest to the reader" \cite{close}.
 
 V-A theory is used to compute cross sections for scattering experiments and decay rates for electron capture for various atoms,  even in different environments, chemical and otherwise.  We can use machinery of the V-A theory to explore E.C. in a simple, idealized environment.  To properly describe any reaction, however, we need to understand what reactions we can apply the theory to, and the other, potential competing reactions.
 
-\subsubsection{\label{sec:level3}Electron Capture and other Weak processes} 
+\subsubsection{Electron Capture and other Weak processes} 
 
 The Weak interaction describes several related processes within a single framework.  \emph{Neutron-rich} nuclei may become more stable as a result by undergoing one or more of the following:
 
@@ -137,7 +143,7 @@ There are also several related reactions, including
 \end{itemize}
 
 
-\subsubsection{\label{sec:level3}Neutron Decay} 
+\subsubsection{Neutron Decay} 
 
 
 By detailed balance,  reverse electron capture has the same rate as orbital electron capture--but is more favorable energetically.  Indeed, inside the nucleus, the neutron is relatively stable. Free neutron decay has mean lifetime of $\tau=881.5\pm1.5\;sec $, or about 15 minutes. 
@@ -145,19 +151,19 @@ By detailed balance,  reverse electron capture has the same rate as orbital elec
 In contrast, orbital electron capture by a free proton is unspoken-of outside of a stellar environments. Even if the bare reaction could proceed, the reverse reaction would still dominate un
 less it is suppressed or is kinetically unfavorable.  
 
-\subsubsection{\label{sec:level3}Inverse Beta Decay} 
+\subsubsection{Inverse Beta Decay} 
 
 Electron capture is also sometimes called inverse $\beta$ decay, but, here, we mean this to be the scattering of a proton and an electron anti-neutrino $\bar{\nu}_{e}$.  It is characterized by emission of a positron $e^{+}$. 
 
-\subsubsection{\label{sec:level3}Positron emission} 
+\subsubsection{Positron emission} 
 
 In particular, any high energy relativisitic process, we have to worry about positron emission.  We noted above, however, that in $^{7}Be$, the competing positron decay reaction can not occur because there is not enough energy.  Generally, this occurs at length scales below the Compton length of the electron, which, is smaller than we will need to consider.
 
-\subsubsection{\label{sec:level3}Radiative Electron Capture}
+\subsubsection{Radiative Electron Capture}
 
 Also, in very rare cases, a gamma ray photon is emitted with the neutrino; this is called Radiative Electron Capture (REC) \cite{glauber1,glauber2, Jauch, roec2007}. This can be thought of as a kind of Internal Bremsstrahlung (or so-called \emph{braking}) radiation, caused by the electron accelerating toward the nucleus during capture,  taking energy away from outbound neutrino\cite{jackson}. It is traditionally been treated as a second order QED correction to the V-A theory \cite{Jauch}.  REC is 1000X less likely, but does occur.   The resulting gamma rays are called soft because they do not exhibit sharp spectral lines.    Recent, detailed rate calculations have elucidated the quantum mechanical details \cite{roec2007}.
 
-\subsection{\label{sec:level2}Rate calculations}
+\subsection{Rate calculations}
 
 The electron capture rate can be computed using the Fermi VA-Theory \cite{ec-review1,ec-review2}.  The most basic calculations require a only specifying the electronic wavefunctions(s), averaging over the possible electron-proton momenta, and numerically integrating over the outbound neutrino momentum.  We describe this below.
 
@@ -165,7 +171,7 @@ The V-A theory is based on second order perturbation theory.  It assumes an inco
 
 More complicated calculations are used for larger nuclei, second order processes, etc.  They only require modifications to treat either atomic electronic structure of reactant and product atoms, and/or specific considerations for nuclear internal conversion and other second order processes.
 
-\subsubsection{\label{sec:level3}Bare proton-electron capture}
+\subsubsection{Bare proton-electron capture}
 
 
 We frequently write electron capture as if it were simply proton-electron capture
@@ -177,7 +183,7 @@ At zero energy, proton electron capture is not possible because it violates ener
 Observing proton electron capture outside of an accelerator, \emph{on the desktop}, so to speak, would be an incredibly hard experiment because both final particles are neutral, and  the neutrino is extremely weakly interacting.
 
 
-\subsubsection{\label{sec:level3}Stellar Nucleosynthesis}
+\subsubsection{Stellar Nucleosynthesis}
 
 Bare proton-electron capture is thought to occur  in the early stages of the big bang and in stellar nucleosynthesis.  It is thought to drive the formation of primordial elements, and to occur in the forming of neutron stars.   
 
@@ -187,7 +193,7 @@ While we usually characterize a star by it's temperature, these are also very de
 
 So electron capture can occur by bare protons, but, presumably, only under extreme confinement (and with the reverse reaction is suppressed).
 
-\section{\label{sec:level1}Confinement Induced Electron Capture}
+\section{Confinement Induced Electron Capture}
 
 We pose the following Gedankenexperiment:    Suppose we confine an electron and a bare proton as a particle-in-a-box of volume $L^3$.  What box size L will 'induce' electron confinement ?
 
@@ -197,13 +203,13 @@ $$E_{box}+p^{+}+e^{-}\rightarrow n^{0}+\nu_{e}$$
 
 where $E_{box}$ is the \emph{confinement energy}, which is induced by the box constraints. 
 
-\subsubsection{\label{sec:level3}Neutron post-reaction}
+\subsubsection{Neutron post-reaction}
 
 To prevent the reverse reaction, we assume that the free neutron subsequently combines with another proton, and gives us 2.2 GeV of energy in the process.  This post-process contributes to the power output, and prevents the reverse reaction.  Realistically, we expect this to happen at the maximum box size, at the energy threshold, where the outbound neutron has very low momentum and therefore a very small mean free path.  
 
 Still, for illustrative purposes, we will compute the power output,  assuming this post-reaction,  at all box sizes.
 
-\subsection{\label{sec:level2}Compton length}
+\subsection{Compton length}
 The first obvious question is, should we use a classical or a relativisitic box?   
 
 Most electron capture rate calculations use \emph{ab initio} classical wavefunctions \cite{ec-review1,ec-review2}, perhaps with some relativisitic corrections to the electronic Hamiltonian \cite{martin}.
@@ -224,6 +230,281 @@ We also assume that the electron wavefunction does not change appreciably during
 \subsubsection{Klein Paradox}
 
 Klein noted that a relativistic (Dirac) particle-in-a-box will \emph{leak out} at box sizes near the Compton wavelength; this called the Klein paradox \cite{klein1,klein2}.  And while this is usually taught as being simply particle-antiparticle creation, it has been suggested that the Klein paradox it can occur even at larger boxes sizes, and it is a general phenomena of confined relativistic particles.  And recent experiments on Graphene have reopened the debate \cite{klein3}. Still, we will assume the traditional interpretation and that we can ignore the Klein paradox.
+
+So we use a classical box, with minimum size $L_{min}=0.004\;\mathring{A}$.  We compute the maximum size below.
+
+
+\subsection{Theory}
+
+\subsubsection{Particle production under the Weak interaction}
+
+\begin{figure}
+   \includegraphics[scale=0.25]{img/feynman.png}
+   \caption{EC particle production process}
+  \label{fig:ppp}
+\end{figure}
+
+Electron capture is mediated by the Weak Interaction, through the particle production process, given by the 4-point Interaction (see Figure \ref{fig:ppp}).   It requires \emph{at least} 0.511 MeV energy to overcome the reaction barrier, which, here, is \emph{provided} by the box. 
+
+$$0.511{MeV}+p^{+}+e^{-}\rightarrow n^{0}+\nu_{e}$$  
+
+We want to compute the rate of E.C. and the (minimum) power generated, as a function of the box size (L), using the full Weak Interaction Hamiltonian.  To do this, we need to express the rate in terms of the differential cross section, and in a form suitable for numerical calculations.  
+
+\subsection{Transition Rates and Power Calculations}
+
+Orbital electron capture and other Beta-decay processes follow first order kinetics, so the capture rate is described by a single number. 
+To calculate the rate, we require a full relativistic, quantum mechanical treatment because the capture process involves both creating particles and the kinetic energy spectrum is of order $m_{e}c^{2}$.
+
+ The capture rate $\Gamma_{EC}$  is given by multiplying the cross section $\sigma_{EC}$ by the incident velocity $\mathbf{v}^{in}_{ep}$ and electronic (box) density $\big\vert\Psi_{ep}(0)\big\vert^{2}$  of the $(e^{-},p^{+})$ pair at the origin
+
+$$\Gamma_{EC}=\big\vert\Psi_{ep}(0)\big\vert^{2}\mathbf{v}^{in}_{ep}\sigma_{EC}\;\;.$$
+
+We will compute the electronic density classically, using box wavefunctions, and, for each box size, determine the incident velocity (really momentum). We then compute the cross section using full relativistic kinematics and Dirac spinors.  
+
+\subsubsection{Cross Section}
+
+We write the differential cross section in the C.M. frame as
+
+$$d\sigma_{EC}=\left(\dfrac{1}{2\pi}\right)^{2}\dfrac{\sum_{fi}\big\vert\mathcal{M}_{fi}\big\vert^{2}}{16\;\big\vert\mathbf{k}\cdot(E{_n}\mathbf{k}-k^{0}\mathbf{p}_{n})\big\vert}\dfrac{k^{3}p_{e}d\Omega_{k}}{\big\vert\mathbf{p}_{e}\cdot(E_{p}\mathbf{p}_{e}-E_{e}\mathbf{p}_{e})\big\vert}$$
+
+where $\mathcal{M}_{fi}$ is a matrix element of the weak interaction Hamiltonian,  $k$ represents the neutrino, and we use natural units $(\hbar=1,c=1)$.
+
+
+\subsubsection{Rate}
+
+This gives the (differential) rate as
+
+$$d\Gamma_{EC}=\left(\dfrac{1}{2\pi}\right)^{2}\dfrac{\sum_{fi}\big\vert\mathcal{M}_{fi}\left[p_{ep}\rightarrow i\nabla)\right]\psi_{ep}(\mathbf{x})\big\vert_{\mathbf{x}=0}\big\vert^{2}}{16E_{p}E_{e}\;\big\vert\mathbf{k}\cdot(E{_n}\mathbf{k}-k^{0}\mathbf{p}_{n})\big\vert}k^{3}d\Omega_{k}$$
+
+where we explicitly specify the electronic wavefunction.
+
+We represent the $(e^{-},p^{+})$ pair using a 3D box wavefunction, and obtain the Energies and 3-momenta from the relativistic kinematics.  We then average over all 8 permutations of the incident velocities (really momenta $\mathbf{p}_{ep}$) for the 3D box, and integrate over outbound neutrino solid angle $d\Omega_{k}$ using numerical quadrature.  The final rate is computed as, for each box size, as a function the kinematics, using
+
+$$\Gamma_{EC}=\frac{1}{8}\sum_{\mathbf{p}_{pe}}\int_{d\Omega_{k}}d\Gamma_{EC}$$
+
+where $\big\vert\mathbf{p}_{ep}\big\vert$ is given by the box size (described below).
+
+\subsubsection{Power}
+
+We  estimate the excess power generated by the confined electron capture, resulting if/when the outbound neutron reacts with the environment. 
+The power $\mathcal{P}$ is
+
+$$\mathcal{P}=\Gamma_{EC}*Q*\rho$$
+
+where is the nuclear decay energy, or Q-value, and $\rho$ is the  density of confined elements.  We choose the density to that of a typical material, of order Avogadro's number, $\mathrm{N_{A}}\sim6.02\times10^{23}$.
+
+We estimate the power for both the bare proton-electron capture
+
+$$\mathcal{P}_{pe}=\Gamma_{EC}*\left[(\mathbf{E}_{e}-m_{e})+(\mathbf{E}_{p}-M_{p})\right]*\rho$$
+
+and the subsequent neutron post-reaction
+
+$$\mathcal{P}_{n}=\Gamma_{EC}*\left[2.2+(\mathbf{E}_{n}-M_{n})\right]*\rho$$.
+
+We also define an excess power as
+
+$$\mathcal{P}_{XS}=\mathcal{P}_{pe}-\mathcal{P}_{n}$$
+
+which we argue is a good measure of the potential reactive power output of the confined E.C. process. We are interested in box lengths where the excess power is significant enough to drive the reaction.
+
+\subsubsection{Particle-in-the-box Wavefunctions}
+
+While most electron capture calculations assume a specific, bound, atomic electronic wavefunction(s), we perform a much simpler calculation; we treat the electron-proton pair as classical particle-in-a-box,  and analyze the problem just above the Compton scale using the low order VA theory.
+
+$$\psi_{ep}(\mathbf{x})=\left(\dfrac{2}{L}\right)^{\frac{3}{2}}cos\left(\dfrac{\pi x}{L}\right)cos\left(\dfrac{\pi y}{L}\right)cos\left(\dfrac{\pi z}{L}\right)$$.
+
+expressions for momentum.
+
+Because the VA theory assumes an incoherent process, the electron, proton wavefunction is usually factored as an electron wavefunction, with a point-particle in the center
+
+$$\psi_{ep}(\mathbf{x})=\psi_{p}(0)\psi_{e}(\mathbf{x})$$
+
+We only consider the ground state $\psi_{ep}^{0}$ wavefunction.
+
+We note, in \emph{ab initio} electronic structure calculations, it is now generally possible to treat the Hydrogen proton wavefunction explicitly, and to treat the electron-proton coupling at the level of Hartree Fock \cite{martin}.  This has proved useful, for example, for describing isotope effects on electronic structure.
+
+Here, we treat the confined electron, proton pair in the C.M. frame so that the 3-momentum of the electron and proton related
+$$\mathbf{p}_{e}=\mathbf{p}_{pe}$$
+$$\mathbf{p}_{p}=-\mathbf{p}_{pe}$$
+
+and we consider all 8 permutations for a given box size L:
+
+$$\pm\mathbf{p}_{pe}(1), \pm\mathbf{p}_{pe}(1), \pm\mathbf{p}_{pe}(3)$$
+
+\subsubsection{Relativistic Kinematics and Energetics}
+For consistency with the particle production process, we treat all kinematics and energetics relativistically.  Given energy-momentum conservation
+
+$$E^{2}=m^{2}+\mathbf{p}^{2}$$
+
+and the 3D particle-in-the-box energy ground state energy 
+
+$$E_{gs}=\dfrac{3\pi^{2}}{2mL^{2}}\;\;,$$
+
+we use $E=\dfrac{\mathbf{p}^{2}}{2m}$ to write
+
+$$E^{2}_{e}=m^{2}_{e}+3\left(\dfrac{\pi}{L}\right)^{2}\;\;,$$ and
+
+$$E^{2}_{p}=M^{2}_{p}+3\left(\dfrac{\pi}{L}\right)^{2}\;\;.$$
+
+The threshold Kinetic energy in the center of momentum (C.M.) frame is given as
+
+$$EKe_{min}:\;\;K_{e}=E_{e}-m_{e}=\dfrac{(M_{n}-m_{e}+m_{\nu})^{2}-M^{2}_{p}}{2(M_{n}+m_{\nu})}$$
+
+which is approximately 781.6 KeV (or 783.1 KeV in the proton rest frame).
+
+Of course, the proton rest frame is approximately the electron rest frame, but it should be mentioned that the in the electron rest frame, the threshold kinetic energy is 2000X greater.  Therefore, it is assumed that the energy transfer to induce electron capture is in the C.M. frame of the (e,p) pair.
+
+The minimum momentum is 
+
+$$\mathbf{p}_{min}=\sqrt{(K_{e}+m_{e})^{2}-m_{e}^{2}}\;\;.$$
+
+For the final state, the neutrino $(\nu)$ kinetic energy is
+
+$$K_{\nu}=k^{0}-m_{\nu}=\dfrac{(E_{p}+E_{e}-m_{\nu})^{2}-M^{2}_{n}}{2(E_{p}+E_{e})}$$
+
+and the neutron $(n)$ kinetic energy is
+
+$$K_{n}=E_{n}-M_{n}=\dfrac{(E_{p}+E_{e}-M_{n})^{2}-m^{2}_{\nu}}{2(E_{p}+E_{e})}$$
+
+At this point, we can compute the relativistic energies for all particles, simply as a function of box length (L), for a confined $(e^{-},p^{+})$ pair.  Of interest is the shape of the curve, and when the excess power output becomes favorable.  To compute the exact rate and estimate the power, we need to evaluate the matrix element(s) of the Weak Interaction Hamiltonian.  
+While most practitioners simply estimate this, for our purpose, we can simply compute them exactly.
+
+[maybe show the curve, and state the maximum box size. or wait until later ?]  
+
+[say something about estimating the size of the interaction here, which should be enough for a baseline calculation]
+
+
+\subsection{Weak Interaction Hamiltonian and Matrix Elements}
+
+The Hamiltonian for the V-A theory for E.C. is \cite{ec-review1,ec-review2} 
+
+$$\mathcal{H}(x)=-\dfrac{G_{F}}{\sqrt{2}}\left[J^{\mu}(x)L^{+}_{\mu}(x)+h.c.\right]$$
+
+where $J^{\mu}$ and $L_{\mu}$ are (in modern parlance) the Hadron and Lepton currents, resp., and are given by
+
+$$J_{\mu}=\bar{u}_{n}\gamma_{\mu}(1+\lambda\gamma_{5})u_{p}$$
+
+$$L_{\mu}=\bar{u}_{\nu}(1-\gamma_{5})u_{e}$$
+
+where $u_{n},u_{p},u_{e},u_{\nu}$ are Dirac (free-particle) wavefunctions.   
+
+$G_{F}$ is the Universal Fermi Weak Coupling Constant, and $\lambda=-\dfrac{G_{A}}{G_{V}}$, which is determined by experiment (and subject to minor changes). 
+ $G_{V}$ is the Axial-Vector Weak Coupling Constant, and $G_{A}$ is the vector weak coupling
+constant.  The most recent value is $G_{V}=1.2767(16)$, and $G_{A}=1$ \cite{vacoupling}.
+
+
+\subsubsection{VA Matrix Elements}
+
+In our calculations, however, we use a slightly different, more modern convention for the matrix elements, multiplying through by $G_{V}$ \cite{zuber}.   The matrix elements $\mathcal{M}_{fi}$ are then given by
+
+$$\mathcal{M}_{fi}=\dfrac{G_{F}}{\sqrt{2}}\bar{u}(p_{n},s_{n})(G_{V}-G_{A}\gamma^{5})\gamma^{\mu}u(p_{p},s_{p})\times\bar{u}(p_{\nu},s_{\nu})\gamma_{u}(1-\gamma^{5})u(p_{e},s_{e})$$
+
+where $u{(p},s)$ are Dirac 4-spinors, with the convention
+
+$$u{(p},s=1)=\sqrt{E+m}\left[\begin{array}{c}
+1\\
+0\\
+\frac{p_{3}}{E+m}\\
+\frac{p_{1}+ip_{2}}{E+m}
+\end{array}\right]$$
+$$u{(p},s=2)=\sqrt{E+m}\left[\begin{array}{c}
+0\\
+1\\
+\frac{p_{1}-ip_{2}}{E+m}\\
+\frac{p_{3}}{E+m}
+\end{array}\right]$$
+
+$$\langle\bar{u}|u\rangle=\bar{u}_{0}u_{0}-\bar{u}_{1}u_{1}-\bar{u}_{2}u_{2}-\bar{u}_{3}u_{3}$$
+
+and $\bar{u}=u^{\dagger}\gamma^{0}$.  The $\gamma$ are 4-component Gamma matrices, and  $(\cdots\gamma^{\mu}\cdots\gamma_{u}\cdots)$ is the Einstein summation convention. 
+
+Writing the matrix elements in terms of the currents gives
+
+$$\mathbf{J}_{had}=\bar{u}(p_{n},s_{n})(G_{V}-G_{A}\gamma^{5})\gamma^{\mu}u(p_{p},s_{p})$$
+
+$$\mathbf{L}_{lep}=\bar{u}(p_{\nu},s_{\nu})\gamma_{u}(1-\gamma^{5})u(p_{e},s_{e})$$
+
+[Express power in terms of real part of current]
+
+Notice that when applying the VA theory this way, we assume that the electron-proton interaction is a contact potential, operating at the surface of the nucleus, and that the underlying quantum process is incoherent.  
+
+[how much more to describe here ?  Specify the 4-norm / gamma metric tensor convention? ]
+
+
+\subsubsection{Sum over all spin combinations}
+
+[[I have not yet decided how much of this section to include and work out.  The idea is to look at the detailed spin combinations of the matrix elements, and present an analysis similar to the discussion in "Beta Decay for Pedestrians".  this is relevant since , as we see below, even though we sum over 16 matrix element combinations, only 4 are non-negative in this very specific system.  it is possible, in other environments, that forbidden transitions might be allowed.. I also wanted to discuss this to grok the psudecode.]]  
+
+
+\begin{figure}
+   \includegraphics[scale=0.5]{img/16-allowed.png}
+   \caption{Allowed spin transitions}
+  \label{fig:SC}
+\end{figure}
+We sum over the 16  allowed transitions in the V-A theory, as depicted in Figure \cite{fig:SC}.
+We note, however, that due to symmetry, only 4 spin configurations contribute appreciably:
+
+$$\bar{u}(p_{n},1)u(p_{p},1)\bar{u}(p_{\nu},2)u(p_{e},2)$$
+$$\bar{u}(p_{n},2)u(p_{p},2)\bar{u}(p_{\nu},1)u(p_{e},1)$$
+$$\bar{u}(p_{n},2)u(p_{p},1)\bar{u}(p_{\nu},2)u(p_{e},2)$$
+$$\bar{u}(p_{n},1)u(p_{p},2)\bar{u}(p_{\nu},2)u(p_{e},1)$$
+
+
+\subsection{Numerical Calculations}
+
+ The full calculations sums of over all 8 possible incident momenta permutations
+  $(\pm\mathbf{p}_{ep}(1),\pm\mathbf{p}_{ep}(2),\pm\mathbf{p}_{ep}(3) )$,
+and the 16 allowed spin transitions (see figure below). By conservation of momenta, we can eliminate the neutron and only need to average over the outbound neutrino momenta solid angle ($d\Omega_k$); we do this using an 8-point gaussian quadrature. 
+
+ \begin{figure}
+\begin{algorithm}[H]
+\caption{Rate and Power Calculations}\label{code}
+\begin{algorithmic}[1]
+\For{$\mathsf{p}_{ep}\in [\mathsf{p}_{max}, \mathsf{p}_{min}]$}\Comment{$\mathsf{p}_{ep}=\|\mathbf{p}_{ep}(L)\|$}
+\State $Tran(\mathsf{p}_{ep})=0$\Comment{Transfer}
+\State $Power_{n}(\mathsf{p}_{ep})=0$\Comment{Neutron Power}
+\For{$w_{x},w_{\phi}\in \mathbb{Q}[1,8]$}\Comment{quadrature weights}
+\For{$s_{n},s_{p},s_{\nu},s_{e}\in [0, 1]$}\Comment{$s_{up},s_{down}=0,1$}
+\For{$s_{x},s_{y},s_{z}\in [-1,1]$}\Comment{$\mathbf{p}_{ep}=\mathsf{p}_{ep}[s_{x},s_{y},s_{z}]$}
+\State $p_{n},p_{p}, p_{\nu},p_{e}, \gets pekin(w_{x},w_{\phi},\mathbf{p}_{ep})$\Comment{4 vectors $\gets$ rel. kinematics}
+\State $\bar{u}(p_{n},s_{n}),u(p_{p},s_{p}), \bar{u}(p_{\nu},s_{\nu}), u(p_{e},s_{e})$\Comment{spinors by p, s-index}
+\For{$u\in[1,4]$}\Comment{4-vector indices}
+\State $\mathbf{J}_{had}=\bar{u}(p_{n},s_{n})\cdot(G_{V}-G_{A}\gamma^{5})\cdot\gamma^{\mu}\cdot u(p_{p},s_{p})$\Comment{Hadronic current}
+\State $\mathbf{L}_{lep}=\bar{u}(p_{\nu},s_{\nu})\cdot\gamma_{u}\cdot(1-\gamma^{5})\cdot u(p_{e},s_{e})$\Comment{Leptonic current}
+\EndFor
+\State $\mathbb{C}=\langle\mathbf{L}^{\dagger}_{lep},\mathbf{J}_{had}\rangle$\Comment{Current Amplitude}
+\EndFor
+\EndFor
+\State $\mathcal{F}^{2}(\mathsf{p}_{ep},p_{p},p_{e}, p_{n}, p_{\nu})$\Comment{Matrix Element Factor}
+\State $Tran(\mathsf{p}_{ep})+=w_{x}w_{\phi}Re[\mathbb{C}^{\dagger}\mathbb{C}]\mathcal{F}^{2}$\Comment{Integrated Rate}
+\EndFor
+\State $Power_{n}(\mathsf{p}_{ep})=Tran(\mathsf{p}_{ep})*(2.2+(E_{n}-M_{n}))$\Comment{Neutron Power estimate}
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+\end{figure}
+
+
+
+\subsubsection{Power Calculations}
+
+[[Again, I have not worked this out in detail.  In particular, we discuss the power above, so this is just for understanding the code, and I may leave this to the python notebook. It is necessary , however, to really grok all the pseudocode]]
+
+$$\mathcal{F}=r_{c}\left(\dfrac{p_{ep}}{2\pi}\right)^{3}\left(\dfrac{G_{F}^{2}(E_{\nu}^{2}-m_{\nu}^{2})^{3}}{512\pi^{2}\;E_{p}E_{e}\hbar c\;\big\vert\; \mathbf{k}(E_{n}p_{\nu}-E_{\nu}p_{n})\;\big\vert}\right)$$
+
+\subsection{Results}
+
+
+
+\begin{figure}
+   \includegraphics[scale=0.5]{img/results.png}
+   \caption{Kinetic Energy and Power as a function of Box Length}
+  \label{fig:results}
+\end{figure}
+
+Figure \ref{fig:results} presents the results of relativistic kinematics and excess power calculations, as a function of box length.
+For illustrative purposes, we include results box sizes even below the Compton length.  The excess power ratio is positive for $L>0.004\mathring{A}$, with a maximum of almost a factor of 3.
+
 
 
 
@@ -272,12 +553,12 @@ Note the equation number in an appendix:
 E=mc^2.
 \end{equation}
 
-\subsection{\label{app:subsec}A subsection in an appendix}
+\subsection{{app:subsec}A subsection in an appendix}
 
 You can use a subsection or subsubsection in an appendix. Note the
 numbering: we are now in Appendix~\ref{app:subsec}.
 
-\subsubsection{\label{app:subsubsec}A subsubsection in an appendix}
+\subsubsection{{app:subsubsec}A subsubsection in an appendix}
 Note the equation numbers in this appendix, produced with the
 subequations environment:
 \begin{subequations}
