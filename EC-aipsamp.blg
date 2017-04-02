@@ -1,0 +1,91 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: EC-aipsamp.aux
+The style file: aipnum4-1.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: EC-aipsampNotes.bib
+Database file #2: EC-aipsamp.bib
+Warning--I didn't find a database entry for "fig:SC"
+control{REVTEX41Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
+control{aip41Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{0}, control.pages{1}, control.year{N/A}, control.eprint{N/A}, 
+Warning--jnrlst (dependency: not reversed) set 1
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+merlin.mbs aipnum4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+Control: key (0) 
+Control: author (8) initials jnrlst
+Control: editor formatted (1) identically to author
+Control: production of article title (0) allowed
+Control: page (1) range
+Control: year (1) truncated
+Control: production of eprint (0) enabled
+Warning--missing journal in alvarez
+Warning--missing journal in wang
+Warning--missing journal in raydas
+Warning--missing journal in ohtsuki
+Warning--missing journal in fermi1
+Warning--missing journal in ec-review1
+Warning--missing journal in ec-review2
+Warning--missing journal in close
+Warning--missing journal in glauber1
+Warning--missing journal in glauber2
+Warning--missing journal in Jauch
+Warning--missing journal in roec2007
+Warning--missing journal in bachall62
+Warning--missing journal in bachall69
+Warning--missing journal in widlar1
+Warning--missing journal in relbox
+Warning--missing journal in compton
+Warning--missing journal in planck
+Warning--missing journal in klein2
+Warning--missing journal in klein3
+Warning--missing journal in vacoupling
+Warning--empty year in vacoupling
+Warning--missing journal in zuber
+You've used 29 entries,
+            5918 wiz_defined-function locations,
+            1755 strings with 17776 characters,
+and the built_in function-call counts, 24968 in all, are:
+= -- 1553
+> -- 685
+< -- 144
++ -- 225
+- -- 178
+* -- 3626
+:= -- 2731
+add.period$ -- 50
+call.type$ -- 29
+change.case$ -- 131
+chr.to.int$ -- 31
+cite$ -- 52
+duplicate$ -- 2433
+empty$ -- 1877
+format.name$ -- 329
+if$ -- 4703
+int.to.chr$ -- 1
+int.to.str$ -- 36
+missing$ -- 324
+newline$ -- 134
+num.names$ -- 81
+pop$ -- 1169
+preamble$ -- 2
+purify$ -- 134
+quote$ -- 0
+skip$ -- 838
+stack$ -- 0
+substring$ -- 524
+swap$ -- 2141
+text.length$ -- 53
+text.prefix$ -- 0
+top$ -- 10
+type$ -- 363
+warning$ -- 24
+while$ -- 99
+width$ -- 0
+write$ -- 258
+(There were 25 warnings)

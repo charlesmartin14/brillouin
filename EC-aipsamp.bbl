@@ -1,0 +1,273 @@
+%merlin.mbs aipnum4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (0) allowed
+%Control: page (1) range
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\providecommand{\noopsort}[1]{}\providecommand{\singleletter}[1]{#1}%
+\begin{thebibliography}{27}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Alvarez}(1938)}]{alvarez}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~W.}\ \bibnamefont
+  {Alvarez}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {The capture of
+  orbital electrons by nuclei},}\ }\href@noop {} {\ \textbf {\bibinfo {volume}
+  {54}},\ \bibinfo {pages} {486} (\bibinfo {year} {1938})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {L'Annunziata}(2016)}]{radbook}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~F.}\ \bibnamefont
+  {L'Annunziata}},\ }\href@noop {} {\emph {\bibinfo {title} {Radioactivity:
+  Introduction and History and From the Quantum to Quarks}}}\ (\bibinfo
+  {publisher} {Second Edition and Elsevier and},\ \bibinfo {year}
+  {2016})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {et~al}(2006)}]{wang}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~W.}\ \bibnamefont
+  {et~al}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Change of the
+  $^{7}be$ electron capture half-life in metallic environments},}\ }\href@noop
+  {} {\  (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ray}\ \emph {et~al.}(2009)\citenamefont {Ray},
+  \citenamefont {Das}, \citenamefont {Saha}, \citenamefont {Goswami},\ and\
+  \citenamefont {De}}]{raydas}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Ray}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Das}}, \bibinfo
+  {author} {\bibfnamefont {S.~K.}\ \bibnamefont {Saha}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Goswami}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {De}},\ }\bibfield  {title} {\enquote
+  {\bibinfo {title} {Enhanced orbital electron-capture nuclear decay rate in
+  compact medium},}\ }\href@noop {} {\ \textbf {\bibinfo {volume} {679}},\
+  \bibinfo {pages} {106} (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ohtsuki}\ \emph {et~al.}(2004)\citenamefont
+  {Ohtsuki}, \citenamefont {Yuki}, \citenamefont {Muto}, \citenamefont
+  {Kasagi}, ,\ and\ \citenamefont {Ohnol}}]{ohtsuki}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Ohtsuki}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Yuki}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Muto}}, \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Kasagi}}, , \ and\ \bibinfo {author}
+  {\bibfnamefont {K.}~\bibnamefont {Ohnol}},\ }\bibfield  {title} {\enquote
+  {\bibinfo {title} {Enhanced electron-capture decay rate of be-7 encapsulated
+  in c-60 cages},}\ }\href@noop {} {\ \textbf {\bibinfo {volume} {93(11)}},\
+  \bibinfo {pages} {112501} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Fermi}(1934)}]{fermi1}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Fermi}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {An attempt of a
+  theory of beta radiation.1},}\ }\href@noop {} {\ \textbf {\bibinfo {volume}
+  {88}},\ \bibinfo {pages} {161} (\bibinfo {year} {1934})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Bambynek}\ \emph {et~al.}(1976)\citenamefont
+  {Bambynek}, \citenamefont {Behrens}, \citenamefont {Chen},\ and\
+  \citenamefont {Intemann}}]{ec-review1}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Bambynek}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Behrens}},
+  \bibinfo {author} {\bibfnamefont {M.~H.}\ \bibnamefont {Chen}}, \ and\
+  \bibinfo {author} {\bibfnamefont {R.~L.}\ \bibnamefont {Intemann}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {Orbital electron capture by
+  the nucleus},}\ }\href@noop {} {\ \textbf {\bibinfo {volume} {49}},\ \bibinfo
+  {pages} {1} (\bibinfo {year} {1976})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bouchez}\ and\ \citenamefont
+  {Deponimier}(1960)}]{ec-review2}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Bouchez}}\ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Deponimier}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Orbital
+  electron capture by the nucleus},}\ }\href@noop {} {\ \textbf {\bibinfo
+  {volume} {23}},\ \bibinfo {pages} {395} (\bibinfo {year} {1960})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Close}(2013)}]{close}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Close}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Small things and
+  nothing},}\ }\href@noop {} {\  (\bibinfo {year} {2013})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Glauber}\ and\ \citenamefont
+  {Martin}(1956)}]{glauber1}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~J.}\ \bibnamefont
+  {Glauber}}\ and\ \bibinfo {author} {\bibfnamefont {P.~C.}\ \bibnamefont
+  {Martin}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Radiative
+  capture of orbital electrons},}\ }\href@noop {} {\ \textbf {\bibinfo {volume}
+  {104}},\ \bibinfo {pages} {158} (\bibinfo {year} {1956})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Glauber}\ and\ \citenamefont
+  {Martin}(1958)}]{glauber2}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~J.}\ \bibnamefont
+  {Glauber}}\ and\ \bibinfo {author} {\bibfnamefont {P.~C.}\ \bibnamefont
+  {Martin}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Relativistic
+  theory of radiative orbital electron capture},}\ }\href@noop {} {\ \textbf
+  {\bibinfo {volume} {109}},\ \bibinfo {pages} {1307} (\bibinfo {year}
+  {1958})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Jauch}(1951)}]{Jauch}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Jauch}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {On the theory of
+  inner bremsstrahlung in $\beta$ decay},}\ }\href@noop {} {\  (\bibinfo {year}
+  {1951})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pachucki}\ and\ \citenamefont
+  {Jentschura}(2007)}]{roec2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Pachucki}}\ and\ \bibinfo {author} {\bibfnamefont {U.}~\bibnamefont
+  {Jentschura}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Radiative
+  orbital electron capture by the atomic nucleus},}\ }\href@noop {} {\ \textbf
+  {\bibinfo {volume} {75}},\ \bibinfo {pages} {055502} (\bibinfo {year}
+  {2007})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Jackson}(1998)}]{jackson}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~D.}\ \bibnamefont
+  {Jackson}},\ }\href@noop {} {\emph {\bibinfo {title} {Classical
+  Electrodynamics}}}\ (\bibinfo  {publisher} {Third Edition and Wiley and},\
+  \bibinfo {year} {1998})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bahcall}(1962)}]{bachall62}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~N.}\ \bibnamefont
+  {Bahcall}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Electron
+  capture and nuclear matrix elements of $^{7}be$},}\ }\href@noop {} {\ \textbf
+  {\bibinfo {volume} {128}},\ \bibinfo {pages} {1297} (\bibinfo {year}
+  {1962})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gruzinov}\ and\ \citenamefont
+  {Bahcall}(1969)}]{bachall69}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~V.}\ \bibnamefont
+  {Gruzinov}}\ and\ \bibinfo {author} {\bibfnamefont {J.~N.}\ \bibnamefont
+  {Bahcall}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {The $^{7}be$
+  electron capture rate in the sun},}\ }\href@noop {} {\ \textbf {\bibinfo
+  {volume} {155}},\ \bibinfo {pages} {511} (\bibinfo {year}
+  {1969})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Widom}\ and\ \citenamefont {Larsen}(2007)}]{widlar1}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Widom}}\ and\ \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Larsen}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {Theoretical standard model
+  rates of proton to neutron conversions near metallic hydride surfaces},}\
+  }\href@noop {} {\  (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Jr.}\ \emph {et~al.}(1965)\citenamefont {Jr.},
+  \citenamefont {Schindler}, \citenamefont {Tanaka}, ,\ and\ \citenamefont
+  {Morita}}]{ferguson}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.~A.~F.}\
+  \bibnamefont {Jr.}}, \bibinfo {author} {\bibfnamefont {A.~I.}\ \bibnamefont
+  {Schindler}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Tanaka}}, ,
+  \ and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Morita}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {Neutron diffraction study of
+  temperature-dependent properties of palladium containing absorbed
+  hydrogen},}\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev}\ }\textbf {\bibinfo {volume} {137(A483)}} (\bibinfo {year}
+  {1965})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Martin}\ and\ \citenamefont {Zerner}(2006)}]{martin}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~H.}\ \bibnamefont
+  {Martin}}\ and\ \bibinfo {author} {\bibfnamefont {M.~C.}\ \bibnamefont
+  {Zerner}},\ }\href@noop {} {\emph {\bibinfo {title} {Electronic Structure
+  Calculations on Transition Metal Complexes: Ab Initio Models and Approximate
+  Models}}}\ (\bibinfo  {publisher} {Inorganic Electronic Structure and
+  Spectroscopy and Volume I: Methodology and E. I. Solomon and A. B. P. Lever
+  and Wiley},\ \bibinfo {year} {2006})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Alberto}, \citenamefont {Fiolhais},\ and\
+  \citenamefont {Gil}(1996)}]{relbox}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Alberto}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Fiolhais}}, \
+  and\ \bibinfo {author} {\bibfnamefont {V.~M.~S.}\ \bibnamefont {Gil}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {Relativistic particle in a
+  box},}\ }\href@noop {} {\ \textbf {\bibinfo {volume} {17}},\ \bibinfo {pages}
+  {19} (\bibinfo {year} {1996})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Garay}\ and\ \citenamefont {J}(1995)}]{compton}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {Garay}}\ and\ \bibinfo
+  {author} {\bibfnamefont {L.}~\bibnamefont {J}},\ }\bibfield  {title}
+  {\enquote {\bibinfo {title} {Quantum gravity and minimum length},}\
+  }\href@noop {} {\ \textbf {\bibinfo {volume} {A10}},\ \bibinfo {pages} {145}
+  (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sidharth}(2006)}]{planck}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Sidharth}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Planck scale
+  to compton scale},}\ }\href@noop {} {\  (\bibinfo {year} {2006})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Bjorken}\ and\ \citenamefont {Drell}(1964)}]{klein1}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {Bjorken}}\ and\
+  \bibinfo {author} {\bibnamefont {Drell}},\ }\href@noop {} {\emph {\bibinfo
+  {title} {Relativistic Quantum Mechanics}}}\ (\bibinfo  {publisher}
+  {McGraw-Hill},\ \bibinfo {year} {1964})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dombey}\ and\ \citenamefont
+  {Calogeracos}(1999)}]{klein2}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Dombey}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Calogeracos}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {70 years of
+  the klein paradox},}\ }\href@noop {} {\ \textbf {\bibinfo {volume} {315d}}
+  (\bibinfo {year} {1999})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Katsnelson1}, \citenamefont {Novoselov2},\ and\
+  \citenamefont {Geim}(2006)}]{klein3}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~I.}\ \bibnamefont
+  {Katsnelson1}}, \bibinfo {author} {\bibfnamefont {K.~S.}\ \bibnamefont
+  {Novoselov2}}, \ and\ \bibinfo {author} {\bibfnamefont {A.~K.}\ \bibnamefont
+  {Geim}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Chiral tunnelling
+  and the klein paradox in graphene},}\ }\href@noop {} {\ \textbf {\bibinfo
+  {volume} {2}},\ \bibinfo {pages} {620} (\bibinfo {year} {2006})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {et. al}()}]{vacoupling}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {et.
+  al}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Determination of the
+  weak axial vector coupling from a measurement of the beta-asymmetry parameter
+  a in neutron beta decay},}\ }\href@noop {} {\ }\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Itzykson}\ and\ \citenamefont {Zuber}(1985)}]{zuber}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Itzykson}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Zuber}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Quantum field
+  theory},}\ }\href@noop {} {\  (\bibinfo {year} {1985})}\BibitemShut {NoStop}%
+\end{thebibliography}%
