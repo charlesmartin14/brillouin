@@ -58,7 +58,7 @@ Authors' institution and/or address%\\This line break forced with \textbackslash
              %  but any date may be explicitly specified
 
 \begin{abstract}
-We describe a Gedankenexperiment in which a bare proton can capture an electron due solely to confinement. We first briefly review K orbital electron capture and related processes.  We then describe the Fermi VA Theory and how it can be applied to compute the cross section and rate for electron capture by a bare proton.  We set the problem up as a (proton, electron) pair confined in classical box of size L, and compute the cross section using the full Weak Interaction Hamiltonian and relativisitic Kinematics.  We provide numerical solutions for electron capture rate, and compare the power output relative to that of a neutron being captured in the port-reaction.  We find that the capture is most likely for L=0.004-0.009 Angstroms, well beyond the radius of the proton and the Compton wavelength of the electron.  We also examine the implications for theoretical minimal power output for such a process.  Finally, we discuss some interesting applications and proposals for future work.
+We describe a Gedankenexperiment in which a bare proton can capture an electron due solely to confinement. We first briefly review K orbital electron capture and related processes.  We then describe the Fermi VA Theory and how it can be applied to compute the cross section and rate for electron capture by a bare proton.  We set the problem up as a (proton, electron) pair confined in classical box of size L, and compute the cross section using the full Weak Interaction Hamiltonian and relativisitic Kinematics.  We provide numerical solutions for electron capture rate, and compare the power output relative to that of a neutron being captured in the port-reaction.  We find that the capture is most likely for L=0.004-0.009 Angstroms, well beyond the radius of the proton and the Compton wavelength of the electron.  We estimate the theoretical minimal power output for such a process, seeing that is feasible at large box lengths.  Finally, we discuss proposals for future work and possible applications.
 %
 \end{abstract}
 
@@ -506,7 +506,9 @@ The remaining (single and double flip) transitions have zero amplitude.
 
 \subsection{Numerical Calculations}
 
- The full calculations sums of over all 8 possible incident momenta permutations
+We outline the calculations in pseudocode below.  
+
+The full calculations sums of over all 8 possible incident momenta permutations
   $(\pm\mathbf{p}_{ep}(1),\pm\mathbf{p}_{ep}(2),\pm\mathbf{p}_{ep}(3) )$,
 and the 16 allowed spin transitions (see figure below). By conservation of momenta, we can eliminate the neutron and only need to average over the outbound neutrino momenta solid angle ($d\Omega_k$); we do this using an 8-point gaussian quadrature. 
 
@@ -534,8 +536,8 @@ and the 16 allowed spin transitions (see figure below). By conservation of momen
 \State $\mathcal{F}^{2}(\mathsf{p}_{ep},p_{p},p_{e}, p_{n}, p_{\nu})$\Comment{Matrix Element Factor}
 \State $Tran(\mathsf{p}_{ep})+=w_{x}w_{\phi}Re[\mathbb{C}^{\dagger}\mathbb{C}]\mathcal{F}^{2}$\Comment{Integrated Rate}
 \EndFor
-\State $Power_{n}(\mathsf{p}_{ep})=Tran(\mathsf{p}_{ep})*(2.2+(E_{n}-M_{n}))$\Comment{Neutron Power estimate}
-\EndFor<
+\State $P_{n}(\mathsf{p}_{ep})=Tran(\mathsf{p}_{ep})*(2.2+(E_{n}-M_{n}))$\Comment{Neutron Power estimate}
+\EndFor
 \end{algorithmic}
 \end{algorithm}
 \end{minipage}
@@ -553,24 +555,26 @@ C^{2}_{amp}=(\mathbf{J}_{had})^{\mu}(\mathbf{L}_{lep})_{\mu}=\\
 J^{0}_{had}L^{0}_{lep}-J^{1}_{had}C^{1}_{lep}-J^{2}_{had}L^{2}_{lep}-J^{3}_{had}L^{3}_{lep}
 \end{multline}
 
-We can express the rate as
+We  express the rate as
 
 $$\Gamma_{EC} = C^{2}_{Re}(\mathcal{F})$$
 
-where
+in terms of an intermediate factor
 \begin{multline}
 \mathcal{F}=r_{c}\left(\dfrac{p_{ep}}{2\pi}\right)^{3}\left(\dfrac{G_{F}^{2}(E_{\nu}^{2}-m_{\nu}^{2})^{3}}{512\pi^{2}\;E_{p}E_{e}\hbar c\;\big\vert\; \mathbf{k}(E_{n}p_{\nu}-E_{\nu}p_{n})\;\big\vert}\right)
 \end{multline}
 
-
-We write power as
+We write the two power terms as
 $$P1 = P_{pe}=C^{2}_{Re}\left[(\mathbf{E}_{e}-m_{e})+(\mathbf{E}_{p}-M_{p})\right]\left(\mathcal{F}\right)$$
-$$P2 = P_{n}=C^{2}_{Re}\left[2.2+(\mathbf{E}_{n}-M_{n})\right]\left(\mathcal{F}\right)$$
+$$P2 =P_{n}=C^{2}_{Re}\left[2.2+(\mathbf{E}_{n}-M_{n})\right]\left(\mathcal{F}\right)$$
 
-and compute these as a function of the box size using the relativistic kinematic and Weak Interaction matrix elements.
+and compute these as a function of the box size using the relativistic kinematic and Weak Interaction matrix elements.  We are interested in the estimated neutron output power ratio 
+
+$$power\;ratio:\;\dfrac{P_{n}}{P_{ep}}$$
+
+as a function of box length $L$.
 
 \subsection{Results}
-
 
 \begin{figure*}
  \begin{minipage}{\linewidth}
@@ -582,33 +586,43 @@ and compute these as a function of the box size using the relativistic kinematic
 
 
 Figure \ref{fig:results} presents the results of relativistic kinematics and excess power calculations, as a function of box length.
-For illustrative purposes, we include results box sizes even below the Compton length.  The excess power ratio is positive for $L>0.004\mathring{A}$, with a maximum of almost a factor of 3.
+For illustrative purposes, we include results box sizes even below the Compton length.  The excess power ratio is greater than unity for $L>0.004\mathring{A}$, with a maximum of almost a factor of 3.
+
+These simple calculations indicate that a confined electron capture reaction would be favorable as long as the produced neutrons react with environment at a high rate.  This is expected at the maximum box size, where the neutron has the smallest mean free path, although the reaction appears favorable for all box lengths larger than the Compton length,$L>0.004\mathring{A}$.
 
 \section{Discussion}
+
+We present calculations for a Gedankenexperiment describing confined orbital electron capture of a bare proton and an electron in a box
+
+$$E_{box}+p^{+}+e^{-}\rightarrow n^{0}+\nu_{e}$$
+
+ The intent is to model, conceptually, a confined proton, trapped in a field of free electrons, such that the kinetic energy of the proton is high enough to induce electron capture.  We treat system as an electon-proton pair in a classical particle-in-the-box, and compute the capture rate using the Fermi VA theory.  We use classical box wavefunctions to express the confinement, and compute relativistic proton momentum and kinetic energy resulting from the box.  We then compute the  rate by evaluating the Weak Interaction Hamiltonian matrix elements using the box wavefunction density at the origin, using a form of the cross section tat takes into account the full relativistic Kinematics of the two-body $e^{-}+p^{+}$ nuclear reaction.  We  compute the power generated by the E.C. process, as well as estimate the minimum excess neutron power, as a function of box size $L$.  We find that the excess power ratio is greater than one for box sizes $L>0.004\mathring{A}$, and increases rapidly as we approach the maximum box size $L>0.009\mathring{A}$.  We note we need a compression ratio of order 50X to induce capture.
+
+While being pedagogic exercise, we would also like to discuss both directions for future work and a possible application.
 
 \subsection{Low energy electron-proton scattering resonances}
 We treat the electron-proton pair as if they are bound by the box potential; that is, we assume the box exists.
 We would like to observe a bound state directly, but describing bound states in relativistic field theory is a complex problem.
-Indeed,  Steven Weinberg stated: 
+Indeed, Steven Weinberg has stated \cite{weinberg}:
 
-ÒIt must be said that the theory of relativistic effects and radiative corrections in bound states is not yet in satisfactory shape.Ó  
+\emph{It must be said that the theory of relativistic effects and radiative corrections in bound states is not yet in satisfactory shape.Ó}
 
 Ideally we would look for resonances, or quasi-bound states, in solutions of the Bethe Salpeter equation, or a related formulation of the relativistic two-body equations, for electron-proton scattering.  This is significantly more complicated, requires some choice of approximation, and is prone to singularities that can lead to numerical instabilities.  Still, there is some older work that suggests this may be successful.  
 
-In 1991, Spence and Vary claimed to have observed several (5) narrow, low energy, near threshold continuum resonances in numerical solutions of the Blankenbeckler-Sugar equation, a specific, relativistic (but not Gauge invariant) reduction of the two-body Bethe-Salpeter equation into a one-body equation. Their results suggested there could be short lived, quasi-bound electron-proton states up to 100 fm ($0.001\mathring{A}$) in extent.  This is of order the box sizes we have investigated, and it would be very interesting to continue out study of confined electron capture using modern techniques.
+In 1991, Spence and Vary claimed to have observed several (5) narrow, low energy, near threshold continuum resonances in numerical solutions of the Blankenbeckler-Sugar equation, a specific, relativistic (but not Gauge invariant) reduction of the two-body Bethe-Salpeter equation into a one-body equation. Their results suggested there could be short lived, quasi-bound electron-proton states up to 100 fm ($0.001\mathring{A}$) in extent.  This is of order the box sizes we have investigated, and it would be very interesting to continue out study of confined electron capture using modern techniques.  
 
-
+The best, modern, relativistic \emph{ab initio} techniques so far, also by Vary, have successfully treated positronium \cite{positroniumQFT}, and it would be interesting to try to extend such methods to electron-proton scattering. This is significantly more difficult since most \emph{ab initio} many body methods can treat ground states, but to find quasi-bound states  requires a powerful open shell method.
 
 \subsection{Confinement-induced Nuclear Fusion in the Earth's Inner Core}
 
-We briefly mention a recent proposal for a confinement-induced nuclear reaction,
-namely, nuclear fusion at the Earth's core
+We briefly mention a recent proposal for another type of  confinement-induced nuclear reaction,
+namely, nuclear fusion at the Earth's core.
 
 The source of heat at the Earth's core remains controversial, although heat flow
 to the surfaces seemingly arises from both primordial and radiogenic sources.
 Moreover, signatures of antineutrinos have been detected emanating from the core.
 Recently (2016), Fukuhara proposed that the observed heat and geoneutrinos
-results from a three-body nuclear fusion of deuterons.  They argue that
+result from a three-body nuclear fusion of deuterons.  They argue that
 the reaction occurs in D atoms confined in hexagonal FeDx crystals, at high pressure
 and temperature.  Moreover, the D+D+D collision is modulated by a charge density wave
 instability which causes a breathing-mode-like displacement of the deuterons.
@@ -619,14 +633,9 @@ although fusion requires a significantly smaller level of confinement than elect
 And we do not consider temperature or pressure effects in our model, which Fukuhara
 estimates includes another $50\%$ confinement in this model.
 
-\subsection{}
-
-
-
-
 \begin{acknowledgments}
-We wish to acknowledge the support of the Anthropocene Institute
-\dots.
+We wish to acknowledge the support of the Anthropocene Institute for proving funding for this work.
+
 \end{acknowledgments}
 %\nocite{*}
 \bibliography{EC-aipsamp}% Produces the bibliography via BibTeX.
