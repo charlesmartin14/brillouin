@@ -7,7 +7,7 @@
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
 \providecommand{\noopsort}[1]{}\providecommand{\singleletter}[1]{#1}%
-\begin{thebibliography}{27}%
+\begin{thebibliography}{25}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -51,6 +51,38 @@
 \providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
 \let\auto@bib@innerbib\@empty
 %</preamble>
+\bibitem [{\citenamefont {Bambynek}\ \emph {et~al.}(1976)\citenamefont
+  {Bambynek}, \citenamefont {Behrens}, \citenamefont {Chen},\ and\
+  \citenamefont {Intemann}}]{ec-review1}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Bambynek}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Behrens}},
+  \bibinfo {author} {\bibfnamefont {M.~H.}\ \bibnamefont {Chen}}, \ and\
+  \bibinfo {author} {\bibfnamefont {R.~L.}\ \bibnamefont {Intemann}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {Orbital electron capture by
+  the nucleus},}\ }\href@noop {} {\ \textbf {\bibinfo {volume} {49}},\ \bibinfo
+  {pages} {1} (\bibinfo {year} {1976})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bouchez}\ and\ \citenamefont
+  {Deponimier}(1960)}]{ec-review2}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Bouchez}}\ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Deponimier}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Orbital
+  electron capture by the nucleus},}\ }\href@noop {} {\ \textbf {\bibinfo
+  {volume} {23}},\ \bibinfo {pages} {395} (\bibinfo {year} {1960})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Jackson}(1998)}]{jackson}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~D.}\ \bibnamefont
+  {Jackson}},\ }\href@noop {} {\emph {\bibinfo {title} {Classical
+  Electrodynamics}}}\ (\bibinfo  {publisher} {Third Edition and Wiley and},\
+  \bibinfo {year} {1998})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Jauch}(1951)}]{Jauch}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Jauch}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {On the theory of
+  inner bremsstrahlung in $\beta$ decay},}\ }\href@noop {} {\  (\bibinfo {year}
+  {1951})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Alvarez}(1938)}]{alvarez}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~W.}\ \bibnamefont
@@ -95,32 +127,28 @@
   {\bibinfo {title} {Enhanced electron-capture decay rate of be-7 encapsulated
   in c-60 cages},}\ }\href@noop {} {\ \textbf {\bibinfo {volume} {93(11)}},\
   \bibinfo {pages} {112501} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bahcall}(1962)}]{bachall62}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~N.}\ \bibnamefont
+  {Bahcall}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Electron
+  capture and nuclear matrix elements of $^{7}be$},}\ }\href@noop {} {\ \textbf
+  {\bibinfo {volume} {128}},\ \bibinfo {pages} {1297} (\bibinfo {year}
+  {1962})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gruzinov}\ and\ \citenamefont
+  {Bahcall}(1969)}]{bachall69}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~V.}\ \bibnamefont
+  {Gruzinov}}\ and\ \bibinfo {author} {\bibfnamefont {J.~N.}\ \bibnamefont
+  {Bahcall}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {The $^{7}be$
+  electron capture rate in the sun},}\ }\href@noop {} {\ \textbf {\bibinfo
+  {volume} {155}},\ \bibinfo {pages} {511} (\bibinfo {year}
+  {1969})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Fermi}(1934)}]{fermi1}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
   {Fermi}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {An attempt of a
   theory of beta radiation.1},}\ }\href@noop {} {\ \textbf {\bibinfo {volume}
   {88}},\ \bibinfo {pages} {161} (\bibinfo {year} {1934})}\BibitemShut
-  {NoStop}%
-\bibitem [{\citenamefont {Bambynek}\ \emph {et~al.}(1976)\citenamefont
-  {Bambynek}, \citenamefont {Behrens}, \citenamefont {Chen},\ and\
-  \citenamefont {Intemann}}]{ec-review1}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
-  {Bambynek}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Behrens}},
-  \bibinfo {author} {\bibfnamefont {M.~H.}\ \bibnamefont {Chen}}, \ and\
-  \bibinfo {author} {\bibfnamefont {R.~L.}\ \bibnamefont {Intemann}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Orbital electron capture by
-  the nucleus},}\ }\href@noop {} {\ \textbf {\bibinfo {volume} {49}},\ \bibinfo
-  {pages} {1} (\bibinfo {year} {1976})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Bouchez}\ and\ \citenamefont
-  {Deponimier}(1960)}]{ec-review2}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {Bouchez}}\ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
-  {Deponimier}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Orbital
-  electron capture by the nucleus},}\ }\href@noop {} {\ \textbf {\bibinfo
-  {volume} {23}},\ \bibinfo {pages} {395} (\bibinfo {year} {1960})}\BibitemShut
   {NoStop}%
 \bibitem [{\citenamefont {Close}(2013)}]{close}%
   \BibitemOpen
@@ -146,12 +174,6 @@
   theory of radiative orbital electron capture},}\ }\href@noop {} {\ \textbf
   {\bibinfo {volume} {109}},\ \bibinfo {pages} {1307} (\bibinfo {year}
   {1958})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Jauch}(1951)}]{Jauch}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
-  {Jauch}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {On the theory of
-  inner bremsstrahlung in $\beta$ decay},}\ }\href@noop {} {\  (\bibinfo {year}
-  {1951})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Pachucki}\ and\ \citenamefont
   {Jentschura}(2007)}]{roec2007}%
   \BibitemOpen
@@ -161,48 +183,6 @@
   orbital electron capture by the atomic nucleus},}\ }\href@noop {} {\ \textbf
   {\bibinfo {volume} {75}},\ \bibinfo {pages} {055502} (\bibinfo {year}
   {2007})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Jackson}(1998)}]{jackson}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~D.}\ \bibnamefont
-  {Jackson}},\ }\href@noop {} {\emph {\bibinfo {title} {Classical
-  Electrodynamics}}}\ (\bibinfo  {publisher} {Third Edition and Wiley and},\
-  \bibinfo {year} {1998})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Bahcall}(1962)}]{bachall62}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~N.}\ \bibnamefont
-  {Bahcall}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Electron
-  capture and nuclear matrix elements of $^{7}be$},}\ }\href@noop {} {\ \textbf
-  {\bibinfo {volume} {128}},\ \bibinfo {pages} {1297} (\bibinfo {year}
-  {1962})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Gruzinov}\ and\ \citenamefont
-  {Bahcall}(1969)}]{bachall69}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~V.}\ \bibnamefont
-  {Gruzinov}}\ and\ \bibinfo {author} {\bibfnamefont {J.~N.}\ \bibnamefont
-  {Bahcall}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {The $^{7}be$
-  electron capture rate in the sun},}\ }\href@noop {} {\ \textbf {\bibinfo
-  {volume} {155}},\ \bibinfo {pages} {511} (\bibinfo {year}
-  {1969})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Widom}\ and\ \citenamefont {Larsen}(2007)}]{widlar1}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Widom}}\ and\ \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Larsen}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Theoretical standard model
-  rates of proton to neutron conversions near metallic hydride surfaces},}\
-  }\href@noop {} {\  (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Jr.}\ \emph {et~al.}(1965)\citenamefont {Jr.},
-  \citenamefont {Schindler}, \citenamefont {Tanaka}, ,\ and\ \citenamefont
-  {Morita}}]{ferguson}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.~A.~F.}\
-  \bibnamefont {Jr.}}, \bibinfo {author} {\bibfnamefont {A.~I.}\ \bibnamefont
-  {Schindler}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Tanaka}}, ,
-  \ and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Morita}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Neutron diffraction study of
-  temperature-dependent properties of palladium containing absorbed
-  hydrogen},}\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
-  Rev}\ }\textbf {\bibinfo {volume} {137(A483)}} (\bibinfo {year}
-  {1965})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Martin}\ and\ \citenamefont {Zerner}(2006)}]{martin}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~H.}\ \bibnamefont
