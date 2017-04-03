@@ -58,7 +58,7 @@ Authors' institution and/or address%\\This line break forced with \textbackslash
              %  but any date may be explicitly specified
 
 \begin{abstract}
-We describe a Gedankenexperiment in which a bare proton can capture an electron due solely to confinement. We first briefly review K orbital electron capture and related processes.  We then describe the Fermi VA-Theory and how it can be applied to compute the cross section and rate for electron capture by a bare proton.  We set the problem up as a (proton, electron) pair confined in classical box of size L, and compute the cross section using the full Weak Interaction Hamiltonian and relativisitic Kinematics.  We provide numerical solutions for electron capture rate, and compare the power output relative to that of a neutron being captured in the port-reaction.  We find that the capture is most likely for L=0.004-0.009 Angstroms, well beyond the radius of the proton and the Compton wavelength of the electron.  We also examine the implications for theoretical minimal power output for such a process.  Finally, we discuss some interesting applications and proposals for future work.
+We describe a Gedankenexperiment in which a bare proton can capture an electron due solely to confinement. We first briefly review K orbital electron capture and related processes.  We then describe the Fermi VA Theory and how it can be applied to compute the cross section and rate for electron capture by a bare proton.  We set the problem up as a (proton, electron) pair confined in classical box of size L, and compute the cross section using the full Weak Interaction Hamiltonian and relativisitic Kinematics.  We provide numerical solutions for electron capture rate, and compare the power output relative to that of a neutron being captured in the port-reaction.  We find that the capture is most likely for L=0.004-0.009 Angstroms, well beyond the radius of the proton and the Compton wavelength of the electron.  We also examine the implications for theoretical minimal power output for such a process.  Finally, we discuss some interesting applications and proposals for future work.
 %
 \end{abstract}
 
@@ -74,17 +74,17 @@ As a student, we learn that the nucleus can not contain an electron; this is a s
 
 $$beta\;decay:\;n^{0}\rightarrow p^{+}+\;e^{-}\;+\;\bar{\nu_{e}}$$
 
-We can describe beta decay using the Fermi VA theory for the Weak Interaction, which assumes a phenomenological contact force \emph{with no range}.
+We can describe Beta decay using the Fermi VA theory for the Weak Interaction, which assumes a phenomenological contact force \emph{with no range}.
 
 A related Weak process is orbital electron capture, where a nucleus captures a bound, low lying electron, and emits a neutron and an electron anti-neutrino.
 
 $$electron\;capture:\;p^{+}+\;e^{-}\rightarrow\;n^{0}\;+\;\nu^{e}$$
 
-Orbital electron capture is a fundamental  nuclear process, on pair with the more familiar beta decay and positron production. It is, however, usually treated as an afterthought to beta decay, and there are no modern reviews of how to treat the the problem numerically.  Indeed, the most complete reference dat back to the 1960s and 70s \cite{ec-review1,ec-review2}.  Still, electron capture displays its own unique, rich structure and subtlety.  For example, the rate is effected chemical environment by nearly $1\%$.    This is because the rate depends on the electronic density on the surface of the nucleus (i.e. $\vert\Psi_{e}(r\rightarrow 0)\vert^{2}$) since the interaction has no range. 
+Orbital electron capture is a fundamental  nuclear process, on pair with the more familiar Beta decay and positron production. It is, however, usually treated as an afterthought to Beta decay, and there are no modern reviews of how to treat the the problem numerically.  Indeed, the most complete reference date back to the 1960s and 70s \cite{ec-review1,ec-review2}.  Still, electron capture displays its own unique, rich structure and subtlety.  For example, the rate is effected chemical environment by nearly $1\%$.    This is because the rate depends on the electronic density on the surface of the nucleus (i.e. $\vert\Psi_{e}(r\rightarrow 0)\vert^{2}$) since the interaction has no range. 
 
-But if we apply the Heisenberg Uncertainty Principle for electron capture, we would find the electron can still be captured even if it confined to a volume $100X$ the nuclear radius.  
+But if we apply the Heisenberg Uncertainty Principle for electron capture, we would find the electron can still be captured even if it is confined to a volume $100X$ the nuclear radius.  
 
-It can also emit Bremsstrahlung radiation.  In fact, this is actually discussed in Jackson with a classical model \cite{jackson}--although it is more properly treated using QED corrections to the Weak interaction\cite{Jauch}. In fact, technically, electron capture is a 2-body, relativistic bound state problem, although we model it by computing the non-relativistic atomic electronic wavefunctions of the parent and daughter nuclei, and then use them to evaluate the matrix elements of the Weak Interaction Hamiltonian using the Fermi-VA theory.  And very rarely do we do a complete treatment of the Kinematics.
+It can also emit Bremsstrahlung radiation.  In fact, this is actually discussed in Jackson with a classical model \cite{jackson}--although it is more properly treated using QED corrections to the Weak Interaction\cite{Jauch}. In fact, technically, electron capture is a 2-body, relativistic bound state problem, although we model it by computing the non-relativistic atomic electronic wavefunctions of the parent and daughter nuclei, and then use them to evaluate the matrix elements of the Weak Interaction Hamiltonian using the Fermi-VA theory.  And very rarely do we do a complete treatment of the Kinematics.
 
 
 We are interested in the reviewing the basic  electron capture process to   understand how to apply the Fermi-VA theory to compute the cross section and capture rate as completely as possible.  We will examine electron capture in its simplest form:  a bare proton capturing an electron while confined in a classical box.   We don't believe this has been discussed elsewhere and would serve as a great instructional example for students.  
@@ -99,19 +99,23 @@ $$p^{+}+\;e^{-}\rightarrow\;n^{0}\;+\;\nu^{e}$$
 
 This may be called orbital electron capture, K-electron capture, or just electron capture (E.C.) 
 
+Note that unlike Beta decay, which is a 1 body decay, and the emitted electron has a wide energy spectrum, E.C. is a 2 body reaction, and the emitted neutron is mono-chromatic.
+
 Electron capture usually occurs in unstable radioisotopes which lack the nuclear binding energy $Q$ to decay by the more familiar Beta decay processes ($\beta^{-}, \beta^{+}$). The typical $Q$ energies necessary are 
 
 $$Q_{\beta^{+}}\sim2-4{MeV}$$
 $$Q_{\beta^{-}}\sim0.5-2(MeV)$$
 $$Q_{E.C.}\sim0.2-2.0{MeV}$$
 
-When $Q<1.02{MeV}$, which is twice the rest mass of an electron $(2m_{e}c^{2})$, a proton rich nucleus must decay by electron capture.
+When $Q<1.02{MeV}$, twice the rest mass of an electron $(2m_{e}c^{2})$, a proton rich nucleus must decay by electron capture.
 
-In particular, heavy elements may decay by E.C. and/or $\beta^{+}$ (positron emission) to a lower 'magic number' of stable nuclei, and by $\beta^{-}$ decay to achieve a higher magic number.    E.C. is favored for high Z nuclei, but because of the energetic constraint, very light elements, such as $^{7}Be$, decay by primarily by E.C.    Lacking any binding energy and/or internal nucleon structure, bare proton electron capture is not observed, and requires extreme, exotic conditions.
+In particular, heavy elements may decay by E.C. and/or $\beta^{+}$ (positron emission) to a lower 'magic number' of stable nuclei, and by $\beta^{-}$ decay to achieve a higher magic number.    E.C. is favored for high Z nuclei, but because of the energetic constraint, very light elements, such as $^{7}Be$, decay by primarily by E.C.    
+
+Note that lacking any binding energy and/or internal nucleon structure, bare proton electron capture is not readily observed, and requires extreme, exotic conditions such as strong confinement.
 
 \subsubsection{Experimental Evidence}
 
-We observe electron capture by observing the resulting transmuted nuclei and/or the radiative relaxation processes.  The captured electron is bound to the atom, and it is usually a K-shell electron, but may be L or higher.  The nucleus may then absorb some energy, becoming excited, and then undergo internal conversion.  During this, another higher lying, bound atomic electron is absorbed, and either an X-ray or Auger electron released [see Figure \ref{fig:ec1}].
+We observe electron capture by observing the resulting transmuted nuclei and/or the radiative relaxation processes.  The captured electron is bound to the atom, and it is usually a K-shell electron, but may be L or higher.  The nucleus may then absorb some energy, become excited, and then undergo internal conversion.  During this, another higher lying, bound atomic electron is absorbed, and release an X-ray or Auger electron [see Figure \ref{fig:ec1}].
 
 \begin{figure}
    \includegraphics[scale=0.25]{img/ecrelax.png}
@@ -119,13 +123,13 @@ We observe electron capture by observing the resulting transmuted nuclei and/or 
   \label{fig:ec1}
 \end{figure}
 
-Because electron capture occurs in proton-rich nuclei, and, subsequently, releases a X-Ray photon, the reaction is also sometimes written as
+Because electron capture occurs in proton-rich nuclei, and, subsequently, releases a X-ray photon, the reaction is also sometimes written as
 
 $$^{Z}X_{A}+\;e^{-}\rightarrow\;^{Z-1}X_{A}\;+\;h\nu_{X-ray}$$
 
 (where Z is the total number of protons and neutrons, A the number protons, and $h\nu_{X-ray}$ is an X-ray photon)
 
-Indeed, orbital electron capture is evidenced by high intensity x-rays and soft electrons.  In 1938, Luis W. Alvarez observed the x-ray signature of orbital electron capture in activated Titanium \cite{alvarez}. Since then, electron capture has been observed in about 150 radioactive isotopes.
+Indeed, orbital electron capture is evidenced by high intensity X-rays and soft electrons.  In 1938, Luis W. Alvarez observed the X-ray signature of orbital electron capture in activated Titanium \cite{alvarez}. Since then, electron capture has been observed in about 150 radioactive isotopes.
 
 
 \subsubsection{Environment Effects on Electron Capture rates}
@@ -136,36 +140,28 @@ Being so light, and having such a large rate, electron capture in $^{7}Be$ can b
 
 How could such changes occur?  The nuclear energy levels are in the keV to MeV region, and it is generally thought to be very difficult to impossible to effect.  But the electron capture rate is proportional to electronic density at the surface of the nucleus--\emph{the nuclear charge}.   The electronic energy levels are in the eV range, so intense EM fields can alter the electronic structure and therefore slightly affect the E.C. rate. 
 
+\subsubsection{Bare Electron Proton Capture and Stellar Nucleosynthesis}
 
-\subsubsection{Bare proton-electron capture}
+At zero energy, bare proton electron capture is not possible because it violates energy-momentum conservation. Theoretically, a free proton can could capture an electron from the continuum, but the interaction energy must be  above threshold for neutron production.  This is a huge amount of energy, although this happens regularly in accelerators, and, presumably, in stellar environments.  Observing such capture outside of an accelerator would be an incredibly hard experiment  because both final particles are neutral, and the neutrino is extremely weakly interacting.  Still, we have good reason to believe it occurs, even if we don't understand the detailed mechanism.
 
-We frequently write electron capture as if it were simply proton-electron capture.  But at zero energy, bare proton electron capture is not possible because it violates energy-momentum conservation. Theoretically, a free proton can could capture an electron from the continuum, but the interaction energy must be  above threshold for neutron production.  This is a huge amount of energy, although this happens regularly in accelerators, and, presumably, in stellar environments.
-
-Observing proton electron capture outside of an accelerator, \emph{on the desktop}, so to speak, would be an incredibly hard experiment because both final particles are neutral, and  the neutrino is extremely weakly interacting.  Still, we have good reason to beleive it occurs.
-
-\subsubsection{Stellar Nucleosynthesis}
-
-Bare proton-electron capture is thought to occur  in the early stages of the big bang and in stellar nucleosynthesis.  It is thought to drive the formation of primordial elements, and to occur in the forming of neutron stars.   
-
-At very high temperatures, the proton electron collisions have sufficient energy to overcome the reaction barrier.   For example, Bachall and coworkers have studied the electron capture rate in stellar media, and have computed the electron capture rate of $^{7}Be$ in the Sun \cite{bachall62,bachall69}. And it is believed that ionized Hydrogen captures an electron during the core collapse supernovae and in neutron stars [14]; in fact, it is thought to create stellar instability.   
+Bare capture is thought to occur in the early stages of the big bang and in stellar nucleosynthesis.  It drives the formation of primordial elements, and occur when neutron stars form.  At very high temperatures, the proton electron collisions have sufficient energy to overcome the reaction barrier.   For example, Bachall and coworkers have computed the electron capture rate of $^{7}Be$ in the Sun \cite{bachall62,bachall69}. And it is believed that ionized Hydrogen captures an electron during the core collapse supernovae and in neutron stars [14]; in fact, it is thought to create stellar instability.   
 
 While we usually characterize a star by it's temperature, these are also very dense systems, with $\rho\sim 10^6\;g\;cm^{-3}$.  In contrast, the smallest star has density $\rho\sim 10^{2}-10^{3}\;g\;cm^{-3}$ [?]  As important, the reverse reaction is prohibited because, inside the dense neutron star, it is impossible to create a new electron; the Fermi sea is \emph{full}.
 
-So electron capture can occur by bare protons, but, presumably, only under extreme confinement (and with the reverse reaction is suppressed).
+So electron capture can occur by bare protons, but, presumably, only under extreme confinement, and with the reverse reaction is suppressed.  We  model this as a particle-in-a-box using the Femi VA theory.
 
+\subsection{The Weak Interaction and Femi VA theory}
 
+Electron capture is mediated by the Weak Interaction, described most concisely by the Fermi VA (Vector Axial) theory \cite{fermi1,ec-review1,ec-review2}.
+The VA theory is a simple phenomenological approach, readily amenable to numerical calculations. It is now understood in terms of ElectroWeak Unification and can be derived from the Standard Model.  
 
+The original paper by Fermi, for which he won the 1938 Nobel Prize in Physics, was initially rejected by \emph{Nature} because \emph{It contained speculations too remote from reality to be of interest to the reader} \cite{close}.
 
-\subsection{The Weak Interaction and V-A theory}
-
-Electron capture is mediated by the Weak interaction, described most concisely by the Fermi V-A (Vector Axial) theory \cite{fermi1,ec-review1,ec-review2}.
-The V-A theory is a simple phenomenological approach, readily amenable to numerical calculations.  While It is now understood in terms of ElectroWeak Unification and can be derived from the Standard Model, the original paper by Fermi, for which he won the 1938 Nobel Prize in Physics, was initially rejected by \emph{Nature} because "It contained speculations too remote from reality to be of interest to the reader" \cite{close}.
-
-V-A theory is used to compute cross sections for scattering experiments and decay rates for electron capture for various atoms,  even in different environments, chemical and otherwise.  We can use machinery of the V-A theory to explore E.C. in a simple, idealized environment.  To properly describe any reaction, however, we need to understand what reactions we can apply the theory to, and the other, potential competing reactions.
+VA theory is used to compute cross sections for scattering experiments and decay rates for electron capture for various atoms,  even in different environments, chemical and otherwise.  We can use machinery of the VA theory to explore E.C. in a simple, idealized environment.  To properly describe any reaction, however, we need to understand what reactions we can apply the theory to, and the other, potential competing reactions.
 
 \subsubsection{Electron Capture and other Weak processes} 
 
-The Weak interaction describes several related processes within a single framework.  \emph{Neutron-rich} nuclei may become more stable as a result by undergoing one or more of the following:
+The Weak Interaction describes several related processes within a single framework.  \emph{Neutron-rich} nuclei may become more stable as a result by undergoing one or more of the following:
 
 
 \begin{itemize}
@@ -180,14 +176,14 @@ There are also several related reactions, including
 \begin{itemize}
 \item reverse electron capture  $\;\;\;\;\;\;\;n^{0}+\nu_{e}\rightarrow p^{+}+e^{-}$
 \item free neutron decay  $\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;n^{0}\rightarrow p^{+}+e^{-}+\bar{\nu_{e}}$ 
-\item inverse beta decay  $\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;p^{+}+\bar{\nu_{e}} \rightarrow n^{0}+e^{+}$
+\item inverse Beta decay  $\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;p^{+}+\bar{\nu_{e}} \rightarrow n^{0}+e^{+}$
 \end{itemize}
 
 Let us briefly review these.
 
 \subsubsection{Beta decay} 
 
-Beta decay is the most familiar Weak process, and is discussed in great detail in a number articles and books. In contrast, electron capture, which is significantly more difficult to describe in detail, is a rare topic.  Indeed, the most recent review is from 1976 \cite{ec-review1}.    
+Beta decay is the most familiar Weak process, and is discussed in great detail in a number articles and books. In contrast, electron capture, which is significantly more difficult to describe in detail, is a very rare topic.  Indeed, the most recent review is from 1976 \cite{ec-review1}. 
 
 \subsubsection{Positron emission} 
 
@@ -197,28 +193,27 @@ In any high energy relativisitic process, we have to worry about positron emissi
 
 By detailed balance,  reverse electron capture has the same rate as orbital electron capture--but is more favorable energetically.  Indeed, inside the nucleus, the neutron is relatively stable. Free neutron decay has mean lifetime of $\tau=881.5\pm1.5\;sec $, or about 15 minutes. 
 
-In contrast, orbital electron capture by a free proton is unspoken-of outside of a stellar environments. Even if the bare reaction could proceed, the reverse reaction would still dominate un
-less it is suppressed or is kinetically unfavorable.  
+In contrast, orbital electron capture by a free proton is unspoken-of outside of a stellar environments. Even if the bare reaction could proceed, the reverse reaction would still dominate unless it is suppressed or is kinetically unfavorable.  
 
-\subsubsection{Inverse Beta Decay} 
+\subsubsection{Inverse Beta decay} 
 
 Electron capture is also sometimes called inverse $\beta$ decay, but, here, we mean this to be the scattering of a proton and an electron anti-neutrino $\bar{\nu}_{e}$.  It is characterized by emission of a positron $e^{+}$. 
 
 \subsection{Higher order corrections}
 
 \subsubsection{Orbital effects}
-Highly accurate E.C. calculations must treat the electronic structure of the initial and final electronic states.  The capture rate is strongly affected by the overlap between the initial and final atomic states.  But when Hydrogen is strongly confined, the atomic electron effectively detaches from the proton, and effectively behaves like a particle-in-a-box (depending on the shape of the box) \cite{confinedH}.  So we do not need to consider atomic orbital effects here, and this greatly simplifies the analysis.
+Highly accurate rate calculations must treat the electronic structure of the initial and final electronic states, and it is strongly affected by their overlap.  But when Hydrogen is strongly confined, the atomic electron effectively detaches from the proton, and effectively behaves like a particle-in-a-box (depending on the shape of the box) \cite{confinedH}.  So we do not need to consider atomic orbital effects here, and this greatly simplifies the analysis. 
 
 \subsubsection{Radiative Electron Capture}
 
-The Weak interaction, as presented here, does not include higher order QED contributions.  There are 2 dominant effects: positron emission and Internal Bremsstrahlung \cite{Jauch}.
+The Weak Interaction, as presented here, does not include higher order QED contributions.  There are 2 dominant effects: positron emission and internal Bremsstrahlung\cite{Jauch}.
 
-In particular, in very rare cases, a gamma ray photon is emitted with the neutrino; this is called Radiative Electron Capture (REC) \cite{glauber1,glauber2, Jauch, roec2007}. This can be thought of as a kind of Internal Bremsstrahlung (or so-called \emph{braking}) radiation, caused by the electron accelerating toward the nucleus during capture,  taking energy away from outbound neutrino\cite{jackson}. It is traditionally been treated as a second order QED correction to the V-A theory \cite{Jauch}.  REC is 1000X less likely, but does occur.   The resulting gamma rays are called soft because they do not exhibit sharp spectral lines.    Recent, detailed rate calculations have elucidated the quantum mechanical details \cite{roec2007}.
+In particular, in very rare cases, a gamma ray photon is emitted with the neutrino; this is called Radiative Electron Capture (REC) \cite{glauber1,glauber2, Jauch, roec2007}. This can be thought of as a kind of Internal Bremsstrahlung (or so-called \emph{braking}) radiation, caused by the electron accelerating toward the nucleus during capture,  taking energy away from outbound neutrino\cite{jackson}. It is traditionally been treated as a second order QED correction to the VA theory \cite{Jauch}.  REC is 1000X less likely, but does occur.   The resulting gamma rays are called soft because they do not exhibit sharp spectral lines.    Recent, detailed rate calculations have elucidated the quantum mechanical details \cite{roec2007}.
 
 
 \section{Confinement Induced Electron Capture}
 
-We pose the following Gedankenexperiment:   Suppose we confine a bare proton (and an electron) in a particle-in-a-box of volume $L^3$.  What box size L will 'induce' electron confinement ?  Here, we examine what do detailed calculations look like that employ the full machinery of the Weak interaction, as an illustrative exercise.
+We pose the following Gedankenexperiment:   Suppose we confine a bare proton (and an electron) in a particle-in-a-box of volume $L^3$.  What box size L will 'induce' electron confinement ?  Here, we examine what do detailed calculations look like that employ the full machinery of the Weak Interaction, as an illustrative exercise.
 
 We write this as
 
@@ -226,11 +221,11 @@ $$E_{box}+p^{+}+e^{-}\rightarrow n^{0}+\nu_{e}$$
 
 where $E_{box}$ is the \emph{confinement energy}, which is induced by the box constraints. 
 
-\subsubsection{Neutron post-reaction}
+Before we describe the theoretical approacj, we address a few conceptual issues in setting up the problem.
 
-To prevent the reverse reaction, we assume that the free neutron subsequently combines with another proton, and gives us 2.2 MeV of energy in the process.  This post-process contributes to the power output, and prevents the reverse reaction.  Realistically, we expect this to happen at the maximum box size, at the energy threshold, where the outbound neutron has very low momentum and therefore a very small mean free path.  
+\subsubsection{Confined Atomic systems}
 
-Still, for illustrative purposes, we will compute the power output,  assuming this post-reaction,  at all box sizes.
+Usually electron capture is described using the atomic orbitals of the parent and daughter nuclei \cite{ec-review1,ec-review2}.  This is very complicated and the basic physical insight can be lost in the details of various angular momentum selection rules and orbital overlap calculations.  Moreover, when H atom is confined, the electron will detach from the proton and behave like a free particle in a box \cite{confinedH}.  
 
 \subsubsection{Compton length}
 The first obvious question is, should we use a classical or a relativisitic box?   
@@ -252,23 +247,27 @@ We also assume that the electron wavefunction does not change appreciably during
 
 \subsubsection{Klein Paradox}
 
-Klein noted that a relativistic (Dirac) particle-in-a-box will \emph{leak out} at box sizes near the Compton wavelength; this called the Klein paradox \cite{klein1,klein2}.  And while this is usually taught as being simply particle-antiparticle creation, it has been suggested that the Klein paradox it can occur even at larger boxes sizes, and it is a general phenomena of confined relativistic particles.  And recent experiments on Graphene have reopened the debate \cite{klein3}. Still, we will assume the traditional interpretation and that we can ignore the Klein paradox.
+Klein noted that a relativistic (Dirac) particle-in-a-box will \emph{leak out} at box sizes near the Compton wavelength--this called the Klein paradox \cite{klein1,klein2}.  And while this is usually taught as being simply particle-antiparticle creation, it has been suggested that the Klein paradox it can occur even at larger boxes sizes, and it is a general phenomena of confined relativistic particles.  And recent experiments on Graphene have reopened the debate \cite{klein3}. Still, we will assume the traditional interpretation and we will ignore the Klein paradox.
 
 So we use a classical box, with minimum size $L_{min}=0.004\;\mathring{A}$.  We compute the maximum size below.
 
+\subsubsection{Neutron post-reaction}
 
+To prevent the reverse reaction, we assume that the free neutron subsequently combines with another proton, and gives us 2.2 MeV of energy in the process.  This post-process contributes to the power output.  Realistically, we expect this to happen at the maximum box size, at the energy threshold, where the outbound neutron has very low momentum and therefore a very small mean free path.  
+
+Still, for illustrative purposes, we will compute the power output,  assuming this post-reaction,  at all box sizes.
 
 \section{Theory and Calculations}
 
-The electron capture rate can be computed using the Fermi VA-Theory \cite{ec-review1,ec-review2}.  The most basic calculations require a only specifying the electronic wavefunctions(s), averaging over the possible electron-proton momenta, and numerically integrating over the outbound neutrino momentum.  We describe this below.
+The electron capture rate can be computed using the Fermi VA Theory \cite{ec-review1,ec-review2}.  The most basic calculations require a only specifying the electronic wavefunctions(s), averaging over the possible electron-proton momenta, and numerically integrating over the outbound neutrino momentum.  We describe this below.
 
-The V-A theory is based on second order perturbation theory.  It assumes an incoherent nuclear process, it is local, and that the interaction is phenomenological. It is treated as a simply a contact potential at the surface of the nucleus. Here, this means we need to compute the nuclear charge--the electron density on the surface of the nucleus $\Vert\psi_{e}(R=0)\Vert$, which we obtain from a classical particle-in-the-box wavefunction (below).
+The VA theory is based on second order perturbation theory.  It assumes an incoherent nuclear process, it is local, and that the interaction is phenomenological. It is treated as a simply a contact potential at the surface of the nucleus. Here, this means we need to compute the nuclear charge--the electron density on the surface of the nucleus $\Vert\psi_{e}(R=0)\Vert$, which we obtain from a classical particle-in-the-box wavefunction (below).
 
 More complicated calculations are used for larger nuclei, second order processes, etc.  They only require modifications to treat either atomic electronic structure of reactant and product atoms, and/or specific considerations for nuclear internal conversion and other second order processes.
 
 
 
-\subsection{Particle production under the Weak interaction}
+\subsection{Particle production under the Weak Interaction}
 
 \begin{figure}
    \includegraphics[scale=0.25]{img/feynman.png}
@@ -284,14 +283,14 @@ We want to compute the rate of E.C. and the (minimum) power generated, as a func
 
 \subsection{Transition Rates and Power Calculations}
 
-Orbital electron capture and other Beta-decay processes follow first order kinetics, so the capture rate is described by a single number. 
+Orbital electron capture and other Beta decay processes follow first order kinetics, so the capture rate is described by a single number. 
 To calculate the rate, we require a full relativistic, quantum mechanical treatment because the capture process involves both creating particles and the kinetic energy spectrum is of order $m_{e}c^{2}$.
 
  The capture rate $\Gamma_{EC}$  is given by multiplying the cross section $\sigma_{EC}$ by the incident velocity $\mathbf{v}^{in}_{ep}$ and electronic (box) density $\big\vert\Psi_{ep}(0)\big\vert^{2}$  of the $(e^{-},p^{+})$ pair at the origin
 
 $$\Gamma_{EC}=\big\vert\Psi_{ep}(0)\big\vert^{2}\mathbf{v}^{in}_{ep}\sigma_{EC}\;\;.$$
 
-We will compute the electronic density classically, using box wavefunctions, and, for each box size, determine the incident velocity (really momentum). We then compute the cross section using full relativistic kinematics and Dirac spinors.  
+We will compute the electronic density classically, using box wavefunctions, and, for each box size, determine the incident velocity (as the momentum). We then compute the cross section using the full relativistic kinematics and Dirac spinors.  
 
 \subsubsection{Cross Section}
 
@@ -303,7 +302,7 @@ d\sigma_{EC}=
 \end{multline}
 
 
-where $\mathcal{M}_{fi}$ is a matrix element of the weak interaction Hamiltonian,  $\mathbf{k}$ represents the neutrino momentum components $(k^{0},\mathbf{k})=(E_{\nu},\mathbf{k})=p^{4}_{\nu}$,  and we use natural units $(\hbar=1,c=1)$.
+where $\mathcal{M}_{fi}$ is a matrix element of the Weak Interaction Hamiltonian,  $\mathbf{k}$ represents the neutrino momentum components $(k^{0},\mathbf{k})=(E_{\nu},\mathbf{k})=p^{4}_{\nu}$,  and we use natural units $(\hbar=1,c=1)$.
 
 
 \subsubsection{Rate}
@@ -352,21 +351,19 @@ While most electron capture calculations assume a specific, bound, atomic electr
 
 $$\psi_{ep}(\mathbf{x})=\left(\dfrac{2}{L}\right)^{\frac{3}{2}}cos\left(\dfrac{\pi x}{L}\right)cos\left(\dfrac{\pi y}{L}\right)cos\left(\dfrac{\pi z}{L}\right)$$.
 
-expressions for momentum.
-
 Because the VA theory assumes an incoherent process, the electron, proton wavefunction is usually factored as an electron wavefunction, with a point-particle in the center
 
 $$\psi_{ep}(\mathbf{x})=\psi_{p}(0)\psi_{e}(\mathbf{x})$$
 
 We only consider the ground state $\psi_{ep}^{0}$ wavefunction.
 
-We note, in \emph{ab initio} electronic structure calculations, it is now generally possible to treat the Hydrogen proton wavefunction explicitly, and to treat the electron-proton coupling at the level of Hartree Fock \cite{martin}.  This has proved useful, for example, for describing isotope effects on electronic structure.
+We note, in \emph{ab initio} electronic structure calculations, it is now generally possible to treat the Hydrogen proton wavefunction explicitly, and to treat the electron-proton coupling at the level of Hartree Fock \cite{martin}.  This has proved useful, for example, for describing isotope effects on electronic structure.  It is may also be possible to eventually treat this problem using fully relativistic \emph{ab initio} QFT methods, although this has only been applied to positronium so far \cite{positroniumQFT}.
 
-Here, we treat the confined electron, proton pair in the C.M. frame so that the 3-momentum of the electron and proton related
+Here, we treat the confined electron, proton pair in the C.M. frame so that the 3-momentum of the electron and proton are related as
 $$\mathbf{p}_{e}=\mathbf{p}_{pe}$$
 $$\mathbf{p}_{p}=-\mathbf{p}_{pe}$$
 
-and we consider all 8 permutations for a given box size L:
+and we consider all 8 permutations for each given box size L:
 
 $$\pm\mathbf{p}_{pe}(1), \pm\mathbf{p}_{pe}(1), \pm\mathbf{p}_{pe}(3)$$
 
@@ -405,17 +402,14 @@ and the neutron $(n)$ kinetic energy is
 
 $$K_{n}=E_{n}-M_{n}=\dfrac{(E_{p}+E_{e}-M_{n})^{2}-m^{2}_{\nu}}{2(E_{p}+E_{e})}$$
 
-At this point, we can compute the relativistic energies for all particles, simply as a function of box length (L), for a confined $(e^{-},p^{+})$ pair.  Of interest is the shape of the curve, and when the excess power output becomes favorable.  To compute the exact rate and estimate the power, we need to evaluate the matrix element(s) of the Weak Interaction Hamiltonian.  
+At this point, we can compute the relativistic energies for all particles, simply as a function of box length (L), for a confined $(e^{-},p^{+})$ pair.  Of interest is the shape of the curve, and when the excess power output becomes favorable.  
+
+To compute the exact rate and estimate the power, we need to evaluate the matrix element(s) of the Weak Interaction Hamiltonian.  
 While most practitioners simply estimate this, for our purpose, we can simply compute them exactly.
-
-[maybe show the curve, and state the maximum box size. or wait until later ?]  
-
-[say something about estimating the size of the interaction here, which should be enough for a baseline calculation]
-
 
 \subsection{Weak Interaction Hamiltonian and Matrix Elements}
 
-The Hamiltonian for the V-A theory for E.C. is \cite{ec-review1,ec-review2} 
+The Hamiltonian for the VA theory for E.C. is \cite{ec-review1,ec-review2} 
 
 $$\mathcal{H}(x)=-\dfrac{G_{F}}{\sqrt{2}}\left[J^{\mu}(x)L^{+}_{\mu}(x)+h.c.\right]$$
 
@@ -430,7 +424,6 @@ where $u_{n},u_{p},u_{e},u_{\nu}$ are Dirac (free-particle) wavefunctions.
 $G_{F}$ is the Universal Fermi Weak Coupling Constant, and $\lambda=-\dfrac{G_{A}}{G_{V}}$, which is determined by experiment (and subject to minor changes). 
  $G_{V}$ is the Axial-Vector Weak Coupling Constant, and $G_{A}$ is the vector weak coupling
 constant.  The most recent value is $G_{V}=1.2767(16)$, and $G_{A}=1$ \cite{vacoupling}.
-
 
 \subsubsection{VA Matrix Elements}
 
@@ -460,13 +453,11 @@ $$\langle\bar{u}|u\rangle=\bar{u}_{0}u_{0}-\bar{u}_{1}u_{1}-\bar{u}_{2}u_{2}-\ba
 
 and $\bar{u}=u^{\dagger}\gamma^{0}$.  The $\gamma$ are 4-component Gamma matrices, and  $(\cdots\gamma^{\mu}\cdots\gamma_{u}\cdots)$ is the Einstein summation convention. 
 
-Writing the matrix elements in terms of the currents gives
+Recall that the VA theory assumes that the electron-proton interaction is a contact potential, operating at the surface of the nucleus, and that the underlying quantum process is incoherent.    We need simply compute the matrix elements in terms of the terms of the individual Hadronic and Leptonic currents
 
 $$\mathbf{J}_{had}=\bar{u}(p_{n},s_{n})(G_{V}-G_{A}\gamma^{5})\gamma^{\mu}u(p_{p},s_{p})$$
 
-$$\mathbf{L}_{lep}=\bar{u}(p_{\nu},s_{\nu})\gamma_{u}(1-\gamma^{5})u(p_{e},s_{e})$$
-
-Notice that when applying the VA theory this way, we assume that the electron-proton interaction is a contact potential, operating at the surface of the nucleus, and that the underlying quantum process is incoherent.  
+$$\mathbf{L}_{lep}=\bar{u}(p_{\nu},s_{\nu})\gamma_{u}(1-\gamma^{5})u(p_{e},s_{e})$$.
 
 \subsubsection{Sum over spin combinations}
 
@@ -474,17 +465,17 @@ Electron capture is similar to Beta decay in that there are allowed (Singlet-lik
 as well as some very low order disallowed contributions.  These are, of course, different from Beta decay since we need to consider the total angular momentum of the initial ($p^{+}+e^{-
 })$ and final $(n^{0}+\bar{\nu_{e}})$ states.  
 
-By Singlet-like states, we effectively mean total spin 0, and by Triplet-like, we mean total spin -1 or 1.  Since we are using particle-in-the-box electronic wave functions,  we do not consider orbital angular momentum, and therefore only have to consider if $s_{p}= s{_e}$ and $s_{n}=s_{\nu}$. Notice, however, we use the Dirac-spinor convention for $s=1\;(up)$ and $s=2\;(down)$, so total $s=0$ corresponds to ($up,down$) or ($down,up$), etc.
+By Singlet-like states, we effectively mean total spin 0, and by Triplet-like, we mean total spin $1$ or $-1$.  Since we are using particle-in-the-box electronic wave functions,  we do not consider orbital angular momentum, and therefore only have to consider if $s_{p}= s{_e}$ and $s_{n}=s_{\nu}$. Notice, however, we use the Dirac-spinor convention for $s=1\;(up)$ and $s=2\;(down)$, so total $s=0$ corresponds to ($up,down$) or ($down,up$), etc.
 
 \begin{figure}
    \includegraphics[scale=0.5]{img/16-allowed.png}
    \caption{Allowed spin transitions}
   \label{fig:SC}
 \end{figure}
-We sum over the 16  allowed transitions in the V-A theory, as depicted in Figure \cite{fig:SC}
- (taken from Beta Decay for Pedestrians; we need to replicate , but use p-e as the states, not e-k)
+We sum over the 16  allowed transitions in the VA theory, as depicted in Figure \cite{fig:SC}
+ (taken from Beta decay for Pedestrians; we need to replicate , but use p-e as the states, not e-k)
 
-Similar to Beta, s, we have four spin dominate (\emph{allowed}) spin combinations, 
+Similar to Beta, s, we have four dominate (\emph{allowed}) spin combinations, 
 consisting of Singlet-like (or Fermi-like) initial and final states,  which is of order $50$ (in natural units)
 
 $$s_{p}\neq s{_e};\;\;\;s_{n}\neq s_{\nu}$$
@@ -576,7 +567,7 @@ We write power as
 $$P1 = P_{pe}=C^{2}_{Re}\left[(\mathbf{E}_{e}-m_{e})+(\mathbf{E}_{p}-M_{p})\right]\left(\mathcal{F}\right)$$
 $$P2 = P_{n}=C^{2}_{Re}\left[2.2+(\mathbf{E}_{n}-M_{n})\right]\left(\mathcal{F}\right)$$
 
-and compute these as a function of the box size using the relativistic kinematic and Weak interaction matrix elements.
+and compute these as a function of the box size using the relativistic kinematic and Weak Interaction matrix elements.
 
 \subsection{Results}
 
