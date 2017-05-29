@@ -241,9 +241,12 @@ $$\lambda_{e}\approx2.426\times 10^{-12}\;m$$
 For an electron, the minimum L is on the order of 0.004 Angstrom 
 $$L_{min}\sim0.004\;\mathring{A}$$ 
 
-In any high energy, relativisitic system, positrons can be produced; here it is through $\beta^{+}$-decay. This generally occurs at or below the Compton length. We are seeking the maximum box size which can induce electron capture, and we assume that, at the max, positron emission will be very rare.
+In any high energy, relativisitic system, positrons can be produced; here it is through $\beta^{+}$-decay. This generally occurs at or below the Compton length. We are seeking the maximum box size which can induce electron capture, and we assume that, at the maximum, positron emission will be very rare.
 
-Of course, if the box is extremely small, and the energy of the electron is of the order of a W boson, we are no longer in the low momentum limit and one would need to consider higher order corrections to the Weak interaction.\cite{klein1}
+We do recognize, however, that in an significant thermal effects may induce positron emission and that, in this Gedankenexperiment, we are not considering this.
+Indeed, the electron energy needs to be very fine-tuned in order to allow capture but not pair creation.  In the box with multiple electrons, any fine-tuning would be overcome by electron-electron collisions, which would induce energy fluctuations that could drive  pair production.  For example, at high density, assuming a thermal distribution, if there are 800 keV electrons, there would be some 1 MeV electrons, which are enough to cause significant pair creation, probably faster than electron capture.  
+
+If the box is extremely small, and the energy of the electron is of the order of a W boson, we are no longer in the low momentum limit and one would need to consider higher order corrections to the Weak interaction.\cite{klein1}
 
 We also assume that the electron wavefunction does not change appreciably during the interaction, so that we may use a very simplified form for the cross section ($\sigma$) and rate ($\Gamma$).  Again, this is reasonable for boxes $L\ge\lambda_{e}$.
 
@@ -330,7 +333,7 @@ We represent the $(e^{-},p^{+})$ pair using a 3D box wavefunction, and obtain th
 
 As usual, we average over the initial spins, and sum over the final spins.  That is, we average over all 8 permutations of the incident velocities (really momenta $\mathbf{p}_{ep}$) for the 3D box, and integrate over outbound neutrino solid angle $d\Omega_{k}$ using numerical quadrature.  The final rate is computed as, for each box size, as a function the kinematics, using
 
-$$\Gamma_{EC}=\frac{1}{8}\sum_{\mathbf{p}_{pe}}\int_{d\Omega_{k}}d\Gamma_{EC}$$
+$$\Gamma_{EC}=\frac{re1}{8}\sum_{\mathbf{p}_{pe}}\int_{d\Omega_{k}}d\Gamma_{EC}$$
 
 where $\big\vert\mathbf{p}_{ep}\big\vert$ is given by the box size (described below).
 
@@ -353,11 +356,17 @@ and the subsequent neutron post-reaction
 
 $$\mathcal{P}_{n}=\Gamma_{EC}*\left[2.2+(\mathbf{E}_{n}-M_{n})\right]*\rho$$.
 
-We also define an excess power as
+assuming that the post-reaction has a 
+
+We also define an excess maximum power as
 
 $$\mathcal{P}_{XS}=\mathcal{P}_{pe}-\mathcal{P}_{n}$$
 
-which we argue is a good measure of the potential reactive power output of the confined E.C. process. We are interested in box lengths where the excess power is significant enough to drive the reaction.
+which we argue is a good measure of the gross maximum potential reactive power output of the confined E.C. process. 
+
+Of course, if the outbound neutron has any considerable velocity $v_{n}$, the proton-neutron cross-section $\sigma_{p+n}$ would be very small.  It proton-neutron cross section scales inversely with the velocity ($\sigma_{p+n}\sim\frac{1}{v_{n}}$).  In principle, we could also compute this cross section using the Weak Interaction and the relativistic kinematics, as we did for electron capture.  
+
+But we are only interested in box lengths where the excess power is significant enough to drive the reaction, where the outbound neutron is moving very slow, or is \emph{ulta cold}.  This is, of course, when the box is very large.
 
 \subsubsection{Particle-in-the-box Wavefunctions}
 
@@ -605,6 +614,7 @@ as a function of box length $L$.
 
 Figure \ref{fig:results} presents the results of relativistic kinematics and excess power calculations, as a function of box length.
 For illustrative purposes, we include results box sizes even below the Compton length.  The excess power ratio is greater than unity for $L>0.004\mathring{A}$, with a maximum of almost a factor of 3.
+
 
 These simple calculations indicate that a confined electron capture reaction would be favorable as long as the produced neutrons react with environment at a high rate.  This is expected at the maximum box size, where the neutron has the smallest mean free path, although the reaction appears favorable for all box lengths larger than the Compton length,$L>0.004\mathring{A}$.
 
