@@ -217,13 +217,41 @@ In particular, in very rare cases, a gamma ray photon is emitted with the neutri
 
 \section{Confinement Induced Electron Capture}
 
-We pose the following Gedankenexperiment:   Suppose we confine a bare proton (and an electron) in a particle-in-a-box of volume $L^3$.  What box size L will 'induce' electron confinement ?  Here, we examine what do detailed calculations look like that employ the full machinery of the Weak Interaction, as an illustrative exercise.
+We pose the following Gedankenexperiment:   We imagine some protons embedded in lattice, such that we can say each bare proton is confined in a Fermi sea of electrons. We model this as a classical particle-in-a-box, weith volume $L^3$.   We further imagine that the box is transiently compressed, as in Figure \ref{fig:box1}, such that the box size L is just small enough to  'induce' electron capture.  
+
+\begin{figure}
+   \includegraphics[scale=0.5]{img/box-before.png}
+   \caption{Confinement Induced Electron Capture: before}
+  \label{fig:box1}
+\end{figure}
 
 We write this as
 
 $$E_{box}+p^{+}+e^{-}\rightarrow n^{0}+\nu_{e}$$
 
 where $E_{box}$ represents a \emph{confinement energy}, which is induced by the box constraints. 
+
+After the electron capture event, the box contains a cold neutron, with a very little kinetic energy and a very small mean free path.  Also, as depicted in Figure \ref{fig:box2}, the box now wants to expand because 'walls' , which are effectively a Fermi sea of electrons, are repelling each other and the stabilizing positive charge is gone, and
+
+\begin{figure}
+   \includegraphics[scale=0.5]{img/box-after.png}
+   \caption{Confinement Induced Electron Capture: after}
+  \label{fig:box2}
+\end{figure}
+
+At this point, shown in Figure \ref{fig:box3}, we imagine the box has effectively expanded, and the neutron can capture a nearby proton, forming deuterium, and releasing of 2.2MeV of energy:  
+
+$$n^{0}+p^{+}\rightarrow d^{+}+2.2MeV$$
+
+\begin{figure}
+   \includegraphics[scale=0.5]{img/box-enlarged.png}
+   \caption{Confinement Induced Electron Capture: after}
+  \label{fig:box3}
+\end{figure}
+
+We would like to understand if such a process is reasonably possible and how to model both the rate of electron capture and the maximum excess power such a process might produce.
+
+Here, we examine what do detailed calculations look like that employ the full machinery of the Weak Interaction, as an illustrative exercise.
 
 Before we describe the theoretical approach, we address a few conceptual issues in setting up the problem.
 
@@ -243,8 +271,6 @@ $$L_{min}\sim0.004\;\mathring{A}$$
 
 In any high energy, relativisitic system, positrons can be produced; here it is through $\beta^{+}$-decay. This generally occurs at or below the Compton length. We are seeking the maximum box size which can induce electron capture, and we assume that, at the maximum, positron emission will be very rare.
 
-We do recognize, however, that in an significant thermal effects may induce positron emission and that, in this Gedankenexperiment, we are not considering this.
-Indeed, the electron energy needs to be very fine-tuned in order to allow capture but not pair creation.  In the box with multiple electrons, any fine-tuning would be overcome by electron-electron collisions, which would induce energy fluctuations that could drive  pair production.  For example, at high density, assuming a thermal distribution, if there are 800 keV electrons, there would be some 1 MeV electrons, which are enough to cause significant pair creation, probably faster than electron capture.  
 
 If the box is extremely small, and the energy of the electron is of the order of a W boson, we are no longer in the low momentum limit and one would need to consider higher order corrections to the Weak interaction.\cite{klein1}
 
@@ -255,6 +281,13 @@ We also assume that the electron wavefunction does not change appreciably during
 
 Usually electron capture is described using the atomic orbitals of the parent and daughter nuclei.\cite{ec-review1,ec-review2}  This is very complicated and the basic physical insight can be lost in the details of various angular momentum selection rules and orbital overlap calculations.  Moreover, when an H atom is confined, the electron will detach from the proton and behave like a free particle in a box.\cite{Sen}  
 
+
+\subsubsection{Pair Production}
+
+We do recognize, however, that in typical cage or other confined environment, there would be an significant thermal effects that may induce positron emission.Indeed, the electron energy needs to be very fine-tuned in order to allow capture but not pair creation.  In the box with multiple electrons, any fine-tuning would be overcome by electron-electron collisions, which would induce energy fluctuations that could drive  pair production.  For example, at high density, assuming a thermal distribution, if there are 800 keV electrons, there would be some 1 MeV electrons, which are enough to cause significant pair creation, probably faster than electron capture.  
+
+Here, we assume that the confinement is a highly transient, far-from-equilibrium process, and that we can ignore pair production from both thermal noise and electron-electron scattering. 
+
 \subsubsection{Klein Paradox}
 
 Klein noted that a relativistic (Dirac) particle-in-a-box will \emph{leak out} at box sizes near, \emph{or above}, the Compton wavelength--this called the Klein paradox. \cite{klein1,klein2}  And while this is usually taught as being simply particle-antiparticle creation, it has been suggested that the Klein paradox it can occur even at larger boxes sizes, and it is a general phenomena of confined relativistic particles.  Recent experiments on Graphene have reopened the debate \cite{klein3}. Still, we will assume the traditional interpretation and we will ignore the Klein paradox.
@@ -263,19 +296,13 @@ So we use a classical box, with minimum size $L_{min}=0.004\;\mathring{A}$.  We 
 
 \subsubsection{Neutron post-reaction}
 
-To prevent the reverse reaction, we assume that the free neutron subsequently combines with another proton, and gives us 2.2 MeV of energy in the process.  This post-process contributes to the power output.  Realistically, we expect this to happen at the maximum box size, at the energy threshold, where the outbound neutron has very low momentum and therefore a very small mean free path.  
+To prevent the reverse reaction, we assume that, in the expanded box, the free neutron subsequently combines with another proton, and gives us 2.2 MeV of energy in the process.  This post-process contributes to the power output.  Realistically, we expect this to happen at the maximum box size, at the energy threshold, where the outbound neutron has very low momentum and therefore a very small mean free path.  
 
 Still, for illustrative purposes, we will compute the power output,  assuming this post-reaction,  at all box sizes.
 
 \section{Theory and Calculations}
 
-The electron capture rate can be computed using the Fermi VA theory, \cite{ec-review1,ec-review2} and using the Lorentz Invariant (LI) scattering cross section for a relativistic ($1+2\rightarrow 3+4$) reaction.  The most basic calculations require a only specifying the electronic wavefunctions(s), averaging over the possible electron-proton momenta, and numerically integrating over the outbound neutrino momentum.  We describe this below.
-
-The VA theory is based on second order perturbation theory.  It assumes an incoherent nuclear process, it is local, and that the interaction is phenomenological. It is treated as a simply a contact potential at the surface of the nucleus. Here, this means we need to compute the nuclear charge--the electron density on the surface of the nucleus $\Vert\psi_{e}(R=0)\Vert$, which we obtain from a classical particle-in-the-box wavefunction (below).
-
-More complicated calculations are used for larger nuclei, second order processes, etc.  They only require modifications to treat either atomic electronic structure of reactant and product atoms, and/or specific considerations for nuclear internal conversion and other second order processes.
-
-
+The electron capture rate can be computed using the Fermi VA theory, \cite{ec-review1,ec-review2}.
 
 \subsection{Particle production under the Weak Interaction}
 
@@ -291,20 +318,35 @@ $$0.782{KeV}+p^{+}+e^{-}\rightarrow n^{0}+\nu_{e}$$
 
 We want to compute the rate of E.C. and the (minimum) power generated, as a function of the box size (L), using the full Weak Interaction Hamiltonian.   We will compute the electronic density classically, using box wavefunctions, and, for each box size, determine the incident velocity (as the momentum). We then compute the cross section using the full relativistic kinematics and Dirac spinors.  
 
-To do this, we need to express the rate in terms of the differential cross section, and in a form suitable for numerical calculations.  
+To do this, we need to express the rate in terms of the relativistic differential cross section, and in a form suitable for numerical calculations.  
+But first, we want to motivate why we use such a complicated form of the cross section.
 
-\subsection{Transition Rates and Power Calculations}
+\subsection{Electron Capture Rates}
 
 Orbital electron capture and other Beta decay processes follow first order kinetics, so the capture rate is described by a single number. 
 To calculate the rate, we require a full relativistic, quantum mechanical treatment because the capture process involves both creating particles and the kinetic energy spectrum is of order $m_{e}c^{2}$.
 
- The capture rate $\Gamma_{EC}$  is given by multiplying the cross section $\sigma_{EC}$ by the incident velocity $\mathbf{v}^{in}_{ep}$ and electronic (box) density $\big\vert\Psi_{ep}(0)\big\vert^{2}$  of the $(e^{-},p^{+})$ pair at the origin
+The VA theory is based on second order perturbation theory.  It assumes an incoherent nuclear process, it is local, and that the interaction is phenomenological. It is treated as a simply a contact potential at the surface of the nucleus. Here, this means we need to compute the nuclear charge--the electron density at the the nucleus $\Vert\psi_{e}(R=0)\Vert$, which we obtain from a classical particle-in-the-box wavefunction.
 
-$$\Gamma_{EC}=\big\vert\Psi_{ep}(0)\big\vert^{2}\mathbf{v}^{in}_{ep}\sigma_{EC}\;\;.$$
+The orbital electron capture rate $\Gamma_{EC}$  is given by multiplying the cross section $\sigma_{EC}$ by the incident velocity $\mathbf{v}^{in}_{ep}$ and (orbital) electron density $\big\vert\Psi_{e}(0)\big\vert^{2}$  at the origin
 
-Of course, this velocity is not relativistic \cite{Cannoni}, and we need a relativistic cross section.
+$$\Gamma_{EC}=\big\vert\Psi_{e}(0)\big\vert^{2}\mathbf{v}^{in}_{ep}\sigma_{EC}\;\;.$$
 
-\subsubsection{Cross Section}
+Of course, this velocity is not relativistic \cite{Cannoni}.  And that is fine for typical calculations.
+
+For example, to estimate electron capture rates for something  $^7Be$ confined in a cage, we assume the cross section is not changing, and estimate rate by computing the ratio of the confined to uncaged classical molecular electronic densities. 
+
+$$\Gamma^{confined}_{EC}\sim\dfrac{\vert\Psi^{confined}_{e}(0)\vert^{2}}{\vert\Psi^{free}_{e}(0)\vert^{2}}\Gamma^{free}_{EC}$$
+
+\subsection{Relativistic Cross Sections}
+
+In our Gedankenexperiment, however, we imagine  box confinement induce capture, and, therefore, we are at least in the realm of relativistic kinematics. To that end,
+we use a semi-classical, numerical method to describe the electron-capture cross section and perform the rate calculations.
+ and using the Lorentz Invariant (LI) scattering cross section for a relativistic ($1+2\rightarrow 3+4$) reaction.  The most basic calculations require a only specifying the electronic wavefunctions(s), averaging over the possible electron-proton momenta, and numerically integrating over the outbound neutrino momentum.    
+
+We could also describe the proton-neutron capture this way, but, for simplicity, we will simply assume the cross section for the post reaction is maximally large, and we ignore the kinematics.  We provide the equivalent expression for the proton-neutron capture cross section in the appendix.
+
+More complicated calculations are used for larger nuclei, second order processes, etc.  They only require modifications to treat either atomic electronic structure of reactant and product atoms, and/or specific considerations for nuclear internal conversion and other second order processes.
 
 We write the Lorentz Invariant (LI) differential cross section in the C.M. frame as
 
