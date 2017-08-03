@@ -76,18 +76,18 @@ $$\beta^{-}\;decay:\;n^{0}\rightarrow p^{+}+\;e^{-}\;+\;\bar{\nu_{e}}$$
 
 We can describe Beta decay using the Fermi VA theory for the Weak Interaction, which assumes a phenomenological contact force \emph{with no range}.
 
-A related Weak process is orbital electron capture, where a nucleus captures a bound, low lying electron, and emits a neutron and an electron anti-neutrino.
+A related Weak process is orbital electron capture, where a nucleus captures a bound, low lying electron, creating in a neutron and an electron anti-neutrino.
 
 $$Electron\;capture:\;p^{+}+\;e^{-}\rightarrow\;n^{0}\;+\;\nu^{e}$$
 
-Orbital electron capture (E.C.) is a fundamental  nuclear process, on pair with the more familiar Beta decay and positron production. It is, however, usually treated as an afterthought to Beta decay, and there are no modern reviews of how to treat the the problem numerically.  Indeed, the most complete reference date back to the 1960s and 70s \cite{ec-review1,ec-review2}.  Still, electron capture displays its own unique, rich structure and subtlety.  For example, the rate is effected chemical environment by nearly $1\%$.    This is because the rate depends on the electronic density at the nucleus (i.e. $\vert\Psi_{e}(r\rightarrow 0)\vert^{2}$) since the interaction has no range. 
+Orbital electron capture (E.C.) is a fundamental  nuclear process, on pair with the more familiar Beta decay and positron production. It is, however, usually treated as an afterthought to Beta decay, and there are no modern reviews of how to treat the the problem numerically.  Indeed, the most complete reference date back to the 1960s and 70s \cite{ec-review1,ec-review2}.  Still, electron capture displays its own unique, rich structure and subtlety.  For example, the rate is effected by the chemical environment by nearly $1\%$.    This is because the rate depends on the electronic density at the nucleus (i.e. $\vert\Psi_{e}(r\rightarrow 0)\vert^{2}$) since the interaction has no range. 
 
 But if we apply the Heisenberg Uncertainty Principle for electron capture, we would find the electron can still be captured even if it is confined to a volume $100X$ the nuclear radius.  
 
 E.C. can also emit Bremsstrahlung radiation.  This is actually discussed in Jackson with a classical model \cite{jackson}, although it is more properly treated using QED corrections to the Weak Interaction\cite{Jauch}.  Technically, electron capture is a 2-body, relativistic bound state problem, although we model it by computing the non-relativistic atomic electronic wavefunctions of the parent and daughter nuclei, and then use them to evaluate the matrix elements of the Weak Interaction Hamiltonian using the Fermi-VA theory.  And very rarely is there a complete treatment of the relativistic Kinematics.
 
 
-We are interested in the reviewing the basic  electron capture process to   understand how to apply the Fermi-VA theory to compute the cross section and capture rate as completely as possible.  We will examine electron capture in its simplest form:  a bare proton capturing an electron while confined in a classical box.   We don't believe this has been discussed elsewhere and would serve as a basis for more extensive calculations.  
+We are interested in reviewing the basic  electron capture process to   understand how to apply the Fermi-VA theory to compute the cross section and capture rate as completely as possible.  We will examine electron capture in its simplest form:  a bare proton capturing an electron while confined in a classical box.   We don't believe this has been discussed elsewhere and would serve as a basis for more extensive calculations.  
 
 We begin by briefly reviewing both orbital electron capture and, then, the Fermi VA Theory.
 
@@ -99,7 +99,7 @@ $$p^{+}+\;e^{-}\rightarrow\;n^{0}\;+\;\nu^{e}$$
 
 This may be called orbital electron capture, K-electron capture, or just electron capture (E.C.) 
 
-Note that unlike Beta decay, which is a 1 body decay, and the emitted electron has a wide energy spectrum, E.C. is a 2 body reaction, and the emitted neutron is mono-chromatic.
+Note that unlike Beta decay, which is a 1 body decay, and the resulting electron has a wide energy spectrum, E.C. is a 2 body reaction, and the resulting neutron is mono-chromatic.
 
 Electron capture usually occurs in unstable radioisotopes which lack the nuclear binding energy, $Q$, to decay by the more familiar Beta decay processes ($\beta^{-}, \beta^{+}$). The typical $Q$ energies necessary are 
 
@@ -115,7 +115,7 @@ Note that lacking any binding energy and/or internal nucleon structure, bare pro
 
 \subsubsection{Experimental Evidence}
 
-We observe electron capture by observing the resulting transmuted nuclei and/or the radiative relaxation processes.  The captured electron is bound to the atom, and it is usually a K-shell electron, but may be L or higher.  The nucleus may then absorb some energy, become excited, and undergo internal conversion.  During this, another higher lying, bound atomic electron is absorbed, releasing an X-ray or Auger electron [see Figure \ref{fig:ec1}].
+We observe electron capture by observing the resulting transmuted nuclei and/or the radiative relaxation processes.  The captured electron is bound to the atom, and it is usually a K-shell electron, but may be L or higher.  During this, another higher lying, bound atomic electron is absorbed, releasing an X-ray or Auger electron [see Figure \ref{fig:ec1}].  If the nucleus is in an excited state, it may also  undergo internal conversion.  
 
 \begin{figure}
    \includegraphics[scale=0.25]{img/ecrelax.png}
@@ -142,7 +142,7 @@ How could such changes occur?  The nuclear energy levels are in the keV to MeV r
 
 \subsubsection{Bare Electron Proton Capture and Stellar Nucleosynthesis}
 
-At zero energy, bare proton electron capture is not possible because it violates energy-momentum conservation. Theoretically, a free proton can could capture an electron from the continuum, but the interaction energy must be above the threshold for neutron production.  This is a huge amount of energy, although this happens regularly in accelerators, and, presumably, in stellar environments.  Observing such capture outside of an accelerator would be an incredibly hard experiment  because both final particles are neutral, and the neutrino is extremely weakly interacting.  
+At zero energy, bare proton electron capture is not possible because it violates energy-momentum conservation. Theoretically, a free proton could capture an electron from the continuum, but the interaction energy must be above the threshold for neutron production.  This is a huge amount of energy, although this happens regularly in accelerators, and, presumably, in stellar environments.  Observing such capture outside of an accelerator would be an incredibly hard experiment  because both final particles are neutral, and the neutrino is extremely weakly interacting.  
 
 Bare capture is thought to occur in stellar nucleosynthesis because the environment is very dense, and the system is in thermal equilibrium.  This drives the formation of primordial elements, and occur when neutron stars form.    At very high temperatures, the proton electron collisions have sufficient energy to overcome the reaction barrier.   For example, Bahcall and coworkers famously computed the electron capture rate of $^{7}Be$ in the Sun \cite{bahcall62,bahcall69}.  It took nearly 40 years to resolve these calculations, resulting in the 2002 Nobel prize in physics.  It is believed that ionized Hydrogen captures an electron during the core collapse supernovae and in neutron stars [14].   
 
@@ -231,7 +231,7 @@ $$E_{box}+p^{+}+e^{-}\rightarrow n^{0}+\nu_{e}$$
 
 where $E_{box}$ represents a \emph{confinement energy}, which is induced by the box constraints. 
 
-After the electron capture event, the box contains a cold neutron, with a very little kinetic energy and a very small mean free path.  Also, as depicted in Figure \ref{fig:box2}, the box now wants to expand because the 'walls', which are effectively a Fermi sea of electrons, are repelling each other and the stabilizing positive charge is gone.
+After the electron capture event, the box contains a cold neutron, with very little kinetic energy and a very small mean free path.  Also, as depicted in Figure \ref{fig:box2}, the box now wants to expand because the 'walls', which are effectively a Fermi sea of electrons, are repelling each other and the stabilizing positive charge is gone.
 
 \begin{figure}
    \includegraphics[scale=0.5]{img/box-after.png}
@@ -400,15 +400,13 @@ and the subsequent neutron post-reaction
 
 $$\mathcal{P}_{n}=\Gamma_{EC}*\left[2.2+(\mathbf{E}_{n}-M_{n})\right]*\rho$$.
 
-assuming that the post-reaction has a 
-
-We also define an excess maximum power as
+assuming that the post-reaction has maximal efficiency.  We then define an excess maximum power as
 
 $$\mathcal{P}_{XS}=\mathcal{P}_{pe}-\mathcal{P}_{n}$$
 
 which we argue is a good measure of the gross maximum potential reactive power output of the confined E.C. process. 
 
-Of course, if the outbound neutron has any considerable velocity $v_{n}$, the proton-neutron cross-section $\sigma_{p+n}$ would be very small.  It proton-neutron cross section scales inversely with the velocity ($\sigma_{p+n}\sim\frac{1}{v_{n}}$).  In principle, we could also compute this cross section using the Weak Interaction and the relativistic kinematics, as we did for electron capture.  
+Of course, if the outbound neutron has any considerable velocity $v_{n}$, the proton-neutron cross-section $\sigma_{p+n}$ would be very small.  The proton-neutron cross section scales inversely with the velocity ($\sigma_{p+n}\sim\frac{1}{v_{n}}$).  In principle, we could also compute this cross section using the Weak Interaction and the relativistic kinematics, as we did for electron capture.  
 
 But we are only interested in box lengths where the excess power is significant enough to drive the reaction, where the outbound neutron is moving very slow, or is \emph{ulta cold}.  This is, of course, when the box is very large.
 
