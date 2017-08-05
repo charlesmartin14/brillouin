@@ -132,13 +132,48 @@ $$^{Z}X_{A}+\;e^{-}\rightarrow\;^{Z-1}X_{A}\;+\;h\nu_{X-ray}$$
 Indeed, orbital electron capture is evidenced by high intensity X-rays and soft electrons.  In 1938, Alvarez observed the X-ray signature of orbital electron capture in activated Titanium \cite{alvarez}. Since then, electron capture has been observed in about 150 radioactive isotopes.
 
 
-\subsubsection{Environment Effects on Electron Capture rates}
+\subsubsection{Experimental Enhancement of the Capture Rate}
+
+The E.C. rate 
+
+$$\Gamma_{EC}=\big\vert\Psi_{e}(0)\big\vert^{2}\int dLIPS\big\vert\mathcal{M}\big\vert^{2}.$$
+
+is proportional to the atomic electron density  $\big\vert\Psi_{e}(0)\big\vert^{2}$  at the nucleus and the (integrated) amplitude of the capture process.
+$\int dLIPS$ is the Lorentz invariant phase space,  and $\mathcal{M}$  the matrix element of the Weak interaction process.
+
+Any medium or mechanism that can significantly increase the electron density at the nucleus will enhance the capture rate, such as the molecular environment or an intense laser field.
+
+\subsubsection{Enhancement by Molecular Cages}
 
 $^{7}Be$ is the  lightest element that E.C. has been observed in \cite{radbookbahcall}. In fact, there is so little energy that the competing $\beta^{+}$ positron emission process (described below) is prohibited, leading to a fairly long E.C. half-life of $\tau_{EC}\sim 50\;days$.
 
 Being so light, and having such a large rate, electron capture in $^{7}Be$ can be slightly modified by both changing the chemical environment and/or the external pressure \cite{wang,raydas,ohtsuki}. In particular, in 2004, Ohtsuki et. al. demonstrated a change of $0.83\%$  by embedding Be in C-60 cages \cite{ohtsuki}.
 
 How could such changes occur?  The nuclear energy levels are in the keV to MeV region, and it is generally thought to be very difficult to impossible to effect.  But the electron capture rate is proportional to electronic density at the nucleus--\emph{the nuclear charge}.   The electronic energy levels are in the eV range, so intense EM fields can alter the electronic structure and therefore slightly affect the E.C. rate. 
+
+\subsubsection{Enhancement by Laser Confinement}
+
+It is well know that intense laser radiation can increase the effective mass of an electron.
+
+It is easy to see in the relativistic energy-momentum relation ($p_{\mu}p^{\mu}=m_{e}^{2},\;c=1$). in the presence of strong electromagnetic field.  
+If we include the vector potential ($A_{\mu}\;,e=1$) of the field in the momentum, we have
+
+$$-(p_{\mu}-A_{\mu})(p^{\mu}-A^{\mu})=m_{e}^{2}$$
+
+Assuming the average field fluctuations are zero ($\bar{A_{\mu}}=0$), the effective mass includes the remaining fluctuations, leading to the dressed relation
+
+$$\tilde{p}_{\mu}\tilde{}p^{\mu}=m_{eff}^{2}=m_{e}^{2}+\overline{A_{\mu}A^{\mu}}$$
+
+It has been suggested that the electron capture rate could be enhanced by a factor of $2-3.5$ using laser confinement \cite{sato}.
+They propose that an intense, long wavelength laser could compress electron density, thereby acting like a photon-box,
+increasing its density at the origin and thereby doubling or tripling the rate of E.C.  
+
+They derive an effective mass for an atomic electron using a perturbative treatment of the Dirac equation, giving
+
+$$\big\vert\Psi_{e}(0)\big\vert^{2}\propto m_{eff}^{3}$$
+
+The experiment would require a laser intensity of $10^{10}Wmm^{-2}$ and a wavelength of $0.01\mu m$ (much larger than an Angstrom).
+
 
 \subsubsection{Bare Electron Proton Capture and Stellar Nucleosynthesis}
 
@@ -149,8 +184,11 @@ Bare capture is thought to occur in stellar nucleosynthesis because the environm
 While we usually characterize a star by it's temperature, these are also very dense systems, with $\rho\sim 10^6\;g\;cm^{-3}$.  In contrast, the smallest star has density $\rho\sim 10^{2}-10^{3}\;g\;cm^{-3}$ [?]  As important, the reverse reaction is prohibited because, inside the dense neutron star, it is impossible to create a new electron; the Fermi sea is \emph{full}.
 
 
-So electron capture can occur by bare protons, but, presumably, only under extreme confinement, and with the reverse reaction is suppressed.   And there are many studies of numerical rate calculation in high thermal, stellar environments.  We have found none for the kind of confined process we are describing.
-We model this numerically particle-in-a-box using the fhe Femi VA theory.
+So electron capture can occur by bare protons, but, presumably, only under extreme confinement, and with the reverse reaction is suppressed.   And there are many studies of numerical rate calculation in high thermal, stellar environments.   A complete calculation of the E.C. rate requires numerical integration of  the integrated capture amplitude including four-momentum integrals for all reaction particles \cite{liu}.
+
+We have found no treatment of confined electron capture using the complete numerical methods like those employed in dense astrophysical environments.
+
+In this paper, we model the enhanced electron capture process as a particle-in-a-box, but applied to the Femi VA theory, and using the full numerical integration of the full relativistic expression for the integrated capture amplitude.
 
 \subsection{The Weak Interaction and Femi VA theory}
 
