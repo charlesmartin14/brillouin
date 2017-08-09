@@ -186,9 +186,10 @@ Bare capture is thought to occur in stellar nucleosynthesis because the environm
 
 While we usually characterize a star by it's temperature, these are also very dense systems, with $\rho\sim 10^6\;g\;cm^{-3}$.  In contrast, the smallest star has density $\rho\sim 10^{2}-10^{3}\;g\;cm^{-3}$ [?]  As important, the reverse reaction is prohibited because, inside the dense neutron star, it is impossible to create a new electron; the Fermi sea is \emph{full}.So electron capture can occur by bare protons, but, presumably, only under extreme confinement, and with the reverse reaction is suppressed.   And there are many studies of numerical rate calculation in high thermal, stellar environments.   
 
-A complete calculation of the E.C. rate requires numerical integration of  the integrated capture amplitude including four-momentum integrals for all reaction particles \cite{liu}. That is, one need to consider the full expression for the LIPS
+A complete calculation of the E.C. rate requires numerical integration of  the integrated capture amplitude including four-momentum integrals for all reaction particles \cite{liu}. That is, one need to consider the full expression for the rate (in terms of the LIPS)
 
-$$\int dLIPS=\int2E_{n}\dfrac{d^{3}\mathbf{p}_{n}}{(2\pi)^{3}}\int2E_{\nu}\dfrac{d^{3}\mathbf{p}_{\nu}}{(2\pi)^{3}}\delta^{4}(p_{p}+p_{e}-p_{n}-p_{\nu})$$
+$$\Gamma_{EC}=\int\dfrac{d^{3}\mathbf{p}_{p}}{(2\pi)^{3}}\int\dfrac{d^{3}\mathbf{p}_{e}}{(2\pi)^{3}}\int\dfrac{d^{3}\mathbf{p}_{n}}{(2\pi)^{3}}\int\dfrac{d^{3}\mathbf{p}_{\nu}}{(2\pi)^{3}}\sum\limits_{spin}\vert\mathcal{M}^{2}\vert$$
+$$\times\delta(E_{p}+E_{e}+E_{n}+E_{\nu})\delta^{3}(\mathbf{p}_{p}+\mathbf{p}_{e}-\mathbf{p}_{n}-\mathbf{p}_{\nu})$$
 
 We have found no treatment of confined electron capture using the complete numerical methods like those employed in dense astrophysical environments.
 
@@ -369,7 +370,7 @@ To calculate the rate, we require a full relativistic, quantum mechanical treatm
 
 The VA theory is based on second order perturbation theory.  It assumes an incoherent nuclear process, it is local, and that the interaction is phenomenological. It is treated as a simply a contact potential at the nucleus. Here, this means we need to compute the nuclear charge--the electron density at the the nucleus $\Vert\psi_{e}(R=0)\Vert$, which we obtain from a classical particle-in-the-box wavefunction.
 
-The orbital electron capture rate $\Gamma_{EC}$  is given by multiplying the cross section $\sigma_{EC}$ by the incident velocity $\mathbf{v}^{in}_{ep}$ and (orbital) electron density $\big\vert\Psi_{e}(0)\big\vert^{2}$  at the origin
+The orbital electron capture rate $\Gamma_{EC}$  can be written by multiplying the cross section $\sigma_{EC}$ by the incident velocity $\mathbf{v}^{in}_{ep}$ and (orbital) electron density $\big\vert\Psi_{e}(0)\big\vert^{2}$  at the origin
 
 $$\Gamma_{EC}=\big\vert\Psi_{e}(0)\big\vert^{2}\mathbf{v}^{in}_{ep}\sigma_{EC}\;\;.$$
 
@@ -418,7 +419,7 @@ We represent the $(e^{-},p^{+})$ pair using a 3D box wavefunction, and obtain th
 
 As usual, we average over the initial spins, and sum over the final spins.  That is, we average over all 8 permutations of the incident velocities (really momenta $\mathbf{p}_{ep}$) for the 3D box, and integrate over outbound neutrino solid angle $d\Omega_{k}$ using numerical quadrature.  The final rate is computed as, for each box size, as a function the kinematics, using
 
-$$\Gamma_{EC}=\frac{re1}{8}\sum_{\mathbf{p}_{pe}}\int_{d\Omega_{k}}d\Gamma_{EC}$$
+$$\Gamma_{EC}=\frac{1}{8}\sum_{\mathbf{p}_{pe}}\int_{d\Omega_{k}}d\Gamma_{EC}$$
 
 where $\big\vert\mathbf{p}_{ep}\big\vert$ is given by the box size (described below).
 
@@ -515,31 +516,25 @@ While most practitioners simply estimate this, for our purpose, we can simply co
 
 \subsection{Weak Interaction Hamiltonian and Matrix Elements}
 
-The Hamiltonian for the VA theory for E.C. is \cite{ec-review1,ec-review2,langanke} 
+The Hamiltonian for the VA theory for E.C. is \cite{ec-review1,ec-review2,langanke,} 
 
-$$\mathcal{H}(x)=-\dfrac{G_{F}}{\sqrt{2}}\left[J^{\mu}(x)L^{+}_{\mu}(x)+h.c.\right]$$
+$$\mathcal{H}(x)=-\dfrac{G}{\sqrt{2}}\left[J^{\mu}(x)L^{+}_{\mu}(x)+h.c.\right]$$
 
-where $J^{\mu}$ and $L_{\mu}$ are (in modern parlance) the Hadron and Lepton currents, resp., and are given by
+where $J^{\mu}$ and $L_{\mu}$ are (in modern parlance) the Hadron and Lepton currents, resp,  
+$u_{n},u_{p},u_{e},u_{\nu}$ are Dirac (free-particle) spinor wavefunctions, and h.c. stands for the Hermitian conjugate.
 
-$$J_{\mu}=\bar{u}_{n}\gamma_{\mu}(1+\lambda\gamma_{5})u_{p}$$
-
-$$L_{\mu}=\bar{u}_{\nu}(1-\gamma_{5})u_{e}$$
-
-where $u_{n},u_{p},u_{e},u_{\nu}$ are Dirac (free-particle) wavefunctions.   
+The term $G=G_{F}cos\theta_{C}$, where  $G_{F}$ is the Universal Fermi Weak Coupling Constant, and $\theta_{C}$ is the Cabibbo angle ($sin\theta_{C}=0.231$).
 
 Notice that we are only interested in semi-leptonic processes, governed by weak changing currents, and only leptons are electrons.  
 
-$G_{F}$ is the Universal Fermi Weak Coupling Constant, and $\lambda=-\dfrac{G_{A}}{G_{V}}$, which is determined by experiment (and subject to minor changes). 
- $G_{V}$ is the Axial-Vector Weak Coupling Constant, and $G_{A}$ is the vector weak coupling
-constant.  The most recent value is $G_{V}=1.2767(16)$, and $G_{A}=1$ \cite{vacoupling}.
 
 \subsubsection{VA Matrix Elements}
 
-In our calculations, however, we use a slightly different, more modern convention for the matrix elements, multiplying through by $G_{V}$ \cite{zuber}.   The matrix elements $\mathcal{M}_{fi}$ are then given by
-
+The matrix elements $\mathcal{M}_{fi}$ of $\mathcal{H}(x)$ are given by \cite{zuber}.  
+ 
 \begin{multline}
-\mathcal{M}_{fi}=\dfrac{G_{F}}{\sqrt{2}}\bar{u}(p_{n},s_{n})(G_{V}-G_{A}\gamma^{5})\gamma^{\mu}u(p_{p},s_{p})\times \\
-\bar{u}(p_{\nu},s_{\nu})\gamma_{u}(1-\gamma^{5})u(p_{e},s_{e})
+\mathcal{M}_{fi}=\dfrac{G_{F}}{\sqrt{2}}\bar{u}(p_{n},s_{n})(G_{V}-G_{A}\gamma^{5})\gamma^{\mu}u(p_{p},s_{p})\\
+\times\bar{u}(p_{\nu},s_{\nu})\gamma_{u}(1-\gamma^{5})u(p_{e},s_{e}) + h.c.
 \end{multline}
 
 where $u{(p},s)$ are Dirac 4-spinors, with the convention 
@@ -560,6 +555,9 @@ $$u{(p},s=2)=\sqrt{E+m}\left[\begin{array}{c}
 $$\langle\bar{u}|u\rangle=\bar{u}_{0}u_{0}-\bar{u}_{1}u_{1}-\bar{u}_{2}u_{2}-\bar{u}_{3}u_{3}$$
 
 and $\bar{u}=u^{\dagger}\gamma^{0}$.  The $\gamma$ are 4-component Gamma matrices, and  $(\cdots\gamma^{\mu}\cdots\gamma_{u}\cdots)$ is the Einstein summation convention. 
+
+The term $G_{V}$ is the Axial-Vector Weak Coupling Constant, and $G_{A}$ is the vector weak coupling
+constant.  The most recent value is $G_{V}=1.2767(16)$, and $G_{A}=1$ \cite{vacoupling}.
 
 Recall that the VA theory assumes that the electron-proton interaction is a contact potential, operating at the center of the nucleus, and that the underlying quantum process is incoherent.    We need simply compute the matrix elements in terms of the terms of the individual Hadronic and Leptonic currents
 
