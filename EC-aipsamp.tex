@@ -36,8 +36,13 @@
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
 
+
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
+
+\usepackage{txfonts}
+
+
 
 \begin{document}
 
@@ -306,7 +311,11 @@ $$\lambda_{e}=\dfrac{h}{m_{e}c}=\dfrac{e^{2}}{m_{e}c^{2}}$$
 
 $$\lambda_{e}\approx2.426\times 10^{-12}\;m$$
 
-Note, however,  for relativisitic calculations, one uses the \emph{reduced} Compton wavelength $\lambda^{red}_{e}=\dfrac{\lambda^{red}_{e}}{2\pi}\sim\mathcal{O}(0.4\times 10^{-12}m$.  Thus, for an electron, the minimum L is on the order of 0.004 Angstrom 
+Note, however,  for relativisitic calculations, one uses the \emph{reduced} Compton wavelength 
+
+$$\lambdabar_{e}=\frac{\lambda_{e}}{2\pi}\sim\mathcal{O}(0.4)\times 10^{-12}m$$.
+
+Thus, for an electron, the minimum L is on the order of 0.004 Angstrom 
 $$L_{min}\sim0.004\;\mathring{A}$$ 
 
 In any high energy, relativisitic system, positrons can be produced; here it is through $\beta^{+}$-decay. This generally occurs at or below the reduced Compton length. We are seeking the maximum box size which can induce electron capture, and we assume that, at the maximum, positron emission will be very rare.
