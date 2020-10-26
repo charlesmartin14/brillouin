@@ -50,12 +50,13 @@
 
 \title[]{Confinement Induced Electron Capture}
 
-\author{C. Martin}
- \altaffiliation[Also at ]{Physics Department, XYZ University.}%Lines break automatically or can be forced with \\
-\author{R. Godes}%
- \email{Second.Author@institution.edu.}
+\author{Charles H. Martin}
+ \affiliation{Anthropocene Institute.}%Lines break automatically or can be forced with \\
+  \email{charles@charles@anthinst.org}
+with no\author{Robert Godes}%with 
+ \email{reg@brillouinenergy.com}
 \affiliation{ 
-Authors' institution and/or address%\\This line break forced with \textbackslash\textbackslash
+Brilloiun Energy%\\This line break forced with \textbackslash\textbackslash
 }%
 
 
@@ -63,8 +64,8 @@ Authors' institution and/or address%\\This line break forced with \textbackslash
              %  but any date may be explicitly specified
 
 \begin{abstract}
-We describe a Gedankenexperiment in which a bare proton can capture an electron due solely to confinement. We first briefly review orbital electron capture and related processes.  We then describe the Fermi VA theory and how it can be applied to compute the cross section and rate using the full relativisitic Kinematics.  We set the problem up as a (proton, electron) pair confined in classical box of size L, and compute the cross section using the full Weak Interaction Hamiltonian.  We provide numerical solutions for electron capture rate, and compare the power output relative to that of a neutron being captured in the post-reaction.  We find that the capture is most likely for L=0.004-0.009 Angstroms, well beyond the radius of the proton and the reduced Compton wavelength of the electron.  We estimate the theoretical minimal power output for such a process, seeing that is feasible at large box lengths.  Finally, we discuss proposals for future work and possible applications.
-%
+We describe a Gedankenexperiment in which a bare proton can capture an electron due solely to confinement. We first briefly review orbital electron capture and related processes.  We then describe the Fermi VA theory and how it can be applied to compute the cross section and rate using the full relativistic Kinematics.  We set the problem up as a (proton, electron) pair confined in classical box of size L, and compute the cross section using the full Weak Interaction Hamiltonian.  We provide numerical solutions for electron capture rate, and compare the power output relative to that of a neutron being captured in the post-reaction.  We find that the capture is most likely for L=0.004-0.009 Angstroms, well beyond the radius of the proton and the reduced Compton wavelength of the electron.  We estimate the theoretical minimal power output for such a process, seeing that is feasible at large box lengths.  Finally, we discuss proposals for future work and possible applications.
+%100
 \end{abstract}
 
 \pacs{Valid PACS appear here}% PACS, the Physics and Astronomy
@@ -80,6 +81,7 @@ As a student, we learn that the nucleus can not contain an electron; this is a s
 $$\beta^{-}\;decay:\;n^{0}\rightarrow p^{+}+\;e^{-}\;+\;\bar{\nu_{e}}$$
 
 We can describe Beta decay using the Fermi VA theory for the Weak Interaction, which assumes a phenomenological contact force \emph{with no range}.
+The electron is not confined in the nucleus, but, rather, generated during the Weak process.  Moreover, there is a clear separation of scales between the Weak Interaction and the Electronic Structure of the atoms and their environment.
 
 A related Weak process is orbital electron capture, where a nucleus captures a bound, low lying electron, creating in a neutron and an electron neutrino.
 
@@ -87,12 +89,14 @@ $$Electron\;capture:\;p^{+}+\;e^{-}\rightarrow\;n^{0}\;+\;\nu^{e}$$
 
 Orbital electron capture (E.C.) is a fundamental  nuclear process, on pair with the more familiar Beta decay and positron production. It is, however, usually treated as an afterthought to Beta decay, and there are no modern reviews of how to treat the the problem numerically.  Indeed, the most complete reference date back to the 1960s and 70s \cite{ec-review1,ec-review2}.  Still, electron capture displays its own unique, rich structure and subtlety.  For example, the rate is effected by the chemical environment by nearly $1\%$. This is because the rate depends on the electronic density at the nucleus (i.e. $\vert\Psi_{e}(r\rightarrow 0)\vert^{2}$) since the interaction has no range. 
 
-But if we apply the Heisenberg Uncertainty Principle for electron capture, we would find the electron can still be captured even if it is confined to a volume $100X$ the nuclear radius.  
+But if we apply the Heisenberg Uncertainty Principle for electron capture, we would find the electron can still be captured even if it is confined to a volume $100$ times the nuclear radius.    This suggests that the chemical environment can modify the observed the E.C. rate; indeed, this has been known since the 1970s\cite{emery}.  More recently, the shift in decay rate of $Be^{7}$ has been re-examined in a wide variety of materials.\cite{RAY2009106}
 
-E.C. can also emit Bremsstrahlung radiation.  This is actually discussed in Jackson with a classical model \cite{jackson}, although it is more properly treated using QED corrections to the Weak Interaction\cite{Jauch}.  Technically, electron capture is a 2-body, relativistic bound state problem, although we model it by computing the non-relativistic atomic electronic wavefunctions of the parent and daughter nuclei.  We then use the wavefuntions to evaluate the matrix elements of the Weak Interaction Hamiltonian using the Fermi-VA theory.  Very rarely is there a complete treatment of the relativistic Kinematics.
+One can predict the environmental effects on E.C. using modern ab initio electronic structure calculations, such as Density Function Theory (DFT) calculations.\cite{PhysRevC.71.025801}   Technically, orbital electron capture is a 2-body, relativistic quasi-bound state problem, although most practitioners model it by computing the non-relativistic atomic electronic wavefunctions of the parent and daughter nuclei. One can then predict  shifts in the E.C rate by  computing the electron density at the nucleus for two different experimental environments, and taking the ratio.  The shift in the E.C. rate is simply 
+$$\Delta\Gamma_{EC}=\dfrac{\big\vert\Psi^{1}_{e}(0)\big\vert^{2}} {\big\vert\Psi^{2}_{e}(0)\big\vert^{2}} $$
 
+However, current DFT calculations can fail to predict $\Delta\Gamma_{EC}$ correctly.    In particular, recent results on $Be^{7}$ shows anomalously large shifts in the E.C. rate for in Pd under compression which are difficult to explain.\cite{PhysRevC.101.035801}
 
-We are interested in reviewing the basic  electron capture process to   understand how to apply the Fermi-VA theory to compute the cross section and capture rate as completely as possible.  We will examine electron capture in its simplest form:  a bare proton capturing an electron while confined in a classical box.   We don't believe this has been discussed elsewhere and would serve as a basis for more extensive calculations.  
+We are interested in reviewing the basic  electron capture process to  understand how to apply the Fermi-VA theory to compute the cross section and capture rate as completely as possible.  We will examine electron capture in its simplest form:  a bare proton capturing an electron while confined in a classical box.   We don't believe this has been discussed elsewhere and would serve as a basis for more extensive calculations.    To compute the rate itself, not just the shift,  we will use simple particle-in-the-box the electronic wavefunctions to evaluate the matrix elements of the Weak Interaction Hamiltonian using the Fermi-VA theory, and then integrate the over the cross-section with a complete treatment of the relativistic Kinematics.  We cast then within a thought experiment wherein the capture event occurs within a material in a way that suppresses the reverse reaction via neutron capture.
 
 We begin by briefly reviewing both orbital electron capture and, then, the Fermi VA Theory.
 
@@ -134,6 +138,7 @@ $$^{Z}X_{A}+\;e^{-}\rightarrow\;^{Z-1}X_{A}\;+\;h\nu_{X-ray}$$
 
 Indeed, orbital electron capture is evidenced by high intensity X-rays and soft electrons.  In 1938, Alvarez observed the X-ray signature of orbital electron capture in activated Titanium \cite{alvarez}. Since then, electron capture has been observed in about 150 radioactive isotopes.
 
+It is noted that E.C. can also emit Bremsstrahlung radiation.  This is actually discussed in Jackson using a classical model \cite{jackson}, although it is more properly treated using QED corrections to the Weak Interaction\cite{Jauch}.  
 
 \subsubsection{Experimental Enhancement of the Capture Rate}
 
@@ -727,7 +732,7 @@ We treat the electron-proton pair as if they are bound by the box potential; tha
 We would like to observe a bound state directly, but describing bound states in relativistic field theory is a complex problem.
 Indeed, Steven Weinberg has stated \cite{weinberg}:
 
-\emph{It must be said that the theory of relativistic effects and radiative corrections in bound states is not yet in satisfactory shape.Ó}
+\emph{It must be said that the theory of relativistic effects and radiative corrections in bound states is not yet in satisfactory shape.}
 
 Ideally we would look for resonances, or quasi-bound states, in solutions of the Bethe Salpeter equation, or a related formulation of the relativistic two-body equations, for electron-proton scattering.  This is significantly more complicated, requires some choice of approximation, and is prone to singularities that can lead to numerical instabilities.  Still, there is some older work that suggests this may be successful.  
 
