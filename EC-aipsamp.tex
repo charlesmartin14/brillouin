@@ -185,6 +185,8 @@ where the effective mass is proportional to the laser intensity I and inversely 
 
 $$m_{eff}^{3}=\sqrt{m_{e}^{2}+32\pi\alpha\dfrac{I}{E^{2}_{\gamma}}}$$
 
+The heavier electron mass corresponds to a larger electron density $\big\vert\Psi_{e}(0)\big\vert^{2}$ at the origin, thereby increasing the E.C. rate.
+
 The experiment would require a laser intensity of $I=10^{10}Wmm^{-2}$ and an energy $E_{\gamma}=10^{-3}-10^{-4}$eV, or a wavelength of $\lambda=0.01\mu m$ (much larger than an Angstrom).  
   
 \subsubsection{Bare Electron Proton Capture and Stellar Nucleosynthesis}
@@ -193,16 +195,8 @@ At zero energy, bare proton electron capture is not possible because it violates
 
 Bare capture is thought to occur in stellar nucleosynthesis because the environment is very dense, and the system is in thermal equilibrium.  This drives the formation of primordial elements, and occur when neutron stars form.    At very high temperatures, the proton electron collisions have sufficient energy to overcome the reaction barrier.   For example, Bahcall and coworkers famously computed the electron capture rate of $^{7}Be$ in the Sun \cite{bahcall62,bahcall69}.  It took nearly 40 years to resolve these calculations, resulting in the 2002 Nobel prize in physics.  It is believed that ionized Hydrogen captures an electron during the core collapse supernovae and in neutron stars [14].   
 
-While we usually characterize a star by it's temperature, these are also very dense systems, with $\rho\sim 10^6\;g\;cm^{-3}$.  In contrast, crudely, the smallest star has density $\rho\sim 10^{2}-10^{3}\;g\;cm^{-3}$.  As important, the reverse reaction is prohibited because, inside the dense neutron star, it is impossible to create a new electron; the Fermi sea is \emph{full}. So electron capture can occur by bare protons, but, presumably, only under extreme confinement, and with the reverse reaction is suppressed.   And there are many studies of numerical rate calculation in high thermal, stellar environments.   
+While we usually characterize a star by it's temperature, these are also very dense systems, with $\rho\sim 10^6\;g\;cm^{-3}$.  In contrast, crudely, the smallest star has density $\rho\sim 10^{2}-10^{3}\;g\;cm^{-3}$.  As important, the reverse reaction is prohibited because, inside the dense neutron star, it is impossible to create a new electron because the Fermi sea is \emph{full}. So electron capture can occur by bare protons, but, presumably, only under extreme confinement, and with the reverse reaction is suppressed.   And there are many studies of numerical rate calculation in high thermal, stellar environments.   
 
-A complete calculation of the E.C. rate requires numerical integration of  the integrated capture amplitude including four-momentum integrals for all reaction particles \cite{liu}. That is, one need to consider the full expression for the rate (in terms of the LIPS)
-
-$$\Gamma_{EC}=\int\dfrac{d^{3}\mathbf{p}_{p}}{(2\pi)^{3}}\int\dfrac{d^{3}\mathbf{p}_{e}}{(2\pi)^{3}}\int\dfrac{d^{3}\mathbf{p}_{n}}{(2\pi)^{3}}\int\dfrac{d^{3}\mathbf{p}_{\nu}}{(2\pi)^{3}}\sum\limits_{spin}\vert\mathcal{M}^{2}\vert$$
-$$\times\delta(E_{p}+E_{e}+E_{n}+E_{\nu})\delta^{3}(\mathbf{p}_{p}+\mathbf{p}_{e}-\mathbf{p}_{n}-\mathbf{p}_{\nu})$$
-
-We have found no treatment of confined electron capture using the complete numerical methods like those employed in dense astrophysical environments.
-
-In this paper, we model the enhanced electron capture process as a particle-in-a-box, but applied to the Femi VA theory, and using the full numerical integration of the full relativistic expression for the integrated capture amplitude.
 
 \subsection{The Weak Interaction and Femi VA theory}
 
@@ -375,10 +369,20 @@ We want to compute the rate of E.C. and the (minimum) power generated, as a func
 To do this, we need to express the rate in terms of the relativistic differential cross section, and in a form suitable for numerical calculations.  
 But first, we want to motivate why we use such a complicated form of the cross section.
 
-\subsection{Electron Capture Rates}
+\subsection{The Electron Capture Rate}
+
+In this paper, we model the enhanced electron capture process as a particle-in-a-box, but applied to the Femi VA theory, and using the full numerical integration of the full relativistic expression for the integrated capture amplitude.
+
 
 Orbital electron capture and other Beta decay processes follow first order kinetics, so the capture rate is described by a single number. 
 To calculate the rate, we require a full relativistic, quantum mechanical treatment because the capture process involves both creating particles and the kinetic energy spectrum is of order $m_{e}c^{2}$.
+
+A complete calculation of the E.C. rate requires numerical integration of  the integrated capture amplitude including four-momentum integrals for all reaction particles \cite{liu}. That is, one need to consider the full expression for the rate (in terms of the LIPS)
+
+$$\Gamma_{EC}=\int\dfrac{d^{3}\mathbf{p}_{p}}{(2\pi)^{3}}\int\dfrac{d^{3}\mathbf{p}_{e}}{(2\pi)^{3}}\int\dfrac{d^{3}\mathbf{p}_{n}}{(2\pi)^{3}}\int\dfrac{d^{3}\mathbf{p}_{\nu}}{(2\pi)^{3}}\sum\limits_{spin}\vert\mathcal{M}^{2}\vert$$
+$$\times\delta(E_{p}+E_{e}+E_{n}+E_{\nu})\delta^{3}(\mathbf{p}_{p}+\mathbf{p}_{e}-\mathbf{p}_{n}-\mathbf{p}_{\nu})$$
+
+We have found no treatment of confined electron capture using the complete numerical methods like those employed in dense astrophysical environments.
 
 The VA theory is based on second order perturbation theory.  It assumes an incoherent nuclear process, it is local, and that the interaction is phenomenological. It is treated as simply a contact potential at the nucleus. Here, this means we need to compute the nuclear charge--the electron density at the the nucleus $\Vert\psi_{e}(R=0)\Vert$, which we obtain from a classical particle-in-the-box wavefunction.
 
